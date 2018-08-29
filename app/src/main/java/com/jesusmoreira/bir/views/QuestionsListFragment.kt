@@ -11,8 +11,7 @@ import android.view.ViewGroup
 import com.jesusmoreira.bir.adapters.QuestionRecyclerViewAdapter
 import com.jesusmoreira.bir.R
 
-import com.jesusmoreira.bir.dummy.DummyContent
-import com.jesusmoreira.bir.dummy.DummyContent.DummyItem
+import com.jesusmoreira.bir.model.Question
 
 /**
  * A fragment representing a list of Items.
@@ -21,7 +20,7 @@ import com.jesusmoreira.bir.dummy.DummyContent.DummyItem
  */
 class QuestionsListFragment : Fragment() {
 
-//    private var columnCount = 1
+    private var items: Array<Question> = arrayOf()
 
     private var listener: OnListFragmentInteractionListener? = null
 
@@ -29,7 +28,7 @@ class QuestionsListFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         arguments?.let {
-//            columnCount = it.getInt(ARG_COLUMN_COUNT)
+            items = it.getParcelableArray(EXTRA_ARRAY_QUESTIONS) as Array<Question>
         }
     }
 
@@ -41,7 +40,7 @@ class QuestionsListFragment : Fragment() {
         if (view is RecyclerView) {
             with(view) {
                 layoutManager =  LinearLayoutManager(context)
-                adapter = QuestionRecyclerViewAdapter(DummyContent.ITEMS, listener)
+                adapter = QuestionRecyclerViewAdapter(items, listener)
             }
         }
         return view
@@ -73,20 +72,18 @@ class QuestionsListFragment : Fragment() {
      * for more information.
      */
     interface OnListFragmentInteractionListener {
-        fun onClickQuestion(item: DummyItem?)
+        fun onClickQuestion(item: Question)
     }
 
     companion object {
 
-        // TODO: Customize parameter argument names
-        const val ARG_COLUMN_COUNT = "column-count"
+        const val EXTRA_ARRAY_QUESTIONS = "EXTRA_ARRAY_QUESTIONS"
 
-        // TODO: Customize parameter initialization
         @JvmStatic
-        fun newInstance(columnCount: Int) =
+        fun newInstance(items: Array<Question>) =
                 QuestionsListFragment().apply {
                     arguments = Bundle().apply {
-                        putInt(ARG_COLUMN_COUNT, columnCount)
+                        putParcelableArray(EXTRA_ARRAY_QUESTIONS, items)
                     }
                 }
     }

@@ -13,8 +13,9 @@ import com.jesusmoreira.bir.R
 import com.jesusmoreira.bir.dummy.DummyContent
 import com.jesusmoreira.bir.model.Collection
 import com.jesusmoreira.bir.model.Exam
+import com.jesusmoreira.bir.model.Question
+import com.jesusmoreira.bir.utils.FileUtils
 import org.json.JSONArray
-import org.json.JSONObject
 
 class MainActivity : AppCompatActivity(),
         QuestionsListFragment.OnListFragmentInteractionListener,
@@ -49,41 +50,22 @@ class MainActivity : AppCompatActivity(),
             }
         }
 
-        fab = findViewById(R.id.fab)
+        fab = this.findViewById(R.id.fab)
         fab?.setOnClickListener {
             Toast.makeText(this, "FAB: ${collection?.exams?.get(0)?.questions?.get(0)?.statement}", Toast.LENGTH_SHORT).show()
         }
 
+        loadInitialData()
+
         goToQuestionsList()
-
-        val json = JSONArray("[\n" +
-                "  {\n" +
-                "    \"id\": \"2014-1\",\n" +
-                "    \"statement\": \"Confiere a la membrana plasmática alta permeabilidad al agua:\",\n" +
-                "    \"answers\": [\n" +
-                "      \"Acuaporinas\",\n" +
-                "      \"Canales iónicos\",\n" +
-                "      \"La Na^+/K^+ -ATPasa\",\n" +
-                "      \"Intercambiador Cl/HCO_3\",\n" +
-                "      \"Su composición lipídica\"\n" +
-                "    ],\n" +
-                "    \"correct-answer\": 1,\n" +
-                "    \"tags\": [\"fisiologia\",\"bioquimica\",\"citologia\"]\n" +
-                "  }\n" +
-                "]")
-
-        var exam = Exam(json, "2014", "1")
-        var arry = ArrayList<Exam>()
-        arry.add(exam)
-        collection = Collection("", "", arry)
     }
 
-    override fun onClickQuestion(item: DummyContent.DummyItem?) {
-        Toast.makeText(this, "Question: " + item.toString(), Toast.LENGTH_SHORT).show()
+    override fun onClickQuestion(item: Question) {
+        Toast.makeText(this, "Question: " + item.id, Toast.LENGTH_SHORT).show()
     }
 
-    override fun onClickExam(item: DummyContent.DummyItem?) {
-        Toast.makeText(this, "Exam: " + item.toString(), Toast.LENGTH_SHORT).show()
+    override fun onClickExam(item: Exam) {
+        Toast.makeText(this, "Exam: " + item.year, Toast.LENGTH_SHORT).show()
     }
 
     override fun onClickCategory(item: DummyContent.DummyItem?) {
@@ -97,8 +79,23 @@ class MainActivity : AppCompatActivity(),
         return super.onOptionsItemSelected(item)
     }
 
+    private fun loadInitialData() {
+        val path = ""
+        val files = FileUtils.listJSONAssets(this, path)
+        if (files != null && files.isNotEmpty()) {
+            val exams = ArrayList<Exam>()
+            for (i in 0 until files.size) {
+                val json = JSONArray(FileUtils.readJSONFromAsset(this, files[i]))
+
+                val exam = Exam(json, files[i].replace(".json", ""))
+                exams.add(exam)
+            }
+            collection = Collection("", "", exams.toTypedArray())
+        }
+    }
+
     private fun updateFragment(fragment: Fragment) {
-        var fragmentTransaction: FragmentTransaction = supportFragmentManager.beginTransaction()
+        val fragmentTransaction: FragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.fragment, fragment)
         fragmentTransaction.commit()
     }
@@ -106,14 +103,14 @@ class MainActivity : AppCompatActivity(),
     private fun goToQuestionsList(): Boolean {
         fab?.show()
         supportActionBar?.setTitle(R.string.text_questions)
-        updateFragment(QuestionsListFragment())
+        updateFragment(QuestionsListFragment.newInstance(collection!!.getQuestionsArray()))
         return true
     }
 
     private fun goToExamGrid(): Boolean {
         fab?.hide()
         supportActionBar?.setTitle(R.string.text_exams)
-        updateFragment(ExamsGridFragment())
+        updateFragment(ExamsGridFragment.newInstance(collection!!.exams))
         return true
     }
 

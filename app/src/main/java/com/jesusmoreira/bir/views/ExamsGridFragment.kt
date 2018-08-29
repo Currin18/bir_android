@@ -11,8 +11,7 @@ import android.view.ViewGroup
 import com.jesusmoreira.bir.adapters.ExamRecyclerViewAdapter
 import com.jesusmoreira.bir.R
 
-import com.jesusmoreira.bir.dummy.DummyContent
-import com.jesusmoreira.bir.dummy.DummyContent.DummyItem
+import com.jesusmoreira.bir.model.Exam
 
 /**
  * A fragment representing a list of Items.
@@ -21,7 +20,7 @@ import com.jesusmoreira.bir.dummy.DummyContent.DummyItem
  */
 class ExamsGridFragment : Fragment() {
 
-//    private var columnCount = 1
+    private var items: Array<Exam> = arrayOf()
 
     private var listener: OnListFragmentInteractionListener? = null
 
@@ -29,7 +28,7 @@ class ExamsGridFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         arguments?.let {
-//            columnCount = it.getInt(ARG_COLUMN_COUNT)
+            items = it.getParcelableArray(EXTRA_ARRAY_EXAMS) as Array<Exam>
         }
     }
 
@@ -41,7 +40,7 @@ class ExamsGridFragment : Fragment() {
         if (view is RecyclerView) {
             with(view) {
                 layoutManager = GridLayoutManager(context, 2)
-                adapter = ExamRecyclerViewAdapter(DummyContent.ITEMS, listener)
+                adapter = ExamRecyclerViewAdapter(items, listener)
             }
         }
         return view
@@ -73,20 +72,18 @@ class ExamsGridFragment : Fragment() {
      * for more information.
      */
     interface OnListFragmentInteractionListener {
-        fun onClickExam(item: DummyItem?)
+        fun onClickExam(item: Exam)
     }
 
     companion object {
 
-        // TODO: Customize parameter argument names
-        const val ARG_COLUMN_COUNT = "column-count"
+        const val EXTRA_ARRAY_EXAMS = "EXTRA_ARRAY_EXAMS"
 
-        // TODO: Customize parameter initialization
         @JvmStatic
-        fun newInstance(columnCount: Int) =
+        fun newInstance(items: Array<Exam> = arrayOf()) =
                 ExamsGridFragment().apply {
                     arguments = Bundle().apply {
-                        putInt(ARG_COLUMN_COUNT, columnCount)
+                        putParcelableArray(EXTRA_ARRAY_EXAMS, items)
                     }
                 }
     }
