@@ -1,14 +1,15 @@
-package com.jesusmoreira.bir
+package com.jesusmoreira.bir.views
 
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.jesusmoreira.bir.adapters.CategorieRecyclerViewAdapter
+import com.jesusmoreira.bir.R
 
 import com.jesusmoreira.bir.dummy.DummyContent
 import com.jesusmoreira.bir.dummy.DummyContent.DummyItem
@@ -16,12 +17,11 @@ import com.jesusmoreira.bir.dummy.DummyContent.DummyItem
 /**
  * A fragment representing a list of Items.
  * Activities containing this fragment MUST implement the
- * [QuestionFragment.OnListFragmentInteractionListener] interface.
+ * [CategoriesListFragment.OnListFragmentInteractionListener] interface.
  */
-class QuestionFragment : Fragment() {
+class CategoriesListFragment : Fragment() {
 
-    // TODO: Customize parameters
-    private var columnCount = 1
+//    private var columnCount = 1
 
     private var listener: OnListFragmentInteractionListener? = null
 
@@ -29,22 +29,19 @@ class QuestionFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         arguments?.let {
-            columnCount = it.getInt(ARG_COLUMN_COUNT)
+//            columnCount = it.getInt(ARG_COLUMN_COUNT)
         }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_question_list, container, false)
+        val view = inflater.inflate(R.layout.fragment_category_list, container, false)
 
         // Set the adapter
         if (view is RecyclerView) {
             with(view) {
-                layoutManager = when {
-                    columnCount <= 1 -> LinearLayoutManager(context)
-                    else -> GridLayoutManager(context, columnCount)
-                }
-                adapter = QuestionRecyclerViewAdapter(DummyContent.ITEMS, listener)
+                layoutManager = LinearLayoutManager(context)
+                adapter = CategorieRecyclerViewAdapter(DummyContent.ITEMS, listener)
             }
         }
         return view
@@ -76,8 +73,7 @@ class QuestionFragment : Fragment() {
      * for more information.
      */
     interface OnListFragmentInteractionListener {
-        // TODO: Update argument type and name
-        fun onListFragmentInteraction(item: DummyItem?)
+        fun onClickCategory(item: DummyItem?)
     }
 
     companion object {
@@ -88,7 +84,7 @@ class QuestionFragment : Fragment() {
         // TODO: Customize parameter initialization
         @JvmStatic
         fun newInstance(columnCount: Int) =
-                QuestionFragment().apply {
+                CategoriesListFragment().apply {
                     arguments = Bundle().apply {
                         putInt(ARG_COLUMN_COUNT, columnCount)
                     }

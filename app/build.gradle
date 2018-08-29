@@ -8,7 +8,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.jesusmoreira.bir"
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -22,14 +22,44 @@ android {
     }
 }
 
+def versions = [
+    kotlin_version : "$kotlin_version",
+    support_version : "1.0.0-rc02",
+    constraint_version : "1.1.2",
+    material_version : "1.0.0-rc01",
+    lifecycle_version : "2.0.0-rc01"
+]
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.0.0-rc02'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin_version"
+    implementation "androidx.appcompat:appcompat:$versions.support_version"
+    implementation "androidx.legacy:legacy-support-v4:$versions.support_version"
+    implementation "androidx.recyclerview:recyclerview:$versions.support_version"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.constraint_version"
+    implementation "com.google.android.material:material:$versions.material_version"
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle_version"
+    // alternatively - just ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle_version" // use -ktx for Kotlin
+    // alternatively - just LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata:$versions.lifecycle_version"
+    // alternatively - Lifecycles only (no ViewModel or LiveData). Some UI
+    //     AndroidX libraries use this lightweight import for Lifecycle
+    implementation "androidx.lifecycle:lifecycle-runtime:$versions.lifecycle_version"
+
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$versions.lifecycle_version" // use kapt for Kotlin
+    // alternately - if using Java8, use the following instead of lifecycle-compiler
+    implementation "androidx.lifecycle:lifecycle-common-java8:$versions.lifecycle_version"
+
+    // optional - ReactiveStreams support for LiveData
+    implementation "androidx.lifecycle:lifecycle-reactivestreams-ktx:$versions.lifecycle_version" // use -ktx for Kotlin
+
+    // optional - Test helpers for LiveData
+    testImplementation "androidx.arch.core:core-testing:$versions.lifecycle_version"
 }

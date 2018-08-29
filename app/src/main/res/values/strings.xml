@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">BIR</string>
+    <string name="text_questions">Questions</string>
+    <string name="text_exams">Exams</string>
+    <string name="text_categories">Categories</string>
 </resources>

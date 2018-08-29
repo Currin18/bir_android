@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_questions"
+        android:enabled="true"
+        android:icon="@drawable/ic_format_list_bulleted_white_24dp"
+        android:title="@string/text_questions"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_exams"
+        android:enabled="true"
+        android:icon="@drawable/ic_folder_white_24dp"
+        android:title="@string/text_exams"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_categories"
+        android:enabled="true"
+        android:icon="@drawable/ic_view_list_white_24dp"
+        android:title="@string/text_categories"
+        app:showAsAction="ifRoom" />
+</menu>
