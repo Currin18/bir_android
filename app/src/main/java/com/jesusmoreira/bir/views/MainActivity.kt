@@ -10,7 +10,7 @@ import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.jesusmoreira.bir.R
-import com.jesusmoreira.bir.dummy.DummyContent
+import com.jesusmoreira.bir.model.Category
 import com.jesusmoreira.bir.model.Collection
 import com.jesusmoreira.bir.model.Exam
 import com.jesusmoreira.bir.model.Question
@@ -24,6 +24,9 @@ class MainActivity : AppCompatActivity(),
 
     var fab : FloatingActionButton? = null
     var collection: Collection? = null
+    var questions: Array<Question>? = null
+    var exams: Array<Exam>? = null
+    var categories: Array<Category>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,6 +61,8 @@ class MainActivity : AppCompatActivity(),
         loadInitialData()
 
         goToQuestionsList()
+
+        collection!!.groupByCategories()
     }
 
     override fun onClickQuestion(item: Question) {
@@ -68,8 +73,8 @@ class MainActivity : AppCompatActivity(),
         Toast.makeText(this, "Exam: " + item.year, Toast.LENGTH_SHORT).show()
     }
 
-    override fun onClickCategory(item: DummyContent.DummyItem?) {
-        Toast.makeText(this, "Category: " + item.toString(), Toast.LENGTH_SHORT).show()
+    override fun onClickCategory(item: Category) {
+        Toast.makeText(this, "Category: " + item.name, Toast.LENGTH_SHORT).show()
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -90,6 +95,7 @@ class MainActivity : AppCompatActivity(),
                 val exam = Exam(json, files[i].replace(".json", ""))
                 exams.add(exam)
             }
+            exams.sortBy { it.year }
             collection = Collection("", "", exams.toTypedArray())
         }
     }
@@ -103,21 +109,24 @@ class MainActivity : AppCompatActivity(),
     private fun goToQuestionsList(): Boolean {
         fab?.show()
         supportActionBar?.setTitle(R.string.text_questions)
-        updateFragment(QuestionsListFragment.newInstance(collection!!.getQuestionsArray()))
+        if (questions == null) questions = collection!!.getAllQuestions()
+        updateFragment(QuestionsListFragment.newInstance(questions!!))
         return true
     }
 
     private fun goToExamGrid(): Boolean {
         fab?.hide()
         supportActionBar?.setTitle(R.string.text_exams)
-        updateFragment(ExamsGridFragment.newInstance(collection!!.exams))
+        if (exams == null) exams = collection!!.exams
+        updateFragment(ExamsGridFragment.newInstance(exams!!))
         return true
     }
 
     private fun goToCategoriesList(): Boolean {
         fab?.hide()
         supportActionBar?.setTitle(R.string.text_categories)
-        updateFragment(CategoriesListFragment())
+        if (categories == null) categories = collection!!.groupByCategories()
+        updateFragment(CategoriesListFragment.newInstance(categories!!))
         return true
     }
 }

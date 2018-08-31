@@ -11,8 +11,7 @@ import android.view.ViewGroup
 import com.jesusmoreira.bir.adapters.CategorieRecyclerViewAdapter
 import com.jesusmoreira.bir.R
 
-import com.jesusmoreira.bir.dummy.DummyContent
-import com.jesusmoreira.bir.dummy.DummyContent.DummyItem
+import com.jesusmoreira.bir.model.Category
 
 /**
  * A fragment representing a list of Items.
@@ -21,7 +20,7 @@ import com.jesusmoreira.bir.dummy.DummyContent.DummyItem
  */
 class CategoriesListFragment : Fragment() {
 
-//    private var columnCount = 1
+    private var items: Array<Category> = arrayOf()
 
     private var listener: OnListFragmentInteractionListener? = null
 
@@ -29,7 +28,7 @@ class CategoriesListFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         arguments?.let {
-//            columnCount = it.getInt(ARG_COLUMN_COUNT)
+            items = it.getParcelableArray(EXTRA_ARRAY_CATEGORIES) as Array<Category>
         }
     }
 
@@ -41,7 +40,7 @@ class CategoriesListFragment : Fragment() {
         if (view is RecyclerView) {
             with(view) {
                 layoutManager = LinearLayoutManager(context)
-                adapter = CategorieRecyclerViewAdapter(DummyContent.ITEMS, listener)
+                adapter = CategorieRecyclerViewAdapter(items, listener)
             }
         }
         return view
@@ -73,20 +72,18 @@ class CategoriesListFragment : Fragment() {
      * for more information.
      */
     interface OnListFragmentInteractionListener {
-        fun onClickCategory(item: DummyItem?)
+        fun onClickCategory(item: Category)
     }
 
     companion object {
 
-        // TODO: Customize parameter argument names
-        const val ARG_COLUMN_COUNT = "column-count"
+        const val EXTRA_ARRAY_CATEGORIES = "EXTRA_ARRAY_CATEGORIES"
 
-        // TODO: Customize parameter initialization
         @JvmStatic
-        fun newInstance(columnCount: Int) =
+        fun newInstance(categories: Array<Category>) =
                 CategoriesListFragment().apply {
                     arguments = Bundle().apply {
-                        putInt(ARG_COLUMN_COUNT, columnCount)
+                        putParcelableArray(EXTRA_ARRAY_CATEGORIES, categories)
                     }
                 }
     }
