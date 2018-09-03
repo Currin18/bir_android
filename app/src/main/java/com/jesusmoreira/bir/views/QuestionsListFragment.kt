@@ -57,6 +57,7 @@ class QuestionsListFragment : Fragment() {
 
     override fun onDetach() {
         super.onDetach()
+        listener?.onBackQuestion()
         listener = null
     }
 
@@ -73,6 +74,7 @@ class QuestionsListFragment : Fragment() {
      */
     interface OnListFragmentInteractionListener {
         fun onClickQuestion(item: Question)
+        fun onBackQuestion()
     }
 
     companion object {

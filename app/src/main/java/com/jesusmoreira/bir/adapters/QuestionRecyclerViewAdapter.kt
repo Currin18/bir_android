@@ -43,6 +43,7 @@ class QuestionRecyclerViewAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = mValues[position]
+        holder.mIdView.text = "#" + item.id
         holder.mContentView.text = item.statement
 
         with(holder.mView) {
@@ -54,7 +55,8 @@ class QuestionRecyclerViewAdapter(
     override fun getItemCount(): Int = mValues.size
 
     inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
-        val mContentView: TextView = mView.content
+        val mIdView: TextView = mView.question_id
+        val mContentView: TextView = mView.question_content
 
         override fun toString(): String {
             return super.toString() + " '" + mContentView.text + "'"

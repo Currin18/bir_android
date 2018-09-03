@@ -27,10 +27,10 @@ android {
 }
 
 def versions = [
-    kotlin_version : "$kotlin_version",
-    support_version : "1.0.0-rc02",
-    constraint_version : "1.1.2",
-    material_version : "1.0.0-rc01",
+    kotlin_version    : "$kotlin_version",
+    support_version   : "1.0.0-rc02",
+    constraint_version: "1.1.2",
+    material_version  : "1.0.0-rc01",
     lifecycle_version : "2.0.0-rc01"
 ]
 
@@ -47,23 +47,23 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:$versions.constraint_version"
     implementation "com.google.android.material:material:$versions.material_version"
 
-    // ViewModel and LiveData
-    implementation "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle_version"
-    // alternatively - just ViewModel
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle_version" // use -ktx for Kotlin
-    // alternatively - just LiveData
-    implementation "androidx.lifecycle:lifecycle-livedata:$versions.lifecycle_version"
-    // alternatively - Lifecycles only (no ViewModel or LiveData). Some UI
-    //     AndroidX libraries use this lightweight import for Lifecycle
-    implementation "androidx.lifecycle:lifecycle-runtime:$versions.lifecycle_version"
-
-    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$versions.lifecycle_version" // use kapt for Kotlin
-    // alternately - if using Java8, use the following instead of lifecycle-compiler
-    implementation "androidx.lifecycle:lifecycle-common-java8:$versions.lifecycle_version"
-
-    // optional - ReactiveStreams support for LiveData
-    implementation "androidx.lifecycle:lifecycle-reactivestreams-ktx:$versions.lifecycle_version" // use -ktx for Kotlin
-
-    // optional - Test helpers for LiveData
-    testImplementation "androidx.arch.core:core-testing:$versions.lifecycle_version"
+//    // ViewModel and LiveData
+//    implementation "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle_version"
+//    // alternatively - just ViewModel
+//    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle_version"
+//    // alternatively - just LiveData
+//    implementation "androidx.lifecycle:lifecycle-livedata:$versions.lifecycle_version"
+//    // alternatively - Lifecycles only (no ViewModel or LiveData). Some UI
+//    //     AndroidX libraries use this lightweight import for Lifecycle
+//    implementation "androidx.lifecycle:lifecycle-runtime:$versions.lifecycle_version"
+//
+//    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$versions.lifecycle_version"
+//    // alternately - if using Java8, use the following instead of lifecycle-compiler
+//    implementation "androidx.lifecycle:lifecycle-common-java8:$versions.lifecycle_version"
+//
+//    // optional - ReactiveStreams support for LiveData
+//    implementation "androidx.lifecycle:lifecycle-reactivestreams-ktx:$versions.lifecycle_version"
+//
+//    // optional - Test helpers for LiveData
+//    testImplementation "androidx.arch.core:core-testing:$versions.lifecycle_version"
 }

@@ -3,4 +3,7 @@
     <string name="text_questions">Questions</string>
     <string name="text_exams">Exams</string>
     <string name="text_categories">Categories</string>
+    <string name="text_advanced">Advanced</string>
+    <string name="text_advanced_filters">Advanced filters</string>
+
 </resources>
