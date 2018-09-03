@@ -1,9 +1,17 @@
 <resources>
     <string name="app_name">BIR</string>
+    <string name="new_exam">New exam</string>
     <string name="text_questions">Questions</string>
     <string name="text_exams">Exams</string>
+    <string name="text_years">Years</string>
     <string name="text_categories">Categories</string>
     <string name="text_advanced">Advanced</string>
     <string name="text_advanced_filters">Advanced filters</string>
+
+    <string name="button_let_pass">Let pass</string>
+    <string name="button_continue">Let pass</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

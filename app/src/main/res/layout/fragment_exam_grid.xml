@@ -8,5 +8,5 @@
     android:layout_height="match_parent"
     android:scrollbars="vertical"
     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-    tools:context=".views.ExamsGridFragment"
+    tools:context=".views.YearsGridFragment"
     tools:listitem="@layout/fragment_exam" />

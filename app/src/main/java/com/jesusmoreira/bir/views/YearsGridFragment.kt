@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.jesusmoreira.bir.adapters.ExamRecyclerViewAdapter
+import com.jesusmoreira.bir.adapters.YearRecyclerViewAdapter
 import com.jesusmoreira.bir.R
 
 import com.jesusmoreira.bir.model.Exam
@@ -16,9 +16,9 @@ import com.jesusmoreira.bir.model.Exam
 /**
  * A fragment representing a list of Items.
  * Activities containing this fragment MUST implement the
- * [ExamsGridFragment.OnListFragmentInteractionListener] interface.
+ * [YearsGridFragment.OnListFragmentInteractionListener] interface.
  */
-class ExamsGridFragment : Fragment() {
+class YearsGridFragment : Fragment() {
 
     private var items: Array<Exam> = arrayOf()
 
@@ -40,7 +40,7 @@ class ExamsGridFragment : Fragment() {
         if (view is RecyclerView) {
             with(view) {
                 layoutManager = GridLayoutManager(context, 2)
-                adapter = ExamRecyclerViewAdapter(items, listener)
+                adapter = YearRecyclerViewAdapter(items, listener)
             }
         }
         return view
@@ -81,7 +81,7 @@ class ExamsGridFragment : Fragment() {
 
         @JvmStatic
         fun newInstance(items: Array<Exam> = arrayOf()) =
-                ExamsGridFragment().apply {
+                YearsGridFragment().apply {
                     arguments = Bundle().apply {
                         putParcelableArray(EXTRA_ARRAY_EXAMS, items)
                     }

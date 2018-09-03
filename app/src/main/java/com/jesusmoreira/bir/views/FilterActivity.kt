@@ -1,14 +1,12 @@
 package com.jesusmoreira.bir.views
 
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.widget.Toast
-import androidx.appcompat.widget.SearchView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
@@ -24,7 +22,7 @@ import org.json.JSONArray
 
 class FilterActivity : AppCompatActivity(),
         QuestionsListFragment.OnListFragmentInteractionListener,
-        ExamsGridFragment.OnListFragmentInteractionListener,
+        YearsGridFragment.OnListFragmentInteractionListener,
         CategoriesListFragment.OnListFragmentInteractionListener,
         AdvanceFilterFragment.OnFragmentInteractionListener {
 
@@ -175,7 +173,7 @@ class FilterActivity : AppCompatActivity(),
         fab?.show()
 //        supportActionBar?.setTitle(R.string.text_exams)
         if (exams == null) exams = collection!!.exams
-        updateFragment(ExamsGridFragment.newInstance(exams!!))
+        updateFragment(YearsGridFragment.newInstance(exams!!))
         return true
     }
 

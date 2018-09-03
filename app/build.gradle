@@ -27,15 +27,18 @@ android {
 }
 
 def versions = [
-    kotlin_version    : "$kotlin_version",
-    support_version   : "1.0.0-rc02",
-    constraint_version: "1.1.2",
-    material_version  : "1.0.0-rc01",
-    lifecycle_version : "2.0.0-rc01"
+        kotlin_version    : "$kotlin_version",
+        support_version   : "1.0.0-rc02",
+        constraint_version: "1.1.2",
+        material_version  : "1.0.0-rc01",
+        lifecycle_version : "2.0.0-rc01"
 ]
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'

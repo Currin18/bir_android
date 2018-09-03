@@ -8,7 +8,7 @@ import android.widget.TextView
 import com.jesusmoreira.bir.R
 
 
-import com.jesusmoreira.bir.views.ExamsGridFragment.OnListFragmentInteractionListener
+import com.jesusmoreira.bir.views.YearsGridFragment.OnListFragmentInteractionListener
 import com.jesusmoreira.bir.dummy.DummyContent.DummyItem
 import com.jesusmoreira.bir.model.Exam
 
@@ -19,10 +19,10 @@ import kotlinx.android.synthetic.main.fragment_exam.view.*
  * specified [OnListFragmentInteractionListener].
  * TODO: Replace the implementation with code for your data type.
  */
-class ExamRecyclerViewAdapter(
+class YearRecyclerViewAdapter(
         private val mValues: Array<Exam>,
         private val mListener: OnListFragmentInteractionListener?)
-    : RecyclerView.Adapter<ExamRecyclerViewAdapter.ViewHolder>() {
+    : RecyclerView.Adapter<YearRecyclerViewAdapter.ViewHolder>() {
 
     private val mOnClickListener: View.OnClickListener
 
