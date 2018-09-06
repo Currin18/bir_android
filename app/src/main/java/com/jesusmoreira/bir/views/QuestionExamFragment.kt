@@ -1,15 +1,19 @@
 package com.jesusmoreira.bir.views
 
 import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.VISIBLE
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 import com.jesusmoreira.bir.R
+import com.jesusmoreira.bir.adapters.AnswerRecyclerViewAdapter
 import com.jesusmoreira.bir.model.Question
+import kotlinx.android.synthetic.main.fragment_question_exam.view.*
 
 private const val EXTRA_QUESTION = "EXTRA_QUESTION"
 
@@ -36,7 +40,25 @@ class QuestionExamFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_question_exam, container, false)
+        val v: View = inflater.inflate(R.layout.fragment_question_exam, container, false)
+        if (question != null) {
+            v.statement.text = question!!.statement
+
+            if (v.answers is RecyclerView) {
+                with(v.answers) {
+                    layoutManager = LinearLayoutManager(context)
+                    adapter = AnswerRecyclerViewAdapter(question!!.answers!!, listener)
+                }
+            }
+
+            if (question!!.impugned) {
+                v.impugned.visibility = VISIBLE
+            }
+
+            v.btn_let_pass.setOnClickListener { listener?.onLetPassInteraction() }
+            v.btn_continue.setOnClickListener { listener?.onContinueInteraction() }
+        }
+        return v
     }
 
     override fun onAttach(context: Context) {
@@ -65,7 +87,7 @@ class QuestionExamFragment : Fragment() {
      * for more information.
      */
     interface OnQuestionExamInteractionListener {
-        fun onClickAnswer()
+        fun onClickAnswer(item: Int)
         fun onLetPassInteraction()
         fun onContinueInteraction()
     }

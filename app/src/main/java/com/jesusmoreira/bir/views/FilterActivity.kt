@@ -1,5 +1,6 @@
 package com.jesusmoreira.bir.views
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
@@ -78,7 +79,9 @@ class FilterActivity : AppCompatActivity(),
     }
 
     override fun onClickQuestion(item: Question) {
-        Toast.makeText(this, "Question: " + item.id, Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, "Question: " + item.id, Toast.LENGTH_SHORT).show()
+        val intent = ExamActivity.newIntent(applicationContext, item)
+        startActivity(intent)
     }
 
     override fun onBackQuestion() {
