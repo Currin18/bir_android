@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.jesusmoreira.bir.adapters.QuestionRecyclerViewAdapter
 import com.jesusmoreira.bir.R
+import com.jesusmoreira.bir.model.Exam
 
 import com.jesusmoreira.bir.model.Question
 
@@ -30,6 +31,12 @@ class QuestionsListFragment : Fragment() {
         arguments?.let {
             items = it.getParcelableArray(EXTRA_ARRAY_QUESTIONS) as Array<Question>
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val exam = Exam("", items)
+        (activity as FilterActivity).uploadExam(exam)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,

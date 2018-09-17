@@ -11,6 +11,7 @@
         android:id="@+id/statement"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textSize="18sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -58,6 +59,7 @@
         android:background="@color/colorPrimary"
         android:textColor="@color/white"
         android:text="@string/button_continue"
+        android:enabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_let_pass"/>

@@ -36,6 +36,8 @@ class FilterActivity : AppCompatActivity(),
     var exams: Array<Exam>? = null
     var categories: Array<Category>? = null
 
+    var examSelected: Exam? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_filter)
@@ -65,8 +67,12 @@ class FilterActivity : AppCompatActivity(),
         }
 
         fab = this.findViewById(R.id.fab)
-        fab?.setOnClickListener {
-            Toast.makeText(this, "FAB: ${collection?.exams?.get(0)?.questions?.get(0)?.statement}", Toast.LENGTH_SHORT).show()
+        fab?.setOnClickListener { _ ->
+            //            Toast.makeText(this, "FAB: ${collection?.exams?.get(0)?.questions?.get(0)?.statement}", Toast.LENGTH_SHORT).show()
+            examSelected?.let {
+                val intent = ExamActivity.newIntent(applicationContext, it)
+                startActivity(intent)
+            }
         }
 
         fabFilters = this.findViewById(R.id.filters_fab)
@@ -79,9 +85,9 @@ class FilterActivity : AppCompatActivity(),
     }
 
     override fun onClickQuestion(item: Question) {
-//        Toast.makeText(this, "Question: " + item.id, Toast.LENGTH_SHORT).show()
-        val intent = ExamActivity.newIntent(applicationContext, item)
-        startActivity(intent)
+        Toast.makeText(this, "Question: " + item.id, Toast.LENGTH_SHORT).show()
+//        val intent = ExamActivity.newIntent(applicationContext, item)
+//        startActivity(intent)
     }
 
     override fun onBackQuestion() {
@@ -145,6 +151,8 @@ class FilterActivity : AppCompatActivity(),
             collection = Collection("", "", exams.toTypedArray())
         }
     }
+
+    fun uploadExam(examSelected: Exam) { this.examSelected = examSelected }
 
     private fun initialView() {
         fab?.hide()

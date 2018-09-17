@@ -7,4 +7,6 @@
     <color name="colorAccentSecondary">#FFD600</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
+    <color name="grey">#666666</color>
+    <color name="red">#de5858</color>
 </resources>
