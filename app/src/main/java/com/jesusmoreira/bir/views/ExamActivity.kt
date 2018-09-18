@@ -4,15 +4,19 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.View
+import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.jesusmoreira.bir.R
-import com.jesusmoreira.bir.adapters.AnswerRecyclerViewAdapter
 import com.jesusmoreira.bir.model.Exam
 import com.jesusmoreira.bir.model.Question
 import kotlinx.android.synthetic.main.fragment_question_answer.view.*
+import kotlinx.android.synthetic.main.toolbar_exam.*
 
 class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInteractionListener {
 
@@ -30,8 +34,9 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
 
     var question: Question? = null
     var exam: Exam? = null
+    var rand = false
 
-    var questionCount = 0
+    private var questionPosition = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,40 +44,70 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
 
         if (intent != null) {
             if (intent.hasExtra(EXTRA_EXAM)) exam = intent.getParcelableExtra(EXTRA_EXAM)
+            if (intent.hasExtra(EXTRA_RAND)) rand = intent.getBooleanExtra(EXTRA_RAND, false)
         }
+
+        val toolbar : Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
         goToNextQuestion()
     }
 
-    override fun onClickAnswer(item: Int) {
-        val answers: RecyclerView? = findViewById(R.id.answers)
-        if (answers != null) {
-            (answers.layoutManager as LinearLayoutManager).findViewByPosition(question!!.correctAnswer)!!.cardLayout.setBackgroundColor(getColor(R.color.colorPrimaryLight))
-            if (item != question!!.correctAnswer) {
-                (answers.layoutManager as LinearLayoutManager).findViewByPosition(item)!!.cardLayout.setBackgroundColor(getColor(R.color.red))
-            }
-        }
-//        Toast.makeText(applicationContext, "onClickAnswer: $correct", Toast.LENGTH_SHORT).show()
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar_exam, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
 
+    override fun onClickAnswer(item: Int) {
+        val buttonLetPass = findViewById<Button>(R.id.btn_let_pass)
+        val buttonContinue = findViewById<Button>(R.id.btn_continue)
+        if (buttonContinue.visibility == View.GONE) {
+            exam?.questions?.get(questionPosition)?.selectedAnswer = item
+
+            val answers: RecyclerView? = findViewById(R.id.answers)
+            if (answers != null) {
+                (answers.layoutManager as LinearLayoutManager).findViewByPosition(question!!.correctAnswer)!!.cardLayout.setBackgroundColor(getColor(R.color.colorPrimaryLight))
+                if (item != question!!.correctAnswer) {
+                    (answers.layoutManager as LinearLayoutManager).findViewByPosition(item)!!.cardLayout.setBackgroundColor(getColor(R.color.red))
+                    exam!!.questionsError++
+                } else {
+                    exam!!.questionsSuccess++
+                }
+                updateToolbarCounts()
+            }
+            buttonLetPass.visibility = View.GONE
+            buttonContinue.visibility = View.VISIBLE
+        }
     }
 
     override fun onLetPassInteraction() {
-        Toast.makeText(applicationContext, "onLetPassInteraction", Toast.LENGTH_SHORT).show()
+        exam!!.questions[questionPosition].selectedAnswer = -1
+        exam!!.questionsPassed++
         goToNextQuestion()
     }
 
     override fun onContinueInteraction() {
-        Toast.makeText(applicationContext, "onContinueInteraction", Toast.LENGTH_SHORT).show()
         goToNextQuestion()
     }
 
     private fun goToNextQuestion() {
-        if (exam != null && questionCount < exam!!.questions.size) {
-            question = exam!!.questions[questionCount]
+        if (exam != null && questionPosition < exam!!.questions.size) {
+            question = exam!!.questions[questionPosition]
             val fragmentTransaction: FragmentTransaction = supportFragmentManager.beginTransaction()
             fragmentTransaction.replace(R.id.fragment, QuestionExamFragment.newInstance(question!!))
             fragmentTransaction.commit()
-            questionCount++
+
+            exam!!.questionCount++
+            updateToolbarCounts()
+            questionPosition++
         }
+    }
+
+    private fun updateToolbarCounts() {
+        toolbar_count_question.text = "${getString(R.string.toolbar_count_question)} ${exam?.questionCount}/${exam?.questions?.size}"
+        toolbar_answer_correct.text = "${getString(R.string.toolbar_answer_correct)} ${exam?.questionsSuccess}"
+        toolbar_answer_error.text = "${getString(R.string.toolbar_answer_error)} ${exam?.questionsError}"
+        toolbar_answer_passed.text = "${getString(R.string.toolbar_answer_passed)} ${exam?.questionsPassed}"
+
     }
 }

@@ -91,7 +91,8 @@ class FilterActivity : AppCompatActivity(),
     }
 
     override fun onBackQuestion() {
-        bottomNavigation?.visibility = VISIBLE
+        initialView()
+//        bottomNavigation?.visibility = VISIBLE
     }
 
     override fun onClickExam(item: Exam) {
@@ -181,7 +182,7 @@ class FilterActivity : AppCompatActivity(),
 
     private fun goToExamGrid(): Boolean {
         initialView()
-        fab?.show()
+//        fab?.show()
 //        supportActionBar?.setTitle(R.string.text_exams)
         if (exams == null) exams = collection!!.exams
         updateFragment(YearsGridFragment.newInstance(exams!!))
@@ -190,7 +191,7 @@ class FilterActivity : AppCompatActivity(),
 
     private fun goToCategoriesList(): Boolean {
         initialView()
-        fab?.show()
+//        fab?.show()
 //        supportActionBar?.setTitle(R.string.text_categories)
         if (categories == null) categories = collection!!.groupByCategories()
         updateFragment(CategoriesListFragment.newInstance(categories!!))

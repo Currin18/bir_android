@@ -10,6 +10,12 @@ import kotlin.collections.ArrayList
 @Parcelize
 data class Exam (var year: String = "", var questions: Array<Question> = arrayOf()): Parcelable {
 
+    var questionPosition = 0
+    var questionCount = 0
+    var questionsSuccess = 0
+    var questionsError = 0
+    var questionsPassed = 0
+
     constructor(jsonArray: JSONArray = JSONArray(), year: String = "") : this(year) {
         val arrayList: ArrayList<Question> = ArrayList()
         if (jsonArray.length() > 0) {
@@ -37,4 +43,10 @@ data class Exam (var year: String = "", var questions: Array<Question> = arrayOf
         result = 31 * result + Arrays.hashCode(questions)
         return result
     }
+
+    //TODO: finalize function
+//    fun newPosition(rand: Boolean = false): Int {
+//        if (rand) return Random().nextInt()
+//        return ++questionPosition
+//    }
 }

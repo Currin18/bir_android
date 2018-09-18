@@ -27,6 +27,8 @@ data class Question(
         private const val JSON_IMPUGNED = "impugned"
     }
 
+    var selectedAnswer: Int? = null
+
     constructor(json: JSONObject = JSONObject()) : this("") {
         try {
             if (json.has(JSON_ID)) id = json.getString(JSON_ID)

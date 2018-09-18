@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.jesusmoreira.bir.R
 import com.jesusmoreira.bir.adapters.AnswerRecyclerViewAdapter
 import com.jesusmoreira.bir.model.Question
+import kotlinx.android.synthetic.main.fragment_question_answer.view.*
 import kotlinx.android.synthetic.main.fragment_question_exam.view.*
 
 private const val EXTRA_QUESTION = "EXTRA_QUESTION"
@@ -57,6 +58,16 @@ class QuestionExamFragment : Fragment() {
 
             v.btn_let_pass.setOnClickListener { listener?.onLetPassInteraction() }
             v.btn_continue.setOnClickListener { listener?.onContinueInteraction() }
+
+//            if (question!!.selectedAnswer != null) {
+//                (v.answers.layoutManager as LinearLayoutManager).findViewByPosition(question!!.correctAnswer)!!.cardLayout.setBackgroundColor(context.getColor(R.color.colorPrimaryLight))
+//                if (question!!.selectedAnswer != question!!.correctAnswer) {
+//                    (v.answers.layoutManager as LinearLayoutManager).findViewByPosition(question!!.selectedAnswer!!)!!.cardLayout.setBackgroundColor(context!!.getColor(R.color.red))
+//                }
+//
+//                v.btn_let_pass.visibility = View.GONE
+//                v.btn_continue.visibility = View.VISIBLE
+//            }
         }
         return v
     }

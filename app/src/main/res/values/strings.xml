@@ -14,5 +14,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_question_list">Question list</string>
+    <string name="action_report_error">Report error</string>
+    <string name="toolbar_count_question">Question:</string>
+    <string name="toolbar_answer_correct">Correct:</string>
+    <string name="toolbar_count_points">Points:</string>
+    <string name="toolbar_answer_error">Error:</string>
+    <string name="toolbar_answer_passed">Passed:</string>
 
 </resources>
