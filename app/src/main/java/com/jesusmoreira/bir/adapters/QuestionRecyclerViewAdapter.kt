@@ -11,6 +11,7 @@ import com.jesusmoreira.bir.R
 import com.jesusmoreira.bir.views.QuestionsListFragment.OnListFragmentInteractionListener
 import com.jesusmoreira.bir.dummy.DummyContent.DummyItem
 import com.jesusmoreira.bir.model.Question
+import com.jesusmoreira.bir.utils.TextUtils
 
 import kotlinx.android.synthetic.main.fragment_question.view.*
 
@@ -28,10 +29,10 @@ class QuestionRecyclerViewAdapter(
 
     init {
         mOnClickListener = View.OnClickListener { v ->
-            val item = v.tag as Question
+            val item = v.tag as Int
             // Notify the active callbacks interface (the activity, if the fragment is attached to
             // one) that an item has been selected.
-            mListener?.onClickQuestion(item)
+            mListener?.onClickQuestion(item, mValues[item])
         }
     }
 
@@ -43,11 +44,11 @@ class QuestionRecyclerViewAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = mValues[position]
-        holder.mIdView.text = "#" + item.id
-        holder.mContentView.text = item.statement
+        holder.mIdView.text = "#${item.id}"
+        holder.mContentView.text = TextUtils.parseToHtml(item.statement!!)
 
         with(holder.mView) {
-            tag = item
+            tag = position
             setOnClickListener(mOnClickListener)
         }
     }

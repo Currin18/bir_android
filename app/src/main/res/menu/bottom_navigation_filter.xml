@@ -22,7 +22,7 @@
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_filters"
-        android:enabled="true"
+        android:enabled="false"
         android:icon="@drawable/ic_format_list_bulleted_white_24dp"
         android:title="@string/text_advanced_filters"
         app:showAsAction="ifRoom" />

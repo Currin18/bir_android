@@ -6,49 +6,59 @@
     android:padding="8dp">
 
     <TextView
+        android:id="@+id/toolbar_id_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:text="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
         android:id="@+id/toolbar_count_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:textSize="16sp"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"
         android:text="@string/toolbar_count_question"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toEndOf="@id/toolbar_id_question"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_id_question"/>
     <TextView
         android:id="@+id/toolbar_count_points"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_margin="8dp"
-        android:textSize="16sp"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"
         android:text="@string/toolbar_count_points"
         app:layout_constraintStart_toEndOf="@+id/toolbar_count_question"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_id_question"/>
+
     <TextView
-        android:id="@+id/toolbar_answer_correct"
+        android:id="@+id/toolbar_answer_success"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:textSize="16sp"
-        android:text="@string/toolbar_answer_correct"
+        android:layout_marginBottom="8dp"
+        android:textSize="14sp"
+        android:text="@string/toolbar_answer_success"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
     <TextView
         android:id="@+id/toolbar_answer_error"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:textSize="16sp"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"
         android:text="@string/toolbar_answer_error"
-        app:layout_constraintStart_toEndOf="@+id/toolbar_answer_correct"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toEndOf="@+id/toolbar_answer_success"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_answer_success"/>
     <TextView
         android:id="@+id/toolbar_answer_passed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:textSize="16sp"
+        android:layout_marginStart="8dp"
+        android:textSize="14sp"
         android:text="@string/toolbar_answer_passed"
         app:layout_constraintStart_toEndOf="@+id/toolbar_answer_error"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_answer_success"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

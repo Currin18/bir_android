@@ -10,6 +10,7 @@ import com.jesusmoreira.bir.R
 
 import com.jesusmoreira.bir.views.QuestionExamFragment.OnQuestionExamInteractionListener
 import com.jesusmoreira.bir.dummy.DummyContent.DummyItem
+import com.jesusmoreira.bir.utils.TextUtils
 
 import kotlinx.android.synthetic.main.fragment_category.view.*
 
@@ -41,7 +42,7 @@ class AnswerRecyclerViewAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = mValues[position]
-        holder.mContentView.text = item
+        holder.mContentView.text = TextUtils.parseToHtml(item)
 
         with(holder.mView) {
             tag = position

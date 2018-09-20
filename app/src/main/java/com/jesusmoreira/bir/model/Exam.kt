@@ -1,6 +1,7 @@
 package com.jesusmoreira.bir.model
 
 import android.os.Parcelable
+import kotlinx.android.parcel.IgnoredOnParcel
 import kotlinx.android.parcel.Parcelize
 import org.json.JSONArray
 import org.json.JSONObject
@@ -10,11 +11,13 @@ import kotlin.collections.ArrayList
 @Parcelize
 data class Exam (var year: String = "", var questions: Array<Question> = arrayOf()): Parcelable {
 
-    var questionPosition = 0
+    var questionPosition = -1
     var questionCount = 0
     var questionsSuccess = 0
     var questionsError = 0
     var questionsPassed = 0
+
+    var rand = false
 
     constructor(jsonArray: JSONArray = JSONArray(), year: String = "") : this(year) {
         val arrayList: ArrayList<Question> = ArrayList()
@@ -44,9 +47,39 @@ data class Exam (var year: String = "", var questions: Array<Question> = arrayOf
         return result
     }
 
-    //TODO: finalize function
-//    fun newPosition(rand: Boolean = false): Int {
-//        if (rand) return Random().nextInt()
-//        return ++questionPosition
-//    }
+    fun nextQuestion(): Question? {
+        if (rand) {
+            val questionsRemaining = questions.filter { it.selectedAnswer == null }
+            questionPosition = if (questionsRemaining.isNotEmpty()) {
+                val randPosition = Random().nextInt(questionsRemaining.size)
+                questions.indexOf(questionsRemaining[randPosition])
+            } else { -1 }
+        } else {
+            questionPosition++
+        }
+
+        if (questionPosition >= 0 && questionPosition < questions.size) {
+            questionCount++
+            return questions[questionPosition]
+        }
+        return null
+    }
+
+    fun setOnClickAnswer(position: Int): Boolean {
+        if (questionPosition >= 0 && questionPosition < questions.size) {
+            questions[questionPosition].selectedAnswer = position
+            return true
+        }
+        return false
+    }
+
+    fun setLetPassInteraction() {
+        if (questionPosition >= 0 && questionPosition < questions.size)
+            questions[questionPosition].selectedAnswer = -1
+    }
+
+    fun setContinueInteraction() {
+        if (questionPosition >= 0 && questionPosition < questions.size && questions[questionPosition].impugned)
+            questions[questionPosition].selectedAnswer = -2
+    }
 }

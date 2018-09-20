@@ -1,6 +1,5 @@
 package com.jesusmoreira.bir.views
 
-import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
@@ -32,7 +31,6 @@ class FilterActivity : AppCompatActivity(),
     var bottomNavigation : BottomNavigationView? = null
 
     var collection: Collection? = null
-    var questions: Array<Question>? = null
     var exams: Array<Exam>? = null
     var categories: Array<Category>? = null
 
@@ -43,7 +41,9 @@ class FilterActivity : AppCompatActivity(),
         setContentView(R.layout.activity_filter)
 
         val toolbar : Toolbar = findViewById(R.id.toolbar)
+        toolbar.title = getString(R.string.toolbar_name_filter)
         setSupportActionBar(toolbar)
+
 
         bottomNavigation = findViewById(R.id.bottom_navigation)
         bottomNavigation?.setOnNavigationItemSelectedListener {
@@ -70,8 +70,7 @@ class FilterActivity : AppCompatActivity(),
         fab?.setOnClickListener { _ ->
             //            Toast.makeText(this, "FAB: ${collection?.exams?.get(0)?.questions?.get(0)?.statement}", Toast.LENGTH_SHORT).show()
             examSelected?.let {
-                val intent = ExamActivity.newIntent(applicationContext, it)
-                startActivity(intent)
+                startExam(it)
             }
         }
 
@@ -84,10 +83,13 @@ class FilterActivity : AppCompatActivity(),
         collection!!.groupByCategories()
     }
 
-    override fun onClickQuestion(item: Question) {
-        Toast.makeText(this, "Question: " + item.id, Toast.LENGTH_SHORT).show()
+    override fun onClickQuestion(position: Int, item: Question) {
+//        Toast.makeText(this, "Question: " + item.id, Toast.LENGTH_SHORT).show()
 //        val intent = ExamActivity.newIntent(applicationContext, item)
 //        startActivity(intent)
+        examSelected?.let {
+            startExam(it, position)
+        }
     }
 
     override fun onBackQuestion() {
@@ -159,6 +161,11 @@ class FilterActivity : AppCompatActivity(),
         fab?.hide()
         fabFilters?.hide()
         bottomNavigation?.visibility = VISIBLE
+    }
+
+    private fun startExam(exam: Exam, initialPosition: Int = -1, rand: Boolean = false) {
+        val intent = ExamActivity.newIntent(applicationContext, exam, initialPosition, rand)
+        startActivity(intent)
     }
 
     private fun updateFragment(fragment: Fragment, stacked: Boolean = false) {

@@ -80,7 +80,7 @@ class QuestionsListFragment : Fragment() {
      * for more information.
      */
     interface OnListFragmentInteractionListener {
-        fun onClickQuestion(item: Question)
+        fun onClickQuestion(position: Int, item: Question)
         fun onBackQuestion()
     }
 

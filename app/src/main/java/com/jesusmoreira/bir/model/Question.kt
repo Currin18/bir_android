@@ -23,7 +23,7 @@ data class Question(
         private const val JSON_STATEMENT = "statement"
         private const val JSON_ANSWERS = "answers"
         private const val JSON_TAGS = "tags"
-        private const val JSON_CORRECT_ANSWER = "correct_answer"
+        private const val JSON_CORRECT_ANSWER = "correct-answer"
         private const val JSON_IMPUGNED = "impugned"
     }
 
@@ -59,9 +59,10 @@ data class Question(
                     tags = arrayList.toTypedArray()
                 }
             }
-            if (json.has(JSON_CORRECT_ANSWER)) correctAnswer = json.getInt(JSON_CORRECT_ANSWER)
+            // FIXME: fix json files with correct values in correct-answer
+            if (json.has(JSON_CORRECT_ANSWER)) correctAnswer = (json.getInt(JSON_CORRECT_ANSWER) - 1)
             if (json.has(JSON_IMPUGNED)) impugned = json.getBoolean(JSON_IMPUGNED)
-        } catch (e : JSONException) {
+        } catch (e : Throwable) {
             e.printStackTrace()
         }
     }

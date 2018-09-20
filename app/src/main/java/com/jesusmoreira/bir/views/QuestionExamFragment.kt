@@ -2,6 +2,7 @@ package com.jesusmoreira.bir.views
 
 import android.content.Context
 import android.os.Bundle
+import android.text.Html
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.jesusmoreira.bir.R
 import com.jesusmoreira.bir.adapters.AnswerRecyclerViewAdapter
 import com.jesusmoreira.bir.model.Question
+import com.jesusmoreira.bir.utils.TextUtils
 import kotlinx.android.synthetic.main.fragment_question_answer.view.*
 import kotlinx.android.synthetic.main.fragment_question_exam.view.*
 
@@ -43,7 +45,7 @@ class QuestionExamFragment : Fragment() {
         // Inflate the layout for this fragment
         val v: View = inflater.inflate(R.layout.fragment_question_exam, container, false)
         if (question != null) {
-            v.statement.text = question!!.statement
+            v.statement.text = TextUtils.parseToHtml(question!!.statement!!)
 
             if (v.answers is RecyclerView) {
                 with(v.answers) {
@@ -59,15 +61,22 @@ class QuestionExamFragment : Fragment() {
             v.btn_let_pass.setOnClickListener { listener?.onLetPassInteraction() }
             v.btn_continue.setOnClickListener { listener?.onContinueInteraction() }
 
-//            if (question!!.selectedAnswer != null) {
-//                (v.answers.layoutManager as LinearLayoutManager).findViewByPosition(question!!.correctAnswer)!!.cardLayout.setBackgroundColor(context.getColor(R.color.colorPrimaryLight))
-//                if (question!!.selectedAnswer != question!!.correctAnswer) {
-//                    (v.answers.layoutManager as LinearLayoutManager).findViewByPosition(question!!.selectedAnswer!!)!!.cardLayout.setBackgroundColor(context!!.getColor(R.color.red))
-//                }
-//
-//                v.btn_let_pass.visibility = View.GONE
-//                v.btn_continue.visibility = View.VISIBLE
-//            }
+            if (question!!.selectedAnswer != null && question!!.selectedAnswer!! >= 0) {
+                val manager = (v.answers.layoutManager as LinearLayoutManager)
+                val correctAnswer = question!!.correctAnswer
+                val correctRow = manager.findViewByPosition(correctAnswer)
+                correctRow?.cardLayout?.setBackgroundColor(context!!.getColor(R.color.colorPrimaryLight))
+
+                if (question!!.selectedAnswer != question!!.correctAnswer) {
+                    val selectedRow = manager.findViewByPosition(question!!.selectedAnswer!!)!!
+                    selectedRow.cardLayout.setBackgroundColor(context!!.getColor(R.color.red))
+                }
+            }
+
+            if ((question!!.selectedAnswer != null && question!!.selectedAnswer!! >= 0) || question!!.impugned) {
+                v.btn_let_pass.visibility = View.GONE
+                v.btn_continue.visibility = View.VISIBLE
+            }
         }
         return v
     }
