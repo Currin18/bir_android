@@ -24,7 +24,7 @@ class FilterActivity : AppCompatActivity(),
         QuestionsListFragment.OnListFragmentInteractionListener,
         YearsGridFragment.OnListFragmentInteractionListener,
         CategoriesListFragment.OnListFragmentInteractionListener,
-        AdvanceFilterFragment.OnFragmentInteractionListener {
+        AdvancedFiltersFragment.OnFragmentInteractionListener {
 
     var fab : FloatingActionButton? = null
     var fabFilters : FloatingActionButton? = null
@@ -210,7 +210,7 @@ class FilterActivity : AppCompatActivity(),
         fab?.hide()
         fabFilters?.show()
 //        supportActionBar?.setTitle(R.string.text_advanced_filters)
-        updateFragment(AdvanceFilterFragment.newInstance())
+        updateFragment(AdvancedFiltersFragment.newInstance())
         return true
     }
 }

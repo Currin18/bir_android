@@ -18,8 +18,6 @@ import com.jesusmoreira.bir.utils.TextUtils
 import kotlinx.android.synthetic.main.fragment_question_answer.view.*
 import kotlinx.android.synthetic.main.fragment_question_exam.view.*
 
-private const val EXTRA_QUESTION = "EXTRA_QUESTION"
-
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
@@ -113,6 +111,8 @@ class QuestionExamFragment : Fragment() {
     }
 
     companion object {
+
+        private const val EXTRA_QUESTION = "EXTRA_QUESTION"
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.

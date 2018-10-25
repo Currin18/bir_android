@@ -10,21 +10,16 @@ import android.view.ViewGroup
 
 import com.jesusmoreira.bir.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [AdvanceFilterFragment.OnFragmentInteractionListener] interface
+ * [AdvancedFiltersFragment.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [AdvanceFilterFragment.newInstance] factory method to
+ * Use the [AdvancedFiltersFragment.newInstance] factory method to
  * create an instance of this fragment.
  *
  */
-class AdvanceFilterFragment : Fragment() {
+class AdvancedFiltersFragment : Fragment() {
 
     private var listener: OnFragmentInteractionListener? = null
 
@@ -40,7 +35,6 @@ class AdvanceFilterFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_advance_filter, container, false)
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
     fun onButtonPressed(uri: Uri) {
         listener?.onFilterInteraction(uri)
     }
@@ -83,7 +77,7 @@ class AdvanceFilterFragment : Fragment() {
          */
         @JvmStatic
         fun newInstance() =
-                AdvanceFilterFragment().apply {
+                AdvancedFiltersFragment().apply {
                     arguments = Bundle().apply {
                     }
                 }
