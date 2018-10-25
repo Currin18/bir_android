@@ -9,14 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".views.FilterActivity">
+        <activity
+            android:name=".views.main.MainActivity"
+            android:label="@string/title_activity_main"
+            android:parentActivityName=".views.exam.ExamActivity"
+            android:theme="@style/AppTheme">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.ExamActivity"></activity>
+        <activity android:name=".views.filter.FilterActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jesusmoreira.bir.views.main.MainActivity" />
+        </activity>
+        <activity android:name=".views.exam.ExamActivity" />
     </application>
 
 </manifest>

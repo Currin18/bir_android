@@ -8,7 +8,7 @@ import android.widget.TextView
 import com.jesusmoreira.bir.R
 
 
-import com.jesusmoreira.bir.views.YearsGridFragment.OnListFragmentInteractionListener
+import com.jesusmoreira.bir.views.filter.YearsGridFragment.OnListFragmentInteractionListener
 import com.jesusmoreira.bir.dummy.DummyContent.DummyItem
 import com.jesusmoreira.bir.model.Exam
 

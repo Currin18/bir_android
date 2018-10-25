@@ -1,4 +1,4 @@
-package com.jesusmoreira.bir.views
+package com.jesusmoreira.bir.views.filter
 
 import android.content.Context
 import android.os.Bundle

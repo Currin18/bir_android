@@ -1,6 +1,9 @@
 package com.jesusmoreira.bir.utils
 
 import android.content.Context
+import com.jesusmoreira.bir.model.Collection
+import com.jesusmoreira.bir.model.Exam
+import org.json.JSONArray
 import java.io.IOException
 import java.nio.charset.Charset
 
@@ -30,6 +33,23 @@ class FileUtils {
                 e.printStackTrace()
             }
             return json
+        }
+
+        fun loadInitialData(context: Context, path: String = ""): Collection? {
+            var collection: Collection? = null
+            val files = listJSONAssets(context, path)
+            if (files != null && files.isNotEmpty()) {
+                val exams = ArrayList<Exam>()
+                for (i in 0 until files.size) {
+                    val json = JSONArray(readJSONFromAsset(context, files[i]))
+
+                    val exam = Exam(json, files[i].replace(".json", ""))
+                    exams.add(exam)
+                }
+                exams.sortBy { it.year }
+                collection = Collection("", "", exams.toTypedArray())
+            }
+            return collection
         }
     }
 }

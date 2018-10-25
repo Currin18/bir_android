@@ -1,5 +1,7 @@
-package com.jesusmoreira.bir.views
+package com.jesusmoreira.bir.views.filter
 
+import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
@@ -18,6 +20,8 @@ import com.jesusmoreira.bir.model.Collection
 import com.jesusmoreira.bir.model.Exam
 import com.jesusmoreira.bir.model.Question
 import com.jesusmoreira.bir.utils.FileUtils
+import com.jesusmoreira.bir.views.exam.ExamActivity
+import com.jesusmoreira.bir.views.QuestionsListFragment
 import org.json.JSONArray
 
 class FilterActivity : AppCompatActivity(),
@@ -76,11 +80,11 @@ class FilterActivity : AppCompatActivity(),
 
         fabFilters = this.findViewById(R.id.filters_fab)
 
-        loadInitialData()
+        collection = FileUtils.loadInitialData(this)
 
         goToExamGrid()
 
-        collection!!.groupByCategories()
+        collection?.groupByCategories()
     }
 
     override fun onClickQuestion(position: Int, item: Question) {
@@ -137,22 +141,6 @@ class FilterActivity : AppCompatActivity(),
 
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    private fun loadInitialData() {
-        val path = ""
-        val files = FileUtils.listJSONAssets(this, path)
-        if (files != null && files.isNotEmpty()) {
-            val exams = ArrayList<Exam>()
-            for (i in 0 until files.size) {
-                val json = JSONArray(FileUtils.readJSONFromAsset(this, files[i]))
-
-                val exam = Exam(json, files[i].replace(".json", ""))
-                exams.add(exam)
-            }
-            exams.sortBy { it.year }
-            collection = Collection("", "", exams.toTypedArray())
-        }
     }
 
     fun uploadExam(examSelected: Exam) { this.examSelected = examSelected }
@@ -212,5 +200,12 @@ class FilterActivity : AppCompatActivity(),
 //        supportActionBar?.setTitle(R.string.text_advanced_filters)
         updateFragment(AdvancedFiltersFragment.newInstance())
         return true
+    }
+
+    companion object {
+
+        fun newIntent(context: Context): Intent {
+            return Intent(context, FilterActivity::class.java)
+        }
     }
 }

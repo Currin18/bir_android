@@ -8,7 +8,7 @@ import android.widget.TextView
 import com.jesusmoreira.bir.R
 
 
-import com.jesusmoreira.bir.views.CategoriesListFragment.OnListFragmentInteractionListener
+import com.jesusmoreira.bir.views.filter.CategoriesListFragment.OnListFragmentInteractionListener
 import com.jesusmoreira.bir.dummy.DummyContent.DummyItem
 import com.jesusmoreira.bir.model.Category
 

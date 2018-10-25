@@ -8,7 +8,7 @@ import android.widget.TextView
 import com.jesusmoreira.bir.R
 
 
-import com.jesusmoreira.bir.views.QuestionExamFragment.OnQuestionExamInteractionListener
+import com.jesusmoreira.bir.views.exam.QuestionExamFragment.OnQuestionExamInteractionListener
 import com.jesusmoreira.bir.dummy.DummyContent.DummyItem
 import com.jesusmoreira.bir.utils.TextUtils
 

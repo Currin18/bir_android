@@ -1,4 +1,4 @@
-package com.jesusmoreira.bir.views
+package com.jesusmoreira.bir.views.exam
 
 import android.annotation.SuppressLint
 import android.content.Context

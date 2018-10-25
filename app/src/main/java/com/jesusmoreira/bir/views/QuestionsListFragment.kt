@@ -13,6 +13,7 @@ import com.jesusmoreira.bir.R
 import com.jesusmoreira.bir.model.Exam
 
 import com.jesusmoreira.bir.model.Question
+import com.jesusmoreira.bir.views.filter.FilterActivity
 
 /**
  * A fragment representing a list of Items.

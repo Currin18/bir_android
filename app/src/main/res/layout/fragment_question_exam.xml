@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/text_margin"
-    tools:context=".views.QuestionExamFragment">
+    tools:context=".views.exam.QuestionExamFragment">
 
     <TextView
         android:id="@+id/statement"
