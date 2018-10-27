@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
@@ -28,14 +29,26 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
+        fab.setOnClickListener { fab ->
 //            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show()
             if (fab_filters.visibility == View.VISIBLE) {
+                if (fab is FloatingActionButton) {
+                    fab.setImageDrawable(getDrawable(R.drawable.ic_add))
+                }
                 fab_filters.hide()
+                label_filters.visibility = View.INVISIBLE
+
                 fab_random.hide()
+                label_random.visibility = View.INVISIBLE
             } else {
+                if (fab is FloatingActionButton) {
+                    fab.setImageDrawable(getDrawable(R.drawable.ic_clear))
+                }
                 fab_filters.show()
+                label_filters.visibility = View.VISIBLE
+
                 fab_random.show()
+                label_random.visibility = View.VISIBLE
             }
         }
 
