@@ -11,6 +11,7 @@ import kotlin.collections.ArrayList
 @Parcelize
 data class Question(
         var id: String? = "",
+        var year: Int = 0,
         var statement: String? = "",
         var answers: Array<String>? = arrayOf(),
         var tags: Array<String>? = arrayOf(),
