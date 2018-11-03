@@ -14,20 +14,26 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
 import com.jesusmoreira.bir.R
+import com.jesusmoreira.bir.dao.Database
 import com.jesusmoreira.bir.model.Collection
 import com.jesusmoreira.bir.model.Exam
+import com.jesusmoreira.bir.model.Question
 import com.jesusmoreira.bir.utils.FileUtils
+import com.jesusmoreira.bir.utils.PreferencesUtils
 import com.jesusmoreira.bir.views.exam.ExamActivity
 import com.jesusmoreira.bir.views.filter.FilterActivity
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    var collection: Collection? = null
+    var database = Database(this)
+    private var collection: List<Question>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+
+        database.open()
 
         fab.setOnClickListener { fab ->
 //            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show()
@@ -67,7 +73,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         nav_view.setNavigationItemSelectedListener(this)
 
-        collection = FileUtils.loadInitialData(this)
+        loadInitialData()
+    }
+
+    private fun loadInitialData() {
+        if (PreferencesUtils.getDbLastUpdate(this) > 0) {
+            collection = database.questionDao?.fetchAllQuestions()
+        } else {
+            collection = FileUtils.loadInitialData(this)?.getAllQuestions()?.toList()
+            if (collection != null && collection!!.isNotEmpty()) {
+                database.questionDao?.addQuestions(collection!!)
+                PreferencesUtils.setDbLastUpdate(this, System.currentTimeMillis())
+            }
+        }
     }
 
     override fun onBackPressed() {
@@ -123,7 +141,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun goToRandomExam() {
         if (collection != null) {
-            val exam = Exam("", collection!!.getAllQuestions())
+            val exam = Exam("", questions = collection!!.toTypedArray())
             startActivity(ExamActivity.newIntent(this, exam, rand = true))
         }
     }

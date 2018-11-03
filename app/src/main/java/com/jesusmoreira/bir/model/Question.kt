@@ -26,8 +26,25 @@ data class Question(
         private const val JSON_TAGS = "tags"
         private const val JSON_CORRECT_ANSWER = "correct-answer"
         private const val JSON_IMPUGNED = "impugned"
+
+        enum class Status {
+            Default,
+            Correct,
+            Error,
+            Passed
+        }
     }
 
+    var questionStatus: Status = Status.Default
+        get() {
+            return when(selectedAnswer) {
+                -1 -> Status.Passed
+                null, 0 -> Status.Default
+                correctAnswer -> Status.Correct
+                else -> Status.Error
+            }
+        }
+        private set
     var selectedAnswer: Int? = null
 
     constructor(json: JSONObject = JSONObject()) : this("") {
