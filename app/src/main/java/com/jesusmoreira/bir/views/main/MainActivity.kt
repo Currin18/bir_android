@@ -25,6 +25,10 @@ import com.jesusmoreira.bir.views.filter.FilterActivity
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
+    companion object {
+        private const val MAX_QUESTIONS: Int = 235
+    }
+
     var database = Database(this)
     private var collection: List<Question>? = null
 
@@ -139,10 +143,25 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
+    private fun getRandomQuestions(collection: List<Question>?): List<Question> {
+        var questions = emptyList<Question>()
+        var copy = collection
+        if (copy != null && copy.isNotEmpty()) {
+            val random = java.util.Random(System.currentTimeMillis())
+            var question: Question?
+            do {
+                val rand = random.nextInt(copy!!.size)
+                questions = questions.plus(copy[rand])
+                copy = copy.minus(copy[rand])
+            } while (questions.size < MAX_QUESTIONS && copy!!.isNotEmpty())
+        }
+        return questions
+    }
+
     private fun goToRandomExam() {
         if (collection != null) {
-            val exam = Exam("", questions = collection!!.toTypedArray())
-            startActivity(ExamActivity.newIntent(this, exam, rand = true))
+            val exam = Exam("", questions = getRandomQuestions(collection).toTypedArray())
+            startActivity(ExamActivity.newIntent(this, exam))
         }
     }
 

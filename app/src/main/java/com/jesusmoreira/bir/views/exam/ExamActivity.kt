@@ -6,19 +6,23 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.jesusmoreira.bir.R
 import com.jesusmoreira.bir.model.Exam
+import com.jesusmoreira.bir.model.Question
+import com.jesusmoreira.bir.views.QuestionsListFragment
 import kotlinx.android.synthetic.main.fragment_question_answer.view.*
 import kotlinx.android.synthetic.main.toolbar_exam.*
 
-class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInteractionListener {
+class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInteractionListener, QuestionsListFragment.OnListFragmentInteractionListener {
 
     companion object {
         const val EXTRA_EXAM = "EXTRA_EXAM"
@@ -36,8 +40,7 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
 
 //    var question: Question? = null
     var exam: Exam? = null
-    var rand = false
-
+    var menuVisibility = true
 //    private var questionPosition = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,9 +60,51 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
         goToNextQuestion()
     }
 
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.toolbar_exam, menu)
+        if (!menuVisibility && menu != null) {
+            menu.findItem(R.id.action_question_list).setVisible(false)
+            menu.findItem(R.id.action_report_error).isVisible = false
+        }
         return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            R.id.action_question_list -> {
+                updateFragment(QuestionsListFragment.newInstance(exam!!.questions), true)
+                updateMenu(false)
+            }
+        }
+        return true
+    }
+
+    private fun updateMenu(visible: Boolean) {
+        menuVisibility = visible
+        invalidateOptionsMenu()
+    }
+
+    private fun updateFragment(fragment: Fragment, stacked: Boolean = false) {
+        val fragmentTransaction: FragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.fragment, fragment)
+        if (stacked) {
+            fragmentTransaction.addToBackStack(null)
+        }
+        fragmentTransaction.commit()
+    }
+
+    override fun onClickQuestion(position: Int, item: Question) {
+        goToQuestion(position)
+        updateMenu(true)
+    }
+
+    override fun onResume(items: Array<Question>) {
+
+    }
+
+    override fun onBackQuestion() {
+        updateMenu(true)
     }
 
     override fun onClickAnswer(item: Int) {
@@ -101,13 +146,17 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
     private fun goToNextQuestion() {
         val question = exam!!.nextQuestion()
         if (question != null) {
-            val fragmentTransaction: FragmentTransaction = supportFragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.fragment, QuestionExamFragment.newInstance(question))
-            fragmentTransaction.commit()
+            updateFragment(QuestionExamFragment.newInstance(question))
             updateToolbarCounts()
         } else {
             Toast.makeText(applicationContext, "Exam finished", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun goToQuestion(position : Int) {
+        exam!!.questionPosition = position
+        updateFragment(QuestionExamFragment.newInstance(exam!!.questions[position]))
+        updateToolbarCounts()
     }
 
     @SuppressLint("SetTextI18n")

@@ -22,7 +22,6 @@ import com.jesusmoreira.bir.model.Question
 import com.jesusmoreira.bir.utils.FileUtils
 import com.jesusmoreira.bir.views.exam.ExamActivity
 import com.jesusmoreira.bir.views.QuestionsListFragment
-import org.json.JSONArray
 
 class FilterActivity : AppCompatActivity(),
         QuestionsListFragment.OnListFragmentInteractionListener,
@@ -94,6 +93,11 @@ class FilterActivity : AppCompatActivity(),
         examSelected?.let {
             startExam(it, position)
         }
+    }
+
+    override fun onResume(items: Array<Question>) {
+        val exam = Exam("", items)
+        this.uploadExam(exam)
     }
 
     override fun onBackQuestion() {
