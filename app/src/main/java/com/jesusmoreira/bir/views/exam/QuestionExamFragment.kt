@@ -16,6 +16,7 @@ import com.jesusmoreira.bir.model.Question
 import com.jesusmoreira.bir.utils.TextUtils
 import kotlinx.android.synthetic.main.fragment_question_answer.view.*
 import kotlinx.android.synthetic.main.fragment_question_exam.view.*
+import org.json.JSONObject
 
 /**
  * A simple [Fragment] subclass.
@@ -33,7 +34,10 @@ class QuestionExamFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            question = it.getParcelable(EXTRA_QUESTION)
+            if (it.containsKey(EXTRA_QUESTION)) {
+                val jsonQuestion = JSONObject(it.getString(EXTRA_QUESTION));
+                question = Question(jsonQuestion)
+            }
         }
     }
 
@@ -116,14 +120,14 @@ class QuestionExamFragment : Fragment() {
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
          *
-         * @param question Question.
+         * @param question String.
          * @return A new instance of fragment QuestionExamFragment.
          */
         @JvmStatic
-        fun newInstance(question: Question) =
+        fun newInstance(question: String) =
                 QuestionExamFragment().apply {
                     arguments = Bundle().apply {
-                        putParcelable(EXTRA_QUESTION, question)
+                        putString(EXTRA_QUESTION, question)
                     }
                 }
     }

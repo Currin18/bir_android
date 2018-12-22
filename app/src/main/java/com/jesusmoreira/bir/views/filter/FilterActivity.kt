@@ -158,6 +158,7 @@ class FilterActivity : AppCompatActivity(),
     private fun startExam(exam: Exam, initialPosition: Int = -1, rand: Boolean = false) {
         val intent = ExamActivity.newIntent(applicationContext, exam, initialPosition, rand)
         startActivity(intent)
+        this.finish()
     }
 
     private fun updateFragment(fragment: Fragment, stacked: Boolean = false) {

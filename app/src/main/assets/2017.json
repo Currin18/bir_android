@@ -1,0 +1,3330 @@
+[
+  {
+    "id": "2017-1",
+    "statement": "El periodo refractario de una fibra nerviosa se debe a:",
+    "answers": [
+      "Inactivación de canales Ca^2+",
+      "Inactivación de canales K^+",
+      "Inactivación de canales Na^+ ",
+      "La posthiperpolarización que sigue al potencial de acción"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-2",
+    "statement": "Las células ciliadas de la cóclea:",
+    "answers": [
+      "Se despolarizan por entrada de K^+",
+      "Tienen estereocilios embebidos en la membrana otolítica",
+      "Tienen estereocilios embebidos en la cúpula",
+      "Se activan con el giro de la cabeza"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-3",
+    "statement": "En relación a los fotorreceptores:",
+    "answers": [
+      "Los bastones proporcionan visión en color",
+      "Al iluminarse aumenta la corriente de entrada de Na^+",
+      "La luz disocia la rodopsina en sus componentes",
+      "Sinaptan con células ganglionares"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-4",
+    "statement": "Para la contracción de fibras musculares estriadas, el Ca^2+ se une a:",
+    "answers": [
+      "Miosina",
+      "Troponina",
+      "Tropomiosina",
+      "Actina"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Fisiología",
+      "Histología"
+    ]
+  },
+  {
+    "id": "2017-5",
+    "statement": "El reflejo extensor cruzado se produce por activación de:",
+    "answers": [
+      "Nocireceptores",
+      "Receptores Ia del huso muscular",
+      "Receptores Ib del órgano tendinoso de Golgi",
+      "Ganglios basales"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-6",
+    "statement": "En relación al sistema nervioso simpático:",
+    "answers": [
+      "La neurona preganglionar se localiza en el bulbo raquídeo",
+      "La neurona preganglionar libera noradrenalina",
+      "Su activación aumenta la frecuencia cardiaca",
+      "Su activación estimula la micción"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-7",
+    "statement": "El factor de von Willebrand:",
+    "answers": [
+      "Es un lípido",
+      "Favorece la vasodilatación",
+      "Estimula la formación de eritrocitos",
+      "Se une tanto al colágeno como a las plaquetas"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-8",
+    "statement": "La despolarización del potencial de acción en células del nodo sinoauricular está mediada por:",
+    "answers": [
+      "Na^+",
+      "Ca^2+",
+      "K^+",
+      "Cl^-"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-9",
+    "statement": "Según la ley de Posseuille, si se duplica el radio de una arteriola el flujo de sangre será:",
+    "answers": [
+      "La mitad",
+      "El doble",
+      "8 veces mayor",
+      "16 veces mayor"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-10",
+    "statement": "La reabsorción de glucosa y aminoácidos en la nefrona ocurre en:",
+    "answers": [
+      "Túbulo proximal",
+      "Asa de Henle",
+      "Túbulo distal",
+      "Túbulo colector"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-11",
+    "statement": "Cuando la presión arterial media sube de 100 hasta 150 mmHg:",
+    "answers": [
+      "Se produce vasodilatación de la arteriola aferente al glomérulo renal",
+      "Se produce vasoconstricción de la arteriola aferente al glomérulo renal",
+      "La filtración glomerular aumenta 1,5 veces",
+      "La filtración glomerular disminuye 1,5 veces"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-12",
+    "statement": "Durante un ciclo respiratorio en reposo, la presión:",
+    "answers": [
+      "Intrapleural es siempre positiva",
+      "Transpulmonar se hace negativa en la espiración",
+      "Intrapleural no cambia",
+      "Transpulmonar es siempre positiva"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-13",
+    "statement": "El surfactante pulmonar:",
+    "answers": [
+      "Aumenta el trabajo realizado para insuflar el pulmón",
+      "Es una mezcla de monosacáridos y polisacáridos",
+      "Disminuye la tensión superficial de los alveolos",
+      "Se produce por las células endoteliales de los capilares alveolares"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-14",
+    "statement": "La contracción del músculo liso del tubo digestivo:",
+    "answers": [
+      "Requiere la unión del Ca^2+ a la troponina",
+      "Está mediada por Ca^2+ procedente, principalmente, del medio extracelular",
+      "A diferencia del músculo estriado, no está mediada por Ca^2+",
+      "Está mediada por el Na^+ que entra en cada potencial de acción"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Fisiología",
+      "Histología"
+    ]
+  },
+  {
+    "id": "2017-15",
+    "statement": "La fase faríngea de la deglución:",
+    "answers": [
+      "Está controlada por el centro de la deglución",
+      "Es totalmente voluntaria",
+      "Se inicia con la apertura de la glotis",
+      "Termina con la apertura del esfínter pilórico"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-16",
+    "statement": "La secreción de HCl en el estómago puede afirmarse que:",
+    "answers": [
+      "Disminuye por estimulación vagal",
+      "Disminuye por administración de histamina",
+      "Aumenta por acción de la gastrina",
+      "Aumenta por un pH menor de 2 en el estómago"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-17",
+    "statement": "La pepsina:",
+    "answers": [
+      "La secreta el páncreas en forma inactiva",
+      "La secreta el estómago en forma inactiva",
+      "Se activa en el intestino por la enterocinasa o enteropeptidasa",
+      "Actúa activando el tripsinógeno"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-18",
+    "statement": "El plexo mientérico o de Auerbach del tubo digestivo:",
+    "answers": [
+      "Contiene neuronas postganglionares del sistema nervioso simpático",
+      "Está situado entre las capas de músculo liso longitudinal y circular",
+      "Inerva las glándulas secretoras de la mucosa intestinal",
+      "Está situado entre la capa de músculo liso circular y la submucosa"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-19",
+    "statement": "El cortisol estimula la:",
+    "answers": [
+      "Captación de glucosa en muchos tejidos",
+      "Síntesis de lípidos",
+      "Síntesis de proteínas en el músculo",
+      "Síntesis de glucosa"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-20",
+    "statement": "La angiotensina II:",
+    "answers": [
+      "Se sintetiza exclusivamente en el riñón",
+      "Favorece la formación de renina",
+      "Es un potente vasodilatador",
+      "Estimula la secreción de aldosterona"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-21",
+    "statement": "Las hormonas tiroideas:",
+    "answers": [
+      "Son péptidos",
+      "Requieren yoduro para su síntesis",
+      "Se transportan libres en plasma",
+      "Se almacenan en forma de gránulos de secreción"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-22",
+    "statement": "Estimula la secreción de la hormona del crecimiento",
+    "answers": [
+      "Hiperglucemia",
+      "Somatostatina",
+      "Ácidos grasos libres en plasma",
+      "Aminoácidos en plasma"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-23",
+    "statement": "Un medio que causa un aumento del volumen celular es:",
+    "answers": [
+      "Hipertónico",
+      "Hipotónico",
+      "Hiperosmótico",
+      "Hiposmótico"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-24",
+    "statement": "La superficie celular puede determinarse conociendo la:",
+    "answers": [
+      "Resistencia específica de la membrana",
+      "Constante de tiempo de la membrana",
+      "Constante de espacio de la membrana",
+      "Capacitancia de la membrana"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-25",
+    "statement": "El umbral gustativo es menor para:",
+    "answers": [
+      "Sacarosa",
+      "Cloruro sódico",
+      "Ácido cítrico",
+      "Quinina"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-26",
+    "statement": "Los husos musculares",
+    "answers": [
+      "Están inervados sólo por fibras aferentes",
+      "Están inervados sólo por fibras eferentes",
+      "Se localizan sólo en músculos extensores",
+      "Están inervados sólo por fibras mielínicas"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-27",
+    "statement": "El núcleo supraquiasmático:",
+    "answers": [
+      "Regula la osmolaridad plasmática",
+      "Sintetiza oxitocina",
+      "Recibe aferencias de neuronas ganglionares retinianas",
+      "Media el reflejo pupilar"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-28",
+    "statement": "El reflejo fotomotor:",
+    "answers": [
+      "Es monosináptico",
+      "Está mediado por fibras parasimpáticas",
+      "Involucra a neuronas de la corteza cerebral",
+      "Induce midriasis en ambos ojos"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-29",
+    "statement": "La secreción de insulina aumenta por:",
+    "answers": [
+      "Estímulo parasimpático",
+      "Ejercicio",
+      "Hipoglucemia",
+      "Somatostatina"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-30",
+    "statement": "La parathormona estimula la:",
+    "answers": [
+      "Secreción de osteoprotegerina por osteoblastos",
+      "Reabsorción renal de fosfato",
+      "Resorción ósea por osteoclastos",
+      "Formación de 24,25 dihidroxicolecalciferol"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-31",
+    "statement": "La testosterona:",
+    "answers": [
+      "Se sintetiza en células de Sertoli ",
+      "Es anabolizante",
+      "Disminuye el hematocrito",
+      "Estimula la secreción de LH"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-32",
+    "statement": "La albúmina",
+    "answers": [
+      "Contribuye a la presión coloidosmótica plasmática",
+      "Se excreta por orina",
+      "Transporta catecolaminas en plasma",
+      "Es una globulina plasmática"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-33",
+    "statement": "Las células del haz de His:",
+    "answers": [
+      "Carecen de canales de Ca^2+ dependientes de voltaje",
+      "Establecen la frecuencia cardíaca",
+      "Su contracción determina el volumen sistólico",
+      "Transmiten el impulso cardíaco más rápidamente que el nodo auriculo-ventricular"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-34",
+    "statement": "El reflejo de Bainbridge:",
+    "answers": [
+      "Induce taquicardia",
+      "Inhibe los barorreceptores arteriales",
+      "Reduce la contractilidad del miocardio",
+      "Se activa por reducción del retorno venoso"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-35",
+    "statement": "El primer sonido de Korotkoff indica el: ",
+    "answers": [
+      "Valor de la presión arterial sistólica",
+      "Cierre de la válvula aórtica",
+      "Valor de la presión de pulso",
+      "Paso a flujo sanguíneo laminar ocasionado por un manguito de presión"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-36",
+    "statement": "En bipedestación, la perfusión pulmonar es mayor:",
+    "answers": [
+      "En las bases pulmonares que en los vértices",
+      "En una espiración forzada",
+      "Cuando disminuye la P_O2 alveolar",
+      "En hipotensión arterial"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-37",
+    "statement": "Si la ventilación alveolar se duplica (condiciones ambientales y metabólicas constantes):",
+    "answers": [
+      "La P_O2 alveolar se reduce a la mitad",
+      "La P_CO2 alveolar se reduce a la mitad",
+      "El contenido de O_2 en sangre arterial se duplica",
+      "Se induce acidosis respiratoria"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-38",
+    "statement": "Un espirómetro simple (sin analizador de gases) mide:",
+    "answers": [
+      "Volumen residual",
+      "Volumen de reserva espiratorio",
+      "Capacidad pulmonar total",
+      "Capacidad residual funcional"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-39",
+    "statement": "Aumenta la excreción renal de sodio:",
+    "answers": [
+      "Péptido natriurético auricular",
+      "Aldosterona",
+      "Estímulo simpático",
+      "Angiotensina II"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-40",
+    "statement": "La concentración de una sustancia \"X\" en plasma es 2 mM y en orina es 100 mM. Si el flujo urinario es de 2 ml/min, el aclaramiento renal de \"X\" es:",
+    "answers": [
+      "25 mM",
+      "50 mM",
+      "50 ml/min",
+      "100 ml/min"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-41",
+    "statement": "La mayor parte del calcio se reabsorbe en:",
+    "answers": [
+      "Túbulo proximal",
+      "Asa descendente de Henle",
+      "Túbulo distal",
+      "Túbulo colector"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-42",
+    "statement": "La llegada de grasas y/o soluciones con bajo pH al duodeno reduce:",
+    "answers": [
+      "La secreción de secretina",
+      "El vaciado gástrico",
+      "La secreción de colecistoquinina",
+      "La secreción de motilina"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-43",
+    "statement": "La absorción intestinal de hierro es más eficaz:",
+    "answers": [
+      "En forma de ión férrico",
+      "En forma de grupo hemo",
+      "Mediante el transportador de membrana transferrina",
+      "Si hay oxalatos en la luz digestiva"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-44",
+    "statement": "La hormona antidiurética:",
+    "answers": [
+      "Actúa a nivel del túbulo proximal de la nefrona",
+      "Se secreta al disminuir la osmolaridad plasmática",
+      "Aumenta la reabsorción renal de agua",
+      "Estimula la endocitosis de acuaporinas"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-45",
+    "statement": "La secreción biliar se reduce por:",
+    "answers": [
+      "Las sales biliares que recirculan por la circulacion enterohepática",
+      "Secretina",
+      "Colecistoquinina",
+      "Somatostatina"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-46",
+    "statement": "Es característico de los epitelios:",
+    "answers": [
+      "Presentar un complejo de unión en su región basal",
+      "Unirse a la membrana basal mediante hemidesmosomas y adhesiones focales",
+      "Presentar desmosomas justo debajo de su superficie libre",
+      "Contener filamentos intermedios de vimentina y desmina(tonofilamentos)"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Histología",
+      "Citología"
+    ]
+  },
+  {
+    "id": "2017-47",
+    "statement": "En la secreción apocrina se libera al medio:",
+    "answers": [
+      "Sólo el producto de secreción, por exocitosis ",
+      "Sólo el producto de secreción, por transporte transmembrana (canales y transportadores)",
+      "El producto de secreción, algo de citoplasma y membrana plasmática",
+      "Toda la célula"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Histología"
+    ]
+  },
+  {
+    "id": "2017-48",
+    "statement": "¿Cuál de las siguientes células contiene gránulos con mediadores de inflamación?",
+    "answers": [
+      "Fibrobastos",
+      "Cebadas (mastocitos)",
+      "Plasmáticas",
+      "Leucocitos eosinófilos"
+    ],
+    "impugned": true,
+    "tags": [
+      "Citología",
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-49",
+    "statement": "El tendón se caracteriza por presentar un tejido conjuntivo",
+    "answers": [
+      "Laxo",
+      "Denso modelado (regular)",
+      "Denso no modelado (irregular)",
+      "Elástico"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Histología"
+    ]
+  },
+  {
+    "id": "2017-50",
+    "statement": "En el tejido óseo:",
+    "answers": [
+      "Hay dos variedades: trabecular y esponjoso",
+      "La variedad trabecular está formada por los sistemas de Havers",
+      "Hay escasa irrigación",
+      "Los conductos de Volkmann conectan con los conductos de Havers"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Histología",
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-51",
+    "statement": "Los osteoblastos",
+    "answers": [
+      "Se ubican en el periostio y endostio activos",
+      "Contienen abundantes lisosomas",
+      "Contienen abundante retículo endoplasmático liso",
+      "Son macrófagos"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Histología"
+    ]
+  },
+  {
+    "id": "2017-52",
+    "statement": "En relación con la osificación:",
+    "answers": [
+      "La osificación endocondral ocurre en los huesos planos, como los del cráneo",
+      "La osificación de los huesos largos comienza en las epífisis",
+      "El cartílago articular constituye el denominado cartílago de crecimiento o disco epifisiario",
+      "Los túneles de resorción (o conos perforantes) permiten la remodelación ósea"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Histología"
+    ]
+  },
+  {
+    "id": "2017-53",
+    "statement": "Una célula alargada, de gran tamaño, con numerosos núcleos periféricos corresponde a:",
+    "answers": [
+      "Músculo esquelético",
+      "Músculo liso",
+      "Músculo cardíaco",
+      "Célula mioide"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Histología",
+      "Citología",
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-54",
+    "statement": "Las células que mielinizan axones en el sistema nervioso central son:",
+    "answers": [
+      "Astrocitos",
+      "Oligodentrocitos",
+      "Microglia",
+      "Glia ependimaria"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-55",
+    "statement": "Es una vénula postcapilar el vaso:",
+    "answers": [
+      "Formado por endotelio",
+      "Formado por endotelio y pericitos",
+      "Formado por endotelio y una o dos capas de músculo liso",
+      "Que presenta membrana elástica interna"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-56",
+    "statement": "¿En cuál de los siguientes órganos hematopoyéticos el estroma es un epitelio reticular?",
+    "answers": [
+      "Médula ósea",
+      "Ganglio linfático",
+      "Bazo",
+      "Timo"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-57",
+    "statement": "Las células de Paneth son:",
+    "answers": [
+      "Zimogénicas presentes en el estómago",
+      "Zimogénicas presentes en el intestino",
+      "Defensivas presentes en el estómago",
+      "Defensivas presentes en el intestino"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-58",
+    "statement": "¿A cuál de las siguientes glándulas endocrinas humanas pertenecen las células C o parafoliculares?",
+    "answers": [
+      "Hipófisis",
+      "Corteza suprarrenal",
+      "Médula suprarrenal",
+      "Tiroides"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-59",
+    "statement": "La estría vascular:",
+    "answers": [
+      "Se ubica en el cuerpo ciliar del ojo",
+      "Forma parte del sistema de drenaje del humor acuoso",
+      "Es el epitelio posterior de la córnea",
+      "Es un epitelio del oído interno que contiene capilares"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-60",
+    "statement": "Los puentes disulfuro de las proteínas se forman en:",
+    "answers": [
+      "Polirribosomas",
+      "Retículo endoplásmico",
+      "Citosol",
+      "Complejo de Golgi"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Citología",
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-61",
+    "statement": "La selección en el Golgi de las enzimas lisosomales depende de:",
+    "answers": [
+      "Oligomerización",
+      "Glicosilación",
+      "Proteólisis",
+      "Sulfatación"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Citología"
+    ]
+  },
+  {
+    "id": "2017-62",
+    "statement": "La ubicación perinuclear del complejo de Golgi es obra de:",
+    "answers": [
+      "Quinesina",
+      "Dineína",
+      "Miosina",
+      "Queratina"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Citología"
+    ]
+  },
+  {
+    "id": "2017-63",
+    "statement": "La catalasa es un componente habitual de:",
+    "answers": [
+      "Lisosomas",
+      "Peroxisomas",
+      "Endosomas",
+      "Mitocondrias"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Citología",
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-64",
+    "statement": "Se disponen radialmente a partir del centrosoma:",
+    "answers": [
+      "Microtúbulos",
+      "Filamentos de actina",
+      "Filamentos de queratina",
+      "Centriolos"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Genética",
+      "Citología"
+    ]
+  },
+  {
+    "id": "2017-65",
+    "statement": "La lámina nuclear está constituida por:",
+    "answers": [
+      "Filamentos de actina",
+      "Filamentos intermedios",
+      "Laminina",
+      "Heterocromatina"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Citología"
+    ]
+  },
+  {
+    "id": "2017-66",
+    "statement": "La anafase B consiste en:",
+    "answers": [
+      "Desplazamiento de los cromosomas hacia los polos del huso",
+      "Acortamiento de los microtúbulos cinetocóricos",
+      "Acortamiento de los microtúbulos polares",
+      "Separación de los polos del huso"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Citología",
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-67",
+    "statement": "Son lugares de recombinación entre cromosomas homólogos:",
+    "answers": [
+      "Cinetocoros",
+      "Sinapsis",
+      "Quiasmas",
+      "Centrómeros"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-68",
+    "statement": "La presencia de pliegues basales en las células epiteliales se relaciona con:",
+    "answers": [
+      "Captación de señales",
+      "Actividad secretora",
+      "Transporte de iones",
+      "Adhesión del tejido conjuntivo"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Citología"
+    ]
+  },
+  {
+    "id": "2017-69",
+    "statement": "Son proteínas transmembrana responsables de la formación de uniones focales:",
+    "answers": [
+      "Cadherinas",
+      "Integrinas",
+      "Selectinas",
+      "Ocludinas"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Citología"
+    ]
+  },
+  {
+    "id": "2017-70",
+    "statement": "Están rodeados por una lámina basal o externa:",
+    "answers": [
+      "Fibroblastos",
+      "Neuronas",
+      "Eritrocitos",
+      "Adipocitos"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Citología"
+    ]
+  },
+  {
+    "id": "2017-71",
+    "statement": "Glicoproteína adhesiva en la matriz extracelular:",
+    "answers": [
+      "Calmodulina",
+      "Fibronectina",
+      "Catenina",
+      "Adaptina"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Citología"
+    ]
+  },
+  {
+    "id": "2017-72",
+    "statement": "Deriva de la célula precursora de monocitos:",
+    "answers": [
+      "Adipocito",
+      "Hepatocito",
+      "Osteoclasto",
+      "Fibroblasto"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Citología",
+      "Histología"
+    ]
+  },
+  {
+    "id": "2017-73",
+    "statement": "Anclan las vesículas sinápticas a la membrana del terminal presináptico:",
+    "answers": [
+      "Integrinas",
+      "Cadherinas",
+      "SNAREs",
+      "Neurofilamentos"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Citología"
+    ]
+  },
+  {
+    "id": "2017-74",
+    "statement": "Las tríadas portales:",
+    "answers": [
+      "Son características de la vesícula biliar",
+      "Contienen un conducto biliar, una arteria o arteriola y una vena o vénula muscular",
+      "Se sitúan en el centro de los lobulillos hepáticos",
+      "Se denominan también acinos hepáticos"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Fisiología",
+      "Histología"
+    ]
+  },
+  {
+    "id": "2017-75",
+    "statement": "Los sinusoides son un tipo de:",
+    "answers": [
+      "Capilar sanguíneo",
+      "Arteria",
+      "Vena",
+      "Vaso linfático"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Histología",
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-76",
+    "statement": "El compartimiento basal del tubo semífero contiene:",
+    "answers": [
+      "Espermatogonias",
+      "Espermatocitos secundarios",
+      "Espermátides",
+      "Espermatozoides"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Fisiología",
+      "Embriología"
+    ]
+  },
+  {
+    "id": "2017-77",
+    "statement": "En la espermatogénesis, las primeras células con dotación haploide son:",
+    "answers": [
+      "Espermatogonias B",
+      "Espermatocitos primarios",
+      "Espermatocitos secundarios",
+      "Espermatozoides"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Embriología"
+    ]
+  },
+  {
+    "id": "2017-78",
+    "statement": "¿Qué parte del embrión contacta con el endometrio durante la implantación?",
+    "answers": [
+      "Sincitiotrofoblasto",
+      "Mesodermo extraembrionario",
+      "Corona radiada",
+      "Masa celular interna"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Embriología"
+    ]
+  },
+  {
+    "id": "2017-79",
+    "statement": "Al aumentar la edad materna de gestación, se incrementa la incidencia de:",
+    "answers": [
+      "Monosomía X",
+      "Trisomía XXY",
+      "Trisomía XXX",
+      "Trisomía 21"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-80",
+    "statement": "La capacitación espérmica tiene lugar en:",
+    "answers": [
+      "Epidídimo",
+      "Útero y trompas uterinas",
+      "Túbulos semíferos",
+      "Uretra"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Embriología"
+    ]
+  },
+  {
+    "id": "2017-81",
+    "statement": "En los macrófagos, ¿qué enzima cataliza la halogenación de los microbios fagocitados?",
+    "answers": [
+      "NADPH oxidasa",
+      "Mieloperoxidasa",
+      "Sintasa del óxido nítrico inducible",
+      "Catalasa"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-82",
+    "statement": "La activación del sistema del complemento origina moléculas con distinta actividad biológica, entre las que C3b y C4b:",
+    "answers": [
+      "Actúan como anafilotoxina para los fagocitos",
+      "Activan la secreción de histamina",
+      "Activan la opsonización del microbio, promoviendo su fagocitosis",
+      "Impiden la formación del complejo de ataque de la membrana"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-83",
+    "statement": "Son diriginas o adresinas:",
+    "answers": [
+      "Las moléculas de adhesión celular dependientes de Glicosilación (GlyCAM):",
+      "Las moléculas de adhesión celular de la familia de las inmunoglobulinas (IgCAM)",
+      "Las moléculas de adhesión celular vascular (VCAM)",
+      "La integrina α4β1 (VLA-4)"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-84",
+    "statement": "NO es una molécula de activación de expresión transitoria en los linfocitos T:",
+    "answers": [
+      "CD45RO",
+      "CD25",
+      "CD71",
+      "CD95L"
+    ],
+    "impugned": true,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-85",
+    "statement": "Los centros germinales son zonas donde proliferan los linfocitos:",
+    "answers": [
+      "B",
+      "Th",
+      "NK",
+      "Tc"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-86",
+    "statement": "¿Cuál de los siguientes mediadores inflamatorios ejerce un efecto sinérgico con la prostglandina E2 (PGE~2) en el aumento de la permeabilidad vascula?",
+    "answers": [
+      "C3a",
+      "Leucotrieno B4 (LTB~4)",
+      "IL-8",
+      "Factor quimiotáctico de neutrófilos (NCF)"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-87",
+    "statement": "En la señalización celular a través de receptores de tipo Toll 3 (TLR3) NO interviene:",
+    "answers": [
+      "Adaptador con dominio  TIR (TRIF)",
+      "Factor asociado al receptor del factor de necrosis tumoral 6 (TRAF-6)",
+      "Factor de diferenciación mieloide 88 (MyD88)",
+      "Factor nuclear Kappa-B (NF-κB)"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-88",
+    "statement": "¿Cuál de los siguientes mediadores de señalización NO está implicado en la activación del infocito T?",
+    "answers": [
+      "Cinasa regulada por señales extracelulares (ERK)",
+      "Cinasa c-Jun N-terminal (JNK)",
+      "Proteínas Ras",
+      "Cinasa Lyn"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-89",
+    "statement": "Los linfocitos T cooperadores 17 (Th17) producen citocinas proinflamatorias, entre las que se encuentra:",
+    "answers": [
+      "IL-22",
+      "IL-12",
+      "IL-5",
+      "IL-13"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-90",
+    "statement": "El inicio de la vía alternativa de activación del complemento sanguíneo necesita de la:",
+    "answers": [
+      "La unión de C3 al factor B",
+      "Hidrólisis espontánea de C3",
+      "Acción del factor D sobre el factor B",
+      "Formación de la C3 convertasa"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-91",
+    "statement": "Los macrófagos que se localizan en los sinusoides hepáticos se conocen como células:",
+    "answers": [
+      "De Kupffer",
+      "De Ito",
+      "Dendríticas",
+      "Sinusoidales"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Inmunología",
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-92",
+    "statement": "Los radicales de superóxido son producidos por:",
+    "answers": [
+      "Plaquetas",
+      "Macrófagos",
+      "Linfocitos T",
+      "Linfocitos NK"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-93",
+    "statement": "Forma parte de la inmunidad adaptativa:",
+    "answers": [
+      "Complemento",
+      "Lisozima",
+      "Leucocitos polimorfonucleares",
+      "Linfocitos T"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-94",
+    "statement": "NO es función del complemento:",
+    "answers": [
+      "Lisis",
+      "Quimiotaxis",
+      "Glucólisis",
+      "Opsonización"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-95",
+    "statement": "¿Cuál de estos leucocitos se especializa en la defensa frente a grandes parásitos como los helmintos?:",
+    "answers": [
+      "Granulocitos eosinófilos",
+      "Macrófagos",
+      "Linfocitos T",
+      "Células dendríticas"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-96",
+    "statement": "NO son receptores inhibidores de los linfocitos citolíticos naturales (NK) los:",
+    "answers": [
+      "Receptores del linfocito citolítico de tipo Ig (KIR)",
+      "Transcritos de tipo Ig (ILT)",
+      "Receptores CD16",
+      "Receptores CD94/NKG2"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-97",
+    "statement": "En relación al complejo principal de hiscocompatibilidad, haplotipo es el conjunto de:",
+    "answers": [
+      "Genes de clase I",
+      "Genes de clase II",
+      "Alelos existentes en un determinado cromosoma",
+      "Alelos existentes en un determinado locus"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-98",
+    "statement": "En la sinapsis inmunitaria, mientras que la cinasa ZAP-70 se asocia al TCR, la talina lo hace a:",
+    "answers": [
+      "Los correceptores CD4 o CD8",
+      "La integrina LFA-1",
+      "La enzima ZAP-70",
+      "Las enzimas MAP cinasas"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-99",
+    "statement": "NO es un factor de transcripción en la mayoría de las respuestas de los linfocitos T:",
+    "answers": [
+      "El factor nuclear de los linfocitos T activados (NFAT)",
+      "El factor nuclear kappa-B (NF-κB)",
+      "AP-1",
+      "MYC"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Inmunología",
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-100",
+    "statement": "En las respuestas humorales dependientes de los linfocitos T:",
+    "answers": [
+      "Los linfocitos B expresan en la superficie CD40L",
+      "Los linfocitos B activados migran hacia el folículo siguiendo un gradiente de IL-2",
+      "El antígeno es captado por los linfocitos B y presentado a los linfocitos Tγδ",
+      "Los linfocitos B procesan y presentan el antígeno, alteran su perfil de receptores de quimiocinas y migran hacia la zona de los linfocitos T"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-101",
+    "statement": "NO se encuentra entre los mecanismos que activan la eliminación por apoptosis de los linfocitos:",
+    "answers": [
+      "Receptores de la familia del factor de necrosis tumoral (TNF)",
+      "Daño en el ADN",
+      "Estrés oxidativo",
+      "La interleucina-2 (IL-2)"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Inmunología",
+      "Genética",
+      "Citología"
+    ]
+  },
+  {
+    "id": "2017-102",
+    "statement": "El interferón (IFN) de tipo I:",
+    "answers": [
+      "Aumenta la expresión de las moléculas del complejo principal de histocompatibilidad (CPH) de la clase I",
+      "Disminuye la expresión de las moléculas del complejo principal de histocompatibilidad (CPH) de la clase I",
+      "Aumenta la expresión de las moléculas del complejo principal de histocompatibilidad (CPH) de la clase II",
+      "Disminuye la expresión de las moléculas del complejo principal de histocompatibilidad (CPH) de la clase II"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-103",
+    "statement": "Mientras que la IL-4 y la IL-5 son las citocinas producidas por los linfocitos T cooperadores de tipo 2 (TH2), los linfocitos T cooperadores de tipo 1 (TH1) producen como citocina característica el:",
+    "answers": [
+      "Interferón-α (IFN-α)",
+      "Interferón-γ (IFN-γ)",
+      "Interferón-β (IFN-β)",
+      "Factor de crecimiento transformante-β (TGF-β)"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-104",
+    "statement": "NO participa en la diferenciación de linfocitos T cooperadores-1 (TH1) el:",
+    "answers": [
+      "Transductor de señal y activador de la transcripción-1 (STAT1)",
+      "Transductor de señal y activador de la transcripción-6 (STAT6)",
+      "Factor de transcripción T-bet",
+      "Transductor de señal y activador de transcripción-4 (STAT4)"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-105",
+    "statement": "¿Cuál de las inmunoglobulinas (Ig) confiere inmunidad neonatal?:",
+    "answers": [
+      "IgA",
+      "IgE",
+      "IgD",
+      "IgG"
+    ],
+    "impugned": true,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-106",
+    "statement": "En las linfohistiocitosis hemofagocíticas familiares, las debidas a deficiencias de perforina causan:",
+    "answers": [
+      "Activación incontrolada de los macrófagos y defectos de la función de los linfocitos NK",
+      "Defectos de la expresión de moléculas del complejo principal de histocompatibilidad (CPH) de clase II",
+      "Reducción de los linfocitos T CD8^+",
+      "Defectos de la movilidad de los leucocitos"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-107",
+    "statement": "En relación con el virus de la inmunodeficiencia humana (VIH), las personas con mutación del receptor de esta quimiocina son resistentes a la infección:",
+    "answers": [
+      "CXCR4",
+      "CCR5",
+      "CXCR13",
+      "CCR2"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-108",
+    "statement": "La púrpura trombocitopénica autoinmunitaria que se carateriza por un descenso en el número de plaquetas, está causada por autoanticuerpos anti:",
+    "answers": [
+      "CD18",
+      "CD94a",
+      "CD41a",
+      "ITGB6"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-109",
+    "statement": "La enfermedad hemolítica del recién nacido,también llamada eritoblastosis fetal, puede ocurrir en mujeres:",
+    "answers": [
+      "Rh positivas que han tenido un hijo Rh positivo",
+      "Rh negativas que han tenido un hijo Rh positivo",
+      "Rh positivas que han tenido un hijo Rh negativo",
+      "Rh negativas que ham tenido un hijo Rh negativo"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Inmunología",
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-110",
+    "statement": "En relación con la displasia ectodérmica anhidrótica con inmunodeficiencia (DEA-ID), ¿qué gen de la vía del factor nuclear –κB (NF-κB) está mutado?:",
+    "answers": [
+      "Inhibidor de la cinasa α de κB (IKKα)",
+      "Inhibidor de la cinasa β de κB (IKKβ)",
+      "Inhibidor de la cinasa γ de κB (IKKγ)",
+      "Cinasa 4 asociada al receptor de la interleucina-1 (IRAK-4)"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-111",
+    "statement": "¿Qué efecto causa en la hemoglobina un aumento de la concentración de 2,3-bisfosfoglicerato (2,3-BPG)?:",
+    "answers": [
+      "Los cuatro grupos hemo se saturan con 2,3-BPG",
+      "Se estabiliza la conformación oxigenada",
+      "Aumenta la afinidad por el O_2",
+      "Disminuye la afinidad por el O_2"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Bioquímica",
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-112",
+    "statement": "Respecto a la enzima glucoquinasa, se puede afirmar que:",
+    "answers": [
+      "Se expresa en el hígado y en las células beta de los islotes pancreáticos",
+      "Cataliza la escisión fosforolítica del glucógeno hepático liberando glucosa-1-fosfato",
+      "La reacción de fosforilación de la glucosa por la enzima sigue una cinética michaeliana",
+      "La insulina reprime la transcripción del gen de la glocoquinasa hepática"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-113",
+    "statement": "La biotina es el grupo prostético de las:",
+    "answers": [
+      "Descarboxilasas",
+      "Carboxilasas",
+      "Quinasas",
+      "Transferasas"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-114",
+    "statement": "La adrenalina estimula:",
+    "answers": [
+      "Degradación de glucógeno en el músculo esquelético",
+      "Síntesis de glucógeno en el hígado",
+      "Lipogénesis en el tejido adiposo",
+      "Síntesis de triacilgliceroles en el hígado"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-115",
+    "statement": "La ruta de las pentosas genera:",
+    "answers": [
+      "NADH para la biosíntesis de colesterol",
+      "NADPH para la biosíntesis de ácidos grasos y esteroides",
+      "Glucosa a partir de pentosas fosforiladas",
+      "Especies reactivas del oxígeno y pentosas oxidadas"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-116",
+    "statement": "¿Qué compuesto NO puede ser utilizado como precursor para la síntesis neta de glucosa en humanos?",
+    "answers": [
+      "Lactato",
+      "Alanina",
+      "Ácido palmítico (16:0)",
+      "Glicerol"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-117",
+    "statement": "Cada ciclo de la β-oxidación de los ácidos grasos sigue la siguiente secuencia de reacciones:",
+    "answers": [
+      "Oxidación dependiente de NAD^+; oxidación dependiente de FAD; hidratación; tiolisis",
+      "Oxidación dependiente de FAD; oxidación dependiente de NAD^+; hidratación; tiolisis",
+      "Oxidación dependiente de FAD; hidratación; oxidación dependiente de NAD^+; tiolisis",
+      "Tiolisis; oxidación dependiente de FAD; hidratación; oxidación dependiente de NAD^+"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-118",
+    "statement": "La degradación del ácido graso 17:0 rinde:",
+    "answers": [
+      "8 moléculas de acetil-CoA y un fragmento monocarbonado",
+      "7 moléculas de acetil-CoA y 1 molécula de propionil-CoA",
+      "7 moléculas de acetil-CoA y 1 molécula de malonil-CoA",
+      "6 moléculas de acetil-CoA y 1 molécula de succinil-CoA"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-119",
+    "statement": "Los cuerpos cetónicos:",
+    "answers": [
+      "Son acetoacetil-CoA, hidroxibutiril-CoA y acetona",
+      "Se sintetizan en las mitocondrias hepáticas",
+      "Se transportan hacia tejidos periféricos unidos a lipoproteínas",
+      "Disminuyen en sangre en la diabetes tipo 1 no tratada"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Bioquímica",
+      "Fisiología"
+    ]
+  },
+  {
+    "id": "2017-120",
+    "statement": "¿Cuál es el componente lipídico mayoritario de las VLDL?:",
+    "answers": [
+      "Ácidos grasos",
+      "Colesterol",
+      "Triacilglicoroles",
+      "Fosfatidilcolina"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-121",
+    "statement": "Durante el recambio proteico, ¿cuál de las siguientes moléculas se une a las proteínas marcándolas para su degradación por el proteasoma?:",
+    "answers": [
+      "Catepsina",
+      "Ubiquinona",
+      "Ubiquitina",
+      "Carnitina"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-122",
+    "statement": "El grupo prostético de las aminotransferasas (transaminasas) es:",
+    "answers": [
+      "Piridoxal-5’-fosfato",
+      "Pirofosfato de tiamina",
+      "N^5-N^10-metilen-tetrahidrofolato",
+      "Cobalamina"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-123",
+    "statement": "¿Cuál de las siguientes enzimas está implicada en la biosíntesis de urea?:",
+    "answers": [
+      "Glutamato deshidrogenasa",
+      "Carbamoil-fosfato sintetasa I",
+      "Succinato sintetasa",
+      "Ornitina descarboxilasa"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-124",
+    "statement": "El aminoácido precursor de la serotonina es:",
+    "answers": [
+      "Tirosina",
+      "Triptófano",
+      "Homocisteína",
+      "Histidina"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-125",
+    "statement": "En la síntesis de nucleótidos de pirimidina participa la enzima:",
+    "answers": [
+      "Xantina oxidasa",
+      "Uricasa",
+      "Carbamoil-fosfato sintetasa II",
+      "Ornitina transcarbamilasa"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-126",
+    "statement": "¿Cuál de los siguientes compuestos no puede ser sintetizado por los humanos?:",
+    "answers": [
+      "Ácido oleico (Δ^9 18:1)",
+      "Fosfatidiletanolamina",
+      "Carnitina",
+      "Tetrahidrofolato"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-127",
+    "statement": "Los electrones procedentes del FADH_2 de las flavoproteínas se incorporan a la cadena respiratoria a través de:",
+    "answers": [
+      "El complejo I",
+      "El complejo III",
+      "La ubiquinona",
+      "El citocromo c"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-128",
+    "statement": "El ácido pantoténico es necesario para la síntesis de:",
+    "answers": [
+      "Coenzima A",
+      "Biotina",
+      "FAD",
+      "Vitamina B_12"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-129",
+    "statement": "Una dependencia sigmoidea de la velocidad de la reacción catalizada con la concentración de sustrato es señal de que la enzima responsable está sometida a:",
+    "answers": [
+      "Inhibición por exceso de sustrato",
+      "Inhibición acompetitiva",
+      "Regulación alostérica",
+      "Cooperatividad negativa"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-130",
+    "statement": "Las enzimas actúan como catalizadores porque:",
+    "answers": [
+      "Reducen la energía libre de la reacción",
+      "Reducen la energía de activación de la reacción",
+      "Aceleran la formación del estado estacionario",
+      "Incrementan la constante de equilibrio de la reacción"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-131",
+    "statement": "La sacarosa es un disacárido compuesto por:",
+    "answers": [
+      "Una glucosa y una fructopiranosa unidas por enlace glicosídico",
+      "Dos moléculas de glucosa unidas por enlace glicosídico",
+      "Una glucosa y una galactosa unidas por enlace glicosídico",
+      "Una glucosa y una maltosa unidas por enlace glicosídico"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-132",
+    "statement": "La esfingomielina es un esfingolípido formado por una:",
+    "answers": [
+      "Esfingosina, un ácido graso y un azúcar",
+      "Ceramida y un ácido graso",
+      "Esfingosina esterificada por un ácido graso",
+      "Ceramida y un grupo de fosforilcolina"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-133",
+    "statement": "Un inhibidor enzimático que reduce la Vm y la Km de una enzima en la misma proporción es un inhibidor de tipo:",
+    "answers": [
+      "No competitivo",
+      "Mixto",
+      "Acompetitivo",
+      "Competitivo"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-134",
+    "statement": "La alfa-hélice es un elemento de estructura secundaria de las proteínas que se estabiliza mediante puentes de hidrógeno:",
+    "answers": [
+      "Paralelos al eje longitudinal de la hélice",
+      "Intercatenarios",
+      "Entre los carbonilos de los enlaces peptídicos",
+      "Entre cadenas peptídicas paralelas o antiparalelas"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-135",
+    "statement": "Los snRNPs o “snurps” son:",
+    "answers": [
+      "ARN nucleares pequeños",
+      "Ribonucleoproteínas nucleolares pequeñas",
+      "Ribonucleoproteínas citoplasmáticas pequeñas",
+      "Ribonucleoproteínas nucleares pequeñas"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-136",
+    "statement": "En la estructura de doble hélice definida por Watson y Crick para el DNA:",
+    "answers": [
+      "El porcentaje de los pares de bases A=T es igual al porcentaje de los pares de bases G=C",
+      "El par de bases G=C está unido por tres enlaces covalentes y el par A=T por dos",
+      "Los pares de bases nitrogenadas se sitúan en el interior de la doble hélice unidos por fuerzas de stacking o apilamiento",
+      "Las cadenas polinucleotídicas implican enlaces fosfodiéster establecidos entre la posición 1’ de la base nitrogenada y la posición 5’ del resto de azúcar"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-137",
+    "statement": "El mecanismo de la replicación del DNA en bacterias y en los cromosomas nucleares de eucariotas es:",
+    "answers": [
+      "Unidireccional y semiconservativo",
+      "Bidireccional y semiconservativo",
+      "Unidireccional y conservativo",
+      "Bidireccional y conservativo"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-138",
+    "statement": "En relación con las diferentes DNA-polimerasas:",
+    "answers": [
+      "La polimerasa lee la hebra matriz o ~template~ desplazándose sobre ella en el sentido de 5’ a 3’",
+      "La DNA-Pol I de ~E. coli~ es la responsable de la síntesis de ~novo~ de las hebras de DNA",
+      "La DNA-Pol II de ~E. coli~ actúa mayoritariamente en la reparación de los daños en el DNA",
+      "Todas las DNA-polimerasas catalizan la adición de un desoxinucleósido trifosfato al extremo 3’ de la cadena en crecimiento"
+    ],
+    "impugned": true,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-139",
+    "statement": "En relación con los promotores bacterianos:",
+    "answers": [
+      "La caja -10 de los promotores de ~E.coli~ es el sitio de contacto inicial con la RNA-polimerasa",
+      "Una mutación que cambie la secuencia TATAGT de la caja -10 de un promotor y la convierta en TGTAGT es de esperar que provoque un aumento significativo en el nivel de expresión del gen",
+      "La secuencia de nucleótidos de las regiones promotora de ~E.coli~ está muy conservada",
+      "La longitud de la región que separa las secuencias -10 y -35 de los promotores bacterianos es crítica para su reconocimiento por parte de la RNA-polimerasa"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Genética",
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-140",
+    "statement": "En la traducción:",
+    "answers": [
+      "El ensamblaje comienza por la unión de la secuencia de Shine-Dalgarno presente en el RNA mensajero y una secuencia complementaria y muy conservada del RNA 16S de la subunidad pequeña del ribosoma",
+      "El aminoacil-tRNA iniciador es el N-acetilmetionil-tRNA",
+      "Los mensajeros son leídos por el ribosoma en sentido 3’→ 5’ y la cadena polipeptídica crece por el extremo C-terminal",
+      "Los mensajeros son leídos por el ribosoma en sentido 5’ → 3’ y la cadena polipeptídica crece por el extremo N-termina"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-141",
+    "statement": "En la regulación de la expresión génica:",
+    "answers": [
+      "El operador es el sitio del DNA que recibe a la RNA-polimerasa para iniciar la transcripción",
+      "La represión es la capacidad de impedir la expresión de una enzima cuando el producto de su reacción está ausente",
+      "La represión catabólica se ejerce a través del cAMP (AMP cíclico)",
+      "La atenuación es un segundo nivel de control de la expresión del operón ~trp~~ basado en la acción del regulador TrpR"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-142",
+    "statement": "Las endonucleasas de restricción de tipo II:",
+    "answers": [
+      "Deshacen los puentes de hidrógeno que mantienen unidas a las dos hebras del DNA",
+      "Causan la rotura de los enlaces covalentes de una hebra del DNA en una secuencia específica",
+      "Catalizan la hidrólisis de los enlaces azúcarfosfato de los extremos de las dos cadenas del DNA",
+      "Reconocen y rompen las dos hebras del DNA por sitios con secuencia palindrómica"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-143",
+    "statement": "En la tecnología de clonaje de DNA los:",
+    "answers": [
+      "Genes reporter o testigo, se usan para seleccionar las células transformadas por DNA",
+      "Vectores derivados de fagos son los que tienen más capacidad para el clonaje de grandes fragmentos de DNA",
+      "Cósmidos son vectores para el clonaje de DNA en bacterias",
+      "Vectores YAC sólo son activos en levadura"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Genética",
+      "Técnicas"
+    ]
+  },
+  {
+    "id": "2017-144",
+    "statement": "La movilidad electroforética de un fragmento de DNA depende de su:",
+    "answers": [
+      "Forma lineal o circular",
+      "Secuencia de pares de bases",
+      "Contenido en pares GC",
+      "Concentración en la disolución"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Genética",
+      "Técnicas"
+    ]
+  },
+  {
+    "id": "2017-145",
+    "statement": "La PCR:",
+    "answers": [
+      "Es un procedimiento usado para separar los clones de una biblioteca genómica",
+      "Requiere el uso de polimerasas termoresistente",
+      "Es una reacción basada en la actividad de la RNA-polimerasa",
+      "Tiene lugar en el citoplasma celular"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Técnicas"
+    ]
+  },
+  {
+    "id": "2017-146",
+    "statement": "Se comprueba mediante un Anova de dos vías si el efecto de un determinado fármaco depende del sexo de los pacientes. Si dicha interacción presenta una p=0,28 ¿Cómo se interpreta?:",
+    "answers": [
+      "El efecto del fármaco es mejor en hombres",
+      "El efecto del fármaco depende del sexo de los pacientes",
+      "El efecto del fármaco no depende del sexo de los pacientes",
+      "El fármaco no es efectivo"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Estadística"
+    ]
+  },
+  {
+    "id": "2017-147",
+    "statement": "¿Qué test estadístico permite comparar proporciones de dos muestras independientes?:",
+    "answers": [
+      "Test McNemar",
+      "Test de la Mediana",
+      "Test exacto de Fisher",
+      "Test U de Mann-Whitney"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Estadística"
+    ]
+  },
+  {
+    "id": "2017-148",
+    "statement": "¿Qué test estadístico utilizaría para comprobar el efecto del ejercicio físico en un grupo de pacientes con enfermedad coronaria en los que se mide el máximo de oxígeno consumido para cada uno antes y después de 1 año de un programa de rehabilitación?:",
+    "answers": [
+      "t de Student de muestras relacionadas",
+      "Wilcoxon de muestran relacionadas",
+      "U de Mann-Whitney",
+      "Chi cuadrado"
+    ],
+    "impugned": true,
+    "tags": [
+      "Estadística"
+    ]
+  },
+  {
+    "id": "2017-149",
+    "statement": "El test que permite comparar dos medias de muestras independientes cuando la variable no se distribuye normalmente es:",
+    "answers": [
+      "t de Student de dos muestras independientes con n1+n2 grados de libertad",
+      "t de Student de dos muestras independientes con (n1+n2) -2 grados de libertad",
+      "t de Student de dos muestras independientes con (n1+n2) -1 grados de libertad",
+      "U de Mann-Whitney"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Estadística"
+    ]
+  },
+  {
+    "id": "2017-150",
+    "statement": "¿Qué test estadístico se aplicaría para comparar dos colirios administrando uno distinto en cada ojo de un mismo paciente?:",
+    "answers": [
+      "t de Student de muestras independientes",
+      "Exacto de Fisher",
+      "McNemar",
+      "Welch"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Estadística"
+    ]
+  },
+  {
+    "id": "2017-151",
+    "statement": "Las artemisinas son fármacos:",
+    "answers": [
+      "Activos frente a las diferentes especies y estadíos del ciclo vital de ~Plasmodium~",
+      "Usados en la profilaxis de infección por ~Uncinarias~",
+      "Usados tópicamente contra ~Tunga penetrans~",
+      "Usados frecuentemente en meningoencefalitis por ~Naegleria fowleri~"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Parasitología"
+    ]
+  },
+  {
+    "id": "2017-152",
+    "statement": "~Anisakis simplex~:",
+    "answers": [
+      "Es un trematodo cuyas larvas se hayan en los peces y cefalópodos",
+      "Es una platelminto que en su estadio adulto se localiza en el interior de la mucosa del intestino delgado de diversos animales",
+      "Los huéspedes definifivos son mamíferos marinos",
+      "El hombre es su único huésped definitivo"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Parasitología"
+    ]
+  },
+  {
+    "id": "2017-153",
+    "statement": "Puede ocasionar anemia megalobástica en el paciente parasitado:",
+    "answers": [
+      "~Taenia saginata~",
+      "~Taenia solium~",
+      "~Diphyllobothrium latum~",
+      "~Hymenolepis diminuta~"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Parasitología"
+    ]
+  },
+  {
+    "id": "2017-154",
+    "statement": "RARAMENTE se supera en infecciones por ~Plasmodium ovale~ o ~Plasmodium vivax~ el % de hematíes parasitados del:",
+    "answers": [
+      "2%",
+      "7%",
+      "10%",
+      "12%"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Parasitología"
+    ]
+  },
+  {
+    "id": "2017-155",
+    "statement": "En la prueba rápida de inmunocromatografía para la detección inmunológica de Leismaniasis visceral se utiliza como antígeno:",
+    "answers": [
+      "Quinesia recombinante (rK39)",
+      "Extracción de cultivo de promastigotes",
+      "Antígeno recombinante rK26",
+      "Domperidona"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Microbiología",
+      "Técnicas",
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-156",
+    "statement": "La clasificación de Baltimore:",
+    "answers": [
+      "Establece tres dominios taxonómicos: Eucaria, Bacteria y Archaeobacteria",
+      "Clasifica los virus en función de la forma de su cápside",
+      "Distingue entre virus desnudos y envueltos",
+      "Clasifica a los virus por su estrategia en la síntesis del mRNA"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Virología"
+    ]
+  },
+  {
+    "id": "2017-157",
+    "statement": "En el bacteriófago T4, el fenómeno genético de la permutación cíclica está en relación con:",
+    "answers": [
+      "La existencia de viriones descendientes del mismo virus con genes distribuidos en un orden distinto",
+      "La alternancia de ciclos líticos y lisogénicos",
+      "Encapsulaciones defectuosas",
+      "La alternancia de dos tipos de bacterias huésped en su ciclo vital"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Virología"
+    ]
+  },
+  {
+    "id": "2017-158",
+    "statement": "NO pertenece a la familia de los herpesvirus",
+    "answers": [
+      "Epstein-Barr",
+      "Vaccinia",
+      "Citomegalovirus",
+      "Virus del sarcoma de Kaposi"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Virología"
+    ]
+  },
+  {
+    "id": "2017-159",
+    "statement": "¿Cuál de los siguientes virus hepáticos requiere de la presencia (preinfección) de otro virus para replicarse?:",
+    "answers": [
+      "Hepatitis A",
+      "Hepatitis B",
+      "Hepatitis C",
+      "Hepatitis D"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Virología"
+    ]
+  },
+  {
+    "id": "2017-160",
+    "statement": "Son virus con DNA de cadena doble (dsDNA) los de:",
+    "answers": [
+      "La poliomielitis",
+      "La gripe",
+      "El Ébola",
+      "La viruela"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Virología"
+    ]
+  },
+  {
+    "id": "2017-161",
+    "statement": "Usan una transcriptasa inversa los:",
+    "answers": [
+      "Rabdovirus",
+      "Herpesvirus",
+      "Adenovirus",
+      "Hepadnavirus"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Virología"
+    ]
+  },
+  {
+    "id": "2017-162",
+    "statement": "Los virus de la familia Poxviridae de interés clínico para humanos:",
+    "answers": [
+      "Incluyen el de la viruela humana, la viruela bovina, el vaccinia y el del molusco contagioso",
+      "Se replican en la mitocondria de la célula",
+      "Requieren la retrotranscripción de su genoma",
+      "Sus infecciones están asociadas comúnmente a hepatitis víricas"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Virología"
+    ]
+  },
+  {
+    "id": "2017-163",
+    "statement": "Los rotavirus son:",
+    "answers": [
+      "Virus ARN de doble cadena y uno de los principales responsables de gastroenteritis vírica",
+      "Virus ARN de doble cadena causantes de patologías respiratorias",
+      "Virus ADN con envuelta muy resistentes a desinfectantes",
+      "Uno de los principales virus causantes de hepatitis agudas"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Virología"
+    ]
+  },
+  {
+    "id": "2017-164",
+    "statement": "El poliovirus es un virus:",
+    "answers": [
+      "Con membrana plasmática que se replica en células nerviosas causando alteraciones neurológicas",
+      "Que se transmite por vías respiratorias y por eso es tan contagioso",
+      "Cuya infección conlleva la replicación dentro del tracto gastrointestinal y la ulterior excreción del virus en las heces",
+      "Prácticamente erradicado de la población humana"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Virología"
+    ]
+  },
+  {
+    "id": "2017-165",
+    "statement": "Indica la afirmación correcta respecto a los virus que causan hepatitis:",
+    "answers": [
+      "Tienen ARN como material génico",
+      "Las hepatitis A y E son causadas por la infección de los virus A y E tras la ingestión de agua o alimentos contaminados",
+      "Las hepatitis B, C y D se producen tras el contacto con sangre y fluidos corporales humanos contaminados con los virus B, C y D, pero también se transmiten a través de picaduras de mosquitos infectados",
+      "El virus de la hepatitis C, al igual que el virus de la inmunodeficiencia humana (VIH) son retrovirus y se transmiten por vía sexual"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Virología"
+    ]
+  },
+  {
+    "id": "2017-166",
+    "statement": "La fiebre amarilla es transmitida por un mosquito portador de un:",
+    "answers": [
+      "Viroide",
+      "Flavivirus",
+      "Poliovirus",
+      "Rotavirus"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Virología"
+    ]
+  },
+  {
+    "id": "2017-167",
+    "statement": "La parotiditis o paperas:",
+    "answers": [
+      "Es causada por un paramixovirus",
+      "Carece de vacuna efectiva",
+      "Se combate de forma efectiva con β-lactámicos",
+      "Es producida por el virus de la rubeola"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Virología"
+    ]
+  },
+  {
+    "id": "2017-168",
+    "statement": "El virus Marburg:",
+    "answers": [
+      "Causa afecciones catarrales",
+      "Es similar al Ébola",
+      "Causa la llamada neumonía asiática transmitida por mosquitos",
+      "Es un pneumovirus causante de infecciones letales aislado en Alemania a finales de los años sesenta"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Virología"
+    ]
+  },
+  {
+    "id": "2017-169",
+    "statement": "Es FALSO en relación con el tratamiento frente al virus de la inmunodeficiencia humana (VIH) que se:",
+    "answers": [
+      "Utiliza una vacuna recombinante",
+      "Utilicen inhibidores frente al a transcriptasa inversa",
+      "Utilicen inhibidores frente a la proteasa del virus",
+      "Utilicen inhibidores de la integrasa del virus"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Virología"
+    ]
+  },
+  {
+    "id": "2017-170",
+    "statement": "El virus del papiloma humano (VPH):",
+    "answers": [
+      "Tiene membrana plasmática y genoma compuesto por ARN",
+      "Sus serotipos 16 y 18 están asociados al cáncer cervical",
+      "Una de sus principales vías de trasmisión es la transfusión sanguínea",
+      "Su tratamiento incluye inhibidores de la transcriptasa reversa viral"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Virología"
+    ]
+  },
+  {
+    "id": "2017-171",
+    "statement": "El virus de la viruela es un:",
+    "answers": [
+      "Poxvirus",
+      "Adenovirus",
+      "Poliomavirus",
+      "Coronavirus"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Virología"
+    ]
+  },
+  {
+    "id": "2017-172",
+    "statement": "Son inclusiones celulares bacterianas:",
+    "answers": [
+      "Los anamoxosomas",
+      "Los gránulos de polifosfato",
+      "Las vesículas gaseosas",
+      "Los cuerpos de Negri"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-173",
+    "statement": "La principal enzima polimerizadora del DNA bacteriano es la DNA polimerasa:",
+    "answers": [
+      "I",
+      "III",
+      "IV",
+      "V"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Microbiología",
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-174",
+    "statement": "Los sistemas de secreción de tipo III que poseen algunas bacterias gram-negativas que:",
+    "answers": [
+      "Participan en la síntesis de la membrana externa",
+      "Incluyen sistemas de expulsión de antibióticos",
+      "Secretan enzimas líticas para la digestión extracelular de macromoléculas",
+      "Inyectan proteínas en células eucarióticas"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-175",
+    "statement": "En las bacterias, la proteína FtsZ es un componente esencial del:",
+    "answers": [
+      "Sistema fostotransferasa de incorporación de azúcares",
+      "Divisoma",
+      "Ribosom",
+      "Filamento del flagelo"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-176",
+    "statement": "En un quimiostato inoculado con un cultivo puro, al aumentar el flujo disminuye constantemente:",
+    "answers": [
+      "La concentración del sustrato limitante",
+      "La densidad del cultivo",
+      "El tiempo de generación",
+      "El tiempo de generación y la densidad del cultivo"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-177",
+    "statement": "Una diferencia esencial entre desinfectantes generales y antisépticos es que los segundos:",
+    "answers": [
+      "Son compuestos orgánicos",
+      "Matan las endosporas",
+      "Deben ser lo bastante inocuos como para poder aplicarlos en tejidos vivos",
+      "Se utilizan sólo sobre objetos inanimados"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-178",
+    "statement": "¿Cuál de las siguientes afirmaciones es correcta?:",
+    "answers": [
+      "El empleo de filtros con poros de 0,2 micras proporciona esterilidad",
+      "El tiempo de autoclavado convencional (121ºC) depende del volumen del material que se desea esterilizar",
+      "La luz ultravioleta es adecuada para esterilizar líquidos",
+      "Los hongos son más resistentes a las radiaciones que las bacterias o los virus"
+    ],
+    "impugned": true,
+    "tags": [
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-179",
+    "statement": "Actúa(n) sobre la subunidad 30 del ribosoma procariótico:",
+    "answers": [
+      "La eritromicina",
+      "La rifampicina",
+      "Las tetraciclinas",
+      "Las quinolonas"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-180",
+    "statement": "El ribotipado es un método para identificar microorganismos a partir del análisis de:",
+    "answers": [
+      "Mapa de péptidos ribosomales",
+      "Secuencias del gen de la subunidad beta de la RNA polimerasa",
+      "Secuencias del gen de la subunidad alfa de la RNA polimerasa",
+      "Fragmentos de restricción de los genes de RNA ribosómico"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Microbiología",
+      "Técnicas",
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-181",
+    "statement": "Característicamente los estreptococos del subgrupo ~pyogenes~:",
+    "answers": [
+      "Son parte de la microbiota normal de la boca",
+      "Están asociados con la caries dental",
+      "Causas neumonías",
+      "Son beta-hemolíticos"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-182",
+    "statement": "La infección meningocócica (~Neisseria meningitidis~):",
+    "answers": [
+      "Se trata con tetraciclinas combinadas con aminoglucósidos",
+      "Se contrae comúnmente por contacto directo",
+      "Puede prevenirse con vacunas que contienen polisacáridos capsulares",
+      "Tiene una incidencia mayor en adultos que en jóvenes o niños"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-183",
+    "statement": "~Staphylococcus aureus~ se diferencia de ~Staphylococcus epidermidis~ por que el primero:",
+    "answers": [
+      "Rara vez produce infecciones piogénicas (purulentas)",
+      "Produce coagulasa, una enzima que convierte el fibrinógeno en fibrina",
+      "Crece en concentraciones salinas muy altas",
+      "No se encuentra en la microbiota normal humana"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-184",
+    "statement": "¿Cuál de las siguientes afirmaciones es correcta?:",
+    "answers": [
+      "Para detectar Treponema pallidum en muestras clínicas se emplea la microscopía de campo oscuro",
+      "~Helicobacter pilori~ es una espiroqueta que penetra la mucosa gástrica humana",
+      "Las borrelias (~Borrelia spp.~) se transmiten por picaduras de mosquitos",
+      "~Mycobacterium tuberculosis~ es un patógeno intracelular obligado"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-185",
+    "statement": "¿Cuál de las siguientes afirmaciones es correcta?:",
+    "answers": [
+      "~Pseudomonas aeruginosa~ es una casusa común de infecciones nosocomiales",
+      "~Escherichia coli~ lleva a cabo una fermentación butanodiólica",
+      "Las fiebres tifoideas son causadas por una especie de ~Rickettsia~",
+      "Las bacterias del género ~Serratia~ son cocos gram-positivos"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-186",
+    "statement": "¿Cuál de las siguientes afirmaciones es correcta?:",
+    "answers": [
+      "La fiebre Q es causada por ~Coxiella burnetti~",
+      "El reservorio de ~Bacillus anthracis~ son los animales salvajes",
+      "La gangrena gaseosa es causada por estreptococos",
+      "~Salmonella typhi~ (~S. entérica~ serovar ~typhi~) setransmite por contacto directo"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-187",
+    "statement": "Causan micosis superficiales en los seres humanos los hongos del género",
+    "answers": [
+      "~Sporothrix~",
+      "~Trichophyton~",
+      "~Crytococcus~",
+      "~Histoplasma"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Micología"
+    ]
+  },
+  {
+    "id": "2017-188",
+    "statement": "La anfotericina B es una antimicótico que actúa bloqueando la:",
+    "answers": [
+      "RNA polimerasa eucariótica",
+      "Síntesis de la quitina",
+      "Mitosis",
+      "Síntesis del ergosterol"
+    ],
+    "impugned": true,
+    "tags": [
+      "Micología"
+    ]
+  },
+  {
+    "id": "2017-189",
+    "statement": "Con respecto del género ~Aspergillus~ ¿cuál de las siguientes afirmaciones es correcta?:",
+    "answers": [
+      "Produce esporas sexuales llamadas conidios",
+      "Es un zigomiceto",
+      "Incluye especies productoras de potentes toxinas",
+      "Causa sólo micosis superficiales"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Micología"
+    ]
+  },
+  {
+    "id": "2017-190",
+    "statement": "¿Cuál de las siguientes afirmaciones es correcta?:",
+    "answers": [
+      "~Candida albicans~ es un zigomiceto",
+      "~Histoplasma capsulatum~ puede causar infecciones cutáneas en el ser humano",
+      "~Pneumocystis~ puede causar infecciones pulmonares en el ser humano",
+      "Algunas especies de ~Penicillium~ son patógenas para el ser humano"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Micología"
+    ]
+  },
+  {
+    "id": "2017-191",
+    "statement": "Las cepas productoras de Betalactamasas de espectro ampliado (BLEA) no son capaces de hidrolizar:",
+    "answers": [
+      "Las cefalosporinas",
+      "Los monobactámicos",
+      "La penicilina",
+      "Los carbapenems"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-192",
+    "statement": "La diarrea asociada al consumo de antibióticos suele estar producida por:",
+    "answers": [
+      "~Campylobacter spp~",
+      "~Staphylococcus aureus~",
+      "~Clostridium diffile~",
+      "~Yersinia enterocolítica~"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-193",
+    "statement": "La detección rápida de antígeno de ~Legionella pneumophila~ en orina se realiza mediante:",
+    "answers": [
+      "PCR",
+      "Fijación del complemento",
+      "Contrainmunoelectroforesi",
+      "Inmunocromatografía"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Microbiología",
+      "Técnicas"
+    ]
+  },
+  {
+    "id": "2017-194",
+    "statement": "¿Cuál es el agar selectivo de elección para el aislamiento del Género ~Bordetella~?:",
+    "answers": [
+      "Schaedler",
+      "Thayer-Martin",
+      "Regan-Lowe",
+      "BCYE (Buffered Charcoal Yeast extract)"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Microbiología",
+      "Técnicas"
+    ]
+  },
+  {
+    "id": "2017-195",
+    "statement": "La prueba de la eliminación de urea marcada con ^13 C en el aire espirado sirve para la identificación de:",
+    "answers": [
+      "~Helicobacter pylori~",
+      "~Tropheryma whipplei~",
+      "~Borrelia burgdorferi~",
+      "~Coxiella burnetti~"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Microbiología",
+      "Técnicas"
+    ]
+  },
+  {
+    "id": "2017-196",
+    "statement": "La enfermedad de Gaucher se asocia con una actividad reducida de la enzima:",
+    "answers": [
+      "Ferroquelatasa",
+      "Hexosaminidasa A",
+      "Fenilalanina hidroxilasa",
+      "Glucosilceramida"
+    ],
+    "impugned": true,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-197",
+    "statement": "Un cariotipo 45,XX,rob(14;21)(q10;q10) puede corresponder a una mujer:",
+    "answers": [
+      "Con Síndrome de Down con una translocación robertsoniana",
+      "Sana, portadora de una translocación robertsoniana",
+      "Con Síndrome de Prader-Willi",
+      "Con Síndrome de Edwards"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-198",
+    "statement": "La lisencefalia se asocia al síndrome de:",
+    "answers": [
+      "Angelman",
+      "Smith-Magenis",
+      "Rubinstein-Taybi",
+      "Mieller-Dieker"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-199",
+    "statement": "La deleción del (20)(p12) se asocia al síndrome de:",
+    "answers": [
+      "Alagille",
+      "Williams",
+      "Di George",
+      "Langer-Giedion"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-200",
+    "statement": "La enfermedad xerodermia pigmentosa está relacionada con defectos en el mecanismo de la reparación del ADN:",
+    "answers": [
+      "Por escisión de bases",
+      "Por errores de apareamiento",
+      "Directo",
+      "Por escisión de nucleótidos"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-201",
+    "statement": "En las mutaciones por transición una:",
+    "answers": [
+      "Purina es sustituida por una pirimidina",
+      "Pirimidina es sustituida por una purina",
+      "Pirimidina es sustituida por otra pirimidina",
+      "Purina es sustituida por otras dos purinas"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-202",
+    "statement": "En eucariotas, los intrones del grupo II están presentes en genes:",
+    "answers": [
+      "De rARN",
+      "De tARN",
+      "Que codifican proteínas en el núcleo",
+      "Que codifican proteínas en las mitocondrias"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-203",
+    "statement": "En la cromatina, se denomina cromatosoma al:",
+    "answers": [
+      "Nucleosoma sin la histona H",
+      "Nucleosoma con la histona H1",
+      "Conjunto de histonas de un nucleosoma",
+      "ADN e histonas de dos nucleosomas adyacentes"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-204",
+    "statement": "¿Cuántas copias de la histona H3 habrá en cromatina con 200 cromatosomas?:",
+    "answers": [
+      "50",
+      "100",
+      "200",
+      "400"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-205",
+    "statement": "¿Qué tipo de ploidía define a un individuo 2n-2-2?:",
+    "answers": [
+      "Monosomía doble",
+      "Monosomía simple",
+      "Euploidía doble",
+      "Nulisomía doble"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-206",
+    "statement": "¿Cuántas moléculas de ADN contiene una célula diploide 2n=40 durante la fase G2 del ciclo celular?:",
+    "answers": [
+      "20",
+      "40",
+      "80",
+      "120"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-207",
+    "statement": "¿Qué técnica genética podría utilizar para diagnosticar un síndrome de Angelman?:",
+    "answers": [
+      "Citogenética convencional (cariotipo de bandas G)",
+      "Hibridación in situ con fluorescencia (FISH) con sonda centromérica",
+      "(FISH) con sonda telomérica",
+      "(FISH) con sonda locus-específica"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Genética",
+      "Técnicas"
+    ]
+  },
+  {
+    "id": "2017-208",
+    "statement": "ASO-PCR es una técnica de:",
+    "answers": [
+      "Detección de mutaciones sin identificar el tipo",
+      "Detección de mutaciones específicas",
+      "Secuenciación",
+      "Amplificación del ADN"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Genética",
+      "Técnicas"
+    ]
+  },
+  {
+    "id": "2017-209",
+    "statement": "Una de las ventajas del cariotipo, respecto a la técnica de hibridación in situ con fluorescencia (FISH) es que permite:",
+    "answers": [
+      "Utilizar material fresco y parafinado",
+      "Utilizar todo el genoma",
+      "Detectar microdeleciones",
+      "Detectar translocaciones"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Genética",
+      "Técnicas"
+    ]
+  },
+  {
+    "id": "2017-210",
+    "statement": "Las bandas R de los cromosomas metafásicos humanos:",
+    "answers": [
+      "Tienen alta densidad de genes",
+      "Contienen ADN pobre en pares GC",
+      "Se replican al final de la fase S",
+      "Tienen baja densidad de genes"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-211",
+    "statement": "¿Qué proporción aproximada del genoma humano se estima que es codificante?:",
+    "answers": [
+      "1,5 – 2 %",
+      "4 – 10 %",
+      "10 – 25 %",
+      "Más del 25%"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-212",
+    "statement": "Los marcadores de ADN de tipo minisatélite pueden detectarse por:",
+    "answers": [
+      "PCR",
+      "ARMS-PCR",
+      "Southern-blot",
+      "ASO-PCR"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-213",
+    "statement": "Para detectar pequeñas deleciones o duplicaciones a nivel genómico, la técnica de elección sería:",
+    "answers": [
+      "Cariotipo de bandas G",
+      "Microarrays genómicos",
+      "Microarrays de expresión",
+      "RT-PCR"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Genética",
+      "Técnicas"
+    ]
+  },
+  {
+    "id": "2017-214",
+    "statement": "Con respecto al FISH, la PCR presenta la ventaja de que:",
+    "answers": [
+      "Es una técnica de cribado de todo el genoma",
+      "Puede realizarse en tejido fijado y/o congelado",
+      "Detecta alteraciones crípticas menores de 5Mb",
+      "Es más sensible"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Técnicas"
+    ]
+  },
+  {
+    "id": "2017-215",
+    "statement": "En la técnica de Northern-Blot la molécula que se separa y transfiere es:",
+    "answers": [
+      "ADN + ARN",
+      "ADN",
+      "Proteína",
+      "ARN"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Técnicas"
+    ]
+  },
+  {
+    "id": "2017-216",
+    "statement": "El mecanismo más frecuente que induce la activación del protooncogén BCL2 en el linfoma folicular es:",
+    "answers": [
+      "Amplificación génica",
+      "Translocación",
+      "Mutación puntual",
+      "Deleción"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-217",
+    "statement": "La translocación t(15;17)(q22;q11) se asocia a leucemia:",
+    "answers": [
+      "Linfocítica aguda",
+      "Mieloide crónica",
+      "Promielocítica aguda",
+      "Linfocítica crónica"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-218",
+    "statement": "La fórmula correcta para describir un cariotipo de un varón con monosomía del cromosoma 6, y un isocromosoma de brazo largo del cromosoma 17 es: ",
+    "answers": [
+      "45,XY,-6,iso (17) (p10)",
+      "45,XY,6,i (12) (q10)",
+      "45,XY,-6,i (17) (q10)",
+      "45,XY,6,i (12) (p10)"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-219",
+    "statement": "En la profase de la meiosis I los cromosomas homólogos permanecen unidos durante la sinapsis mediante:",
+    "answers": [
+      "El huso celular",
+      "Los centrómeros",
+      "El complejo sinaptonémico",
+      "La membrana celular"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-220",
+    "statement": "En la prometafase de la mitosis los cromosomas se unen al huso mitótico mediante los:",
+    "answers": [
+      "Cinetocoros",
+      "Nucléolos",
+      "Centriolos",
+      "Satélites"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-221",
+    "statement": "Es una enfermedad producida por mutaciones en el ADN mitocondrial:",
+    "answers": [
+      "Síndrome de Rett",
+      "Síndrome de Hunter",
+      "Porfiria aguda intermitente",
+      "Síndrome de Pearson"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-222",
+    "statement": "¿Cuál de las siguientes enfermedades tiene una herencia recesiva ligada al cromosoma X?:",
+    "answers": [
+      "Hipofosfatemia",
+      "Hipertricosis",
+      "Enfermedad de Fabry",
+      "Síndrome de Rett"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-223",
+    "statement": "Es una enfermedad con herencia autosómica recesiva:",
+    "answers": [
+      "Fibrosis quística",
+      "Corea de Huntington",
+      "Hipercolesterolemia familiar",
+      "Síndrome de Crouzon"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-224",
+    "statement": "¿Cuál de los siguientes organismos eucariotas tiene mayor número de genes?:",
+    "answers": [
+      "Ratón (~Mus musculus~)",
+      "Arroz (~Oryza sativa~)",
+      "Pez cebra (~Danio rerio~)",
+      "Maíz (~Zea mays~)"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-225",
+    "statement": "¿Cuántos cromosomas tendrán las células de un organismo diploide 2n=46 que presenta 4 nulisomías y una monosomía?:",
+    "answers": [
+      "37",
+      "38",
+      "39",
+      "42"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Genética"
+    ]
+  },
+  {
+    "id": "2017-226",
+    "statement": "Existe la hipótesis de que el 40% de los adultos realiza ejercicio al menos una vez a la semana ¿Qué test se utilizaría para comprobar dicha hipótesis a partir de una muestra?:",
+    "answers": [
+      "Wilcoxon",
+      "Bondad de ajuste",
+      "Mc Nemar",
+      "Contingencia 2x2"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Estadística"
+    ]
+  },
+  {
+    "id": "2017-227",
+    "statement": "Al realizar un test de hipótesis:",
+    "answers": [
+      "A mayor tamaño muestral, mayor potencia",
+      "A menos error beta, mayor potencia",
+      "Si aumenta la potencia del test, aumenta el error beta",
+      "A menor error alfa, menor especificidad"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Estadística"
+    ]
+  },
+  {
+    "id": "2017-228",
+    "statement": "Si un test de normalidad ofrece un valor p > 0,05, ¿cómo se interpreta?:",
+    "answers": [
+      "Se puede asumir que la variable no sigue una distribución normal",
+      "No se puede asumir que la variable siga una distribución normal",
+      "Se puede asumir que la variable sigue una distribución normal",
+      "El test ha resultado ser significativo"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Estadística"
+    ]
+  },
+  {
+    "id": "2017-229",
+    "statement": "Si una muestra presenta un coeficiente de variación de 0,12 significa que la:",
+    "answers": [
+      "Desviación típica supone el 12% de la media",
+      "Varianza supone el 12% de la media",
+      "Media supone el 12% de la desviación típica",
+      "Desviación típica supone el 88% de la media"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Estadística"
+    ]
+  },
+  {
+    "id": "2017-230",
+    "statement": "La mediana:",
+    "answers": [
+      "Es un estadístico de posición y forma",
+      "Siempre coincide con la media",
+      "Es más estable que la media en distribuciones asimétricas",
+      "Es más fiable que la media en distribuciones simétricas"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Estadística"
+    ]
+  },
+  {
+    "id": "2017-231",
+    "statement": "El agar sal manitol es un medio de cultivo selectivo empleado para el aislamiento de:",
+    "answers": [
+      "~Mycobacterium tuberculosis~",
+      "~Streptococcus pneumoniae~",
+      "~Staphylococcus aureus~",
+      "~seudomonas aeruginosa~"
+    ],
+    "correct-answer": 3,
+    "tags": [
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-232",
+    "statement": "La electroforesis de campo pulsante (PFGE) es una técnica de amplificación de ácidos nucleicos que se emplea para:",
+    "answers": [
+      "La cuantificación del ADN bacteriano total",
+      "Comparar diferentes clones bacterianos",
+      "La detección del ADN de diferentes microorganismos simultáneamen",
+      "Aumentar la sensibilidad de las técnicas convencionales de PCR"
+    ],
+    "impugned": true,
+    "tags": [
+      "Técnicas",
+      "Microbiología"
+    ]
+  },
+  {
+    "id": "2017-233",
+    "statement": "La acción sistémica del TNF genera en el hígado:",
+    "answers": [
+      "La activación de proteínas de fase aguda",
+      "Síntesis de prostaglandinas",
+      "Producción de lipopolisacárido",
+      "Caquexia"
+    ],
+    "correct-answer": 1,
+    "tags": [
+      "Inmunología"
+    ]
+  },
+  {
+    "id": "2017-234",
+    "statement": "Un mapa de Ramachandran representa:",
+    "answers": [
+      "Los diferentes tipos de estructura secundaria en el plegamiento de un polipéptido",
+      "Los ángulos que adoptan los enlaces peptídicos en un polipéptido",
+      "La disposición de los puentes de hidrógeno que estabilizan la estructura 3D de una proteína",
+      "La topología de los elementos de estructurasecundaria de una proteína"
+    ],
+    "correct-answer": 2,
+    "tags": [
+      "Bioquímica"
+    ]
+  },
+  {
+    "id": "2017-235",
+    "statement": "La lisozima cataliza la hidrólisis de:",
+    "answers": [
+      "Proteínas en la superficie de bacterias y virus",
+      "Proteínas en las paredes de bacterias Gram-negativas",
+      "Enlaces peptídicos de los peptidoglicanos bacterianos",
+      "Enlaces glicosídicos de polisacáridos bacterianos"
+    ],
+    "correct-answer": 4,
+    "tags": [
+      "Bioquímica"
+    ]
+  }
+]

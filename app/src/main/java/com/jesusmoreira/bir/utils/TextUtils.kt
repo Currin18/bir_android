@@ -7,7 +7,7 @@ class TextUtils {
     companion object {
 
         private const val strongPatter = "~(.*)~"
-        private const val strongReplacement = "<strong>$1</strong>"
+        private const val strongReplacement = "<i>$1</i>"
         private const val supPattern = "\\^([a-zA-Z0-9]*)"
         private const val supReplacement = "<sup><small>$1</small></sup>"
         private const val subPattern = "_([0-9]*)"

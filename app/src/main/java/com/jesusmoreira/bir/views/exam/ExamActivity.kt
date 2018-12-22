@@ -146,7 +146,7 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
     private fun goToNextQuestion() {
         val question = exam!!.nextQuestion()
         if (question != null) {
-            updateFragment(QuestionExamFragment.newInstance(question))
+            updateFragment(QuestionExamFragment.newInstance(question.toJson().toString()))
             updateToolbarCounts()
         } else {
             Toast.makeText(applicationContext, "Exam finished", Toast.LENGTH_SHORT).show()
@@ -155,7 +155,7 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
 
     private fun goToQuestion(position : Int) {
         exam!!.questionPosition = position
-        updateFragment(QuestionExamFragment.newInstance(exam!!.questions[position]))
+        updateFragment(QuestionExamFragment.newInstance(exam!!.questions[position].toJson().toString()))
         updateToolbarCounts()
     }
 

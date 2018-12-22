@@ -12,6 +12,10 @@ import kotlin.collections.ArrayList
 data class Exam (var year: String = "", var questions: Array<Question> = arrayOf()): Parcelable {
 
     var questionPosition = -1
+        set(value) {
+            field = if (value < -1) -1
+                    else value
+        }
     var questionCount = 0
     var questionsSuccess = 0
     var questionsError = 0

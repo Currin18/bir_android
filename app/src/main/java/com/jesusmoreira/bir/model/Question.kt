@@ -77,12 +77,30 @@ data class Question(
                     tags = arrayList.toTypedArray()
                 }
             }
-            // FIXME: fix json files with correct values in correct-answer
             if (json.has(JSON_CORRECT_ANSWER)) correctAnswer = (json.getInt(JSON_CORRECT_ANSWER) - 1)
             if (json.has(JSON_IMPUGNED)) impugned = json.getBoolean(JSON_IMPUGNED)
         } catch (e : Throwable) {
             e.printStackTrace()
         }
+    }
+
+    fun toJson(): JSONObject {
+        val json = JSONObject()
+
+        json.put(JSON_ID, id)
+        json.put(JSON_STATEMENT, statement)
+        json.put(JSON_CORRECT_ANSWER, correctAnswer)
+        json.put(JSON_IMPUGNED, impugned)
+
+        val jsonAnswers = JSONArray()
+        answers?.forEach { jsonAnswers.put(it) }
+        json.put(JSON_ANSWERS, jsonAnswers)
+
+        val jsonTags = JSONArray()
+        tags?.forEach { jsonTags.put(it) }
+        json.put(JSON_TAGS, jsonTags)
+
+        return json
     }
 
     override fun equals(other: Any?): Boolean {
