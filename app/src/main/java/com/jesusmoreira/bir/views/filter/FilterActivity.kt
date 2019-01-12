@@ -15,27 +15,24 @@ import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.jesusmoreira.bir.R
-import com.jesusmoreira.bir.model.Category
-import com.jesusmoreira.bir.model.Collection
-import com.jesusmoreira.bir.model.Exam
-import com.jesusmoreira.bir.model.Question
-import com.jesusmoreira.bir.utils.FileUtils
+import com.jesusmoreira.bir.dao.Database
+import com.jesusmoreira.bir.model.*
 import com.jesusmoreira.bir.views.exam.ExamActivity
-import com.jesusmoreira.bir.views.QuestionsListFragment
+import com.jesusmoreira.bir.views.exam.QuestionsListFragment
 
 class FilterActivity : AppCompatActivity(),
-        QuestionsListFragment.OnListFragmentInteractionListener,
         YearsGridFragment.OnListFragmentInteractionListener,
         CategoriesListFragment.OnListFragmentInteractionListener,
         AdvancedFiltersFragment.OnFragmentInteractionListener {
+
+    private var database = Database(this)
 
     var fab : FloatingActionButton? = null
     var fabFilters : FloatingActionButton? = null
     var bottomNavigation : BottomNavigationView? = null
 
-    var collection: Collection? = null
-    var exams: Array<Exam>? = null
-    var categories: Array<Category>? = null
+    var years: List<Int>? = null
+    var categories: List<String>? = null
 
     var examSelected: Exam? = null
 
@@ -46,7 +43,6 @@ class FilterActivity : AppCompatActivity(),
         val toolbar : Toolbar = findViewById(R.id.toolbar)
         toolbar.title = getString(R.string.toolbar_name_filter)
         setSupportActionBar(toolbar)
-
 
         bottomNavigation = findViewById(R.id.bottom_navigation)
         bottomNavigation?.setOnNavigationItemSelectedListener {
@@ -73,46 +69,27 @@ class FilterActivity : AppCompatActivity(),
         fab?.setOnClickListener { _ ->
             //            Toast.makeText(this, "FAB: ${collection?.exams?.get(0)?.questions?.get(0)?.statement}", Toast.LENGTH_SHORT).show()
             examSelected?.let {
-                startExam(it)
+//                startExam(it)
             }
         }
 
         fabFilters = this.findViewById(R.id.filters_fab)
 
-        collection = FileUtils.loadInitialData(this)
+        database.open()
+        years = database.questionDao?.getAllYears() ?: listOf()
+        categories = database.questionDao?.getAllCategories() ?: listOf()
 
         goToExamGrid()
-
-        collection?.groupByCategories()
     }
 
-    override fun onClickQuestion(position: Int, item: Question) {
-//        Toast.makeText(this, "Question: " + item.id, Toast.LENGTH_SHORT).show()
-//        val intent = ExamActivity.newIntent(applicationContext, item)
-//        startActivity(intent)
-        examSelected?.let {
-            startExam(it, position)
-        }
-    }
-
-    override fun onResume(items: Array<Question>) {
-        val exam = Exam("", items)
-        this.uploadExam(exam)
-    }
-
-    override fun onBackQuestion() {
-        initialView()
-//        bottomNavigation?.visibility = VISIBLE
-    }
-
-    override fun onClickExam(item: Exam) {
+    override fun onClickExam(item: Int) {
 //        Toast.makeText(this, "Exam: " + item.year, Toast.LENGTH_SHORT).show()
-        goToQuestionsList(item.questions)
+        startExam(Filters(years = arrayOf(item)))
     }
 
-    override fun onClickCategory(item: Category) {
+    override fun onClickCategory(item: String) {
 //        Toast.makeText(this, "Category: " + item.name, Toast.LENGTH_SHORT).show()
-        goToQuestionsList(item.questions)
+        startExam(Filters(categories = arrayOf(item)))
     }
 
     override fun onFilterInteraction(uri: Uri) {
@@ -155,10 +132,8 @@ class FilterActivity : AppCompatActivity(),
         bottomNavigation?.visibility = VISIBLE
     }
 
-    private fun startExam(exam: Exam, initialPosition: Int = -1, rand: Boolean = false) {
-        val intent = ExamActivity.newIntent(applicationContext, exam, initialPosition, rand)
-        startActivity(intent)
-        this.finish()
+    private fun startExam(filters: Filters) {
+        startActivity(ExamActivity.newIntent(this, filters.toString()))
     }
 
     private fun updateFragment(fragment: Fragment, stacked: Boolean = false) {
@@ -176,7 +151,7 @@ class FilterActivity : AppCompatActivity(),
         fab?.show()
 //        supportActionBar?.setTitle(R.string.text_questions)
 //        if (questions == null) questions = collection!!.getAllQuestions()
-        updateFragment(QuestionsListFragment.newInstance(questions!!), true)
+//        updateFragment(QuestionsListFragment.newInstance(questions!!), true)
         return true
     }
 
@@ -184,8 +159,7 @@ class FilterActivity : AppCompatActivity(),
         initialView()
 //        fab?.show()
 //        supportActionBar?.setTitle(R.string.text_exams)
-        if (exams == null) exams = collection!!.exams
-        updateFragment(YearsGridFragment.newInstance(exams!!))
+        updateFragment(YearsGridFragment())
         return true
     }
 
@@ -193,8 +167,7 @@ class FilterActivity : AppCompatActivity(),
         initialView()
 //        fab?.show()
 //        supportActionBar?.setTitle(R.string.text_categories)
-        if (categories == null) categories = collection!!.groupByCategories()
-        updateFragment(CategoriesListFragment.newInstance(categories!!))
+        updateFragment(CategoriesListFragment())
         return true
     }
 

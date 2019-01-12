@@ -5,6 +5,7 @@ object IQuestionScheme {
     const val COLUMN_ID = "_id"
     const val COLUMN_REF = "ref"
     const val COLUMN_YEAR = "year"
+    const val COLUMN_NUMBER = "number"
     const val COLUMN_STATEMENT = "statement"
     const val COLUMN_ANSWERS = "answers"
     const val COLUMN_TAGS = "tags"
@@ -16,6 +17,7 @@ object IQuestionScheme {
             $COLUMN_ID INTEGER PRIMARY KEY AUTOINCREMENT,
             $COLUMN_REF TEXT UNIQUE,
             $COLUMN_YEAR INTEGER,
+            $COLUMN_NUMBER INTEGER,
             $COLUMN_STATEMENT TEXT NOT NULL,
             $COLUMN_ANSWERS TEXT,
             $COLUMN_TAGS TEXT COLLATE NOCASE,
@@ -24,6 +26,6 @@ object IQuestionScheme {
         )
     """
 
-    val COLUMNS = arrayOf(COLUMN_ID, COLUMN_REF, COLUMN_YEAR, COLUMN_STATEMENT, COLUMN_ANSWERS,
+    val COLUMNS = arrayOf(COLUMN_ID, COLUMN_REF, COLUMN_YEAR, COLUMN_NUMBER, COLUMN_STATEMENT, COLUMN_ANSWERS,
             COLUMN_TAGS, COLUMN_CORRECT_ANSWER, COLUMN_IMPUGNED)
 }

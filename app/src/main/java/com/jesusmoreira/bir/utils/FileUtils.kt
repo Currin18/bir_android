@@ -3,6 +3,7 @@ package com.jesusmoreira.bir.utils
 import android.content.Context
 import com.jesusmoreira.bir.model.Collection
 import com.jesusmoreira.bir.model.Exam
+import com.jesusmoreira.bir.model.Question
 import org.json.JSONArray
 import java.io.IOException
 import java.nio.charset.Charset
@@ -35,19 +36,23 @@ class FileUtils {
             return json
         }
 
-        fun loadInitialData(context: Context, path: String = ""): Collection? {
-            var collection: Collection? = null
+        fun loadInitialData(context: Context, path: String = ""): Array<Question> {
+            var collection: Array<Question> = arrayOf()
             val files = listJSONAssets(context, path)
             if (files != null && files.isNotEmpty()) {
-                val exams = ArrayList<Exam>()
                 for (i in 0 until files.size) {
-                    val json = JSONArray(readJSONFromAsset(context, files[i]))
+                    JSONArray(readJSONFromAsset(context, files[i])).let {
+                        for (i in 0 until it.length()) {
+                            collection = collection.plus(Question(it.getJSONObject(i)))
+                        }
+                    }
 
-                    val exam = Exam(json, files[i].replace(".json", ""))
-                    exams.add(exam)
+
+//                    val exam = Exam(json, files[i].replace(".json", ""))
+//                    exams.add(exam)
                 }
-                exams.sortBy { it.year }
-                collection = Collection("", "", exams.toTypedArray())
+//                exams.sortBy { it.year }
+//                collection = Collection("", "", exams.toTypedArray())
             }
             return collection
         }

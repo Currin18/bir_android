@@ -1,6 +1,5 @@
 package com.jesusmoreira.bir.dao.question
 
-import com.jesusmoreira.bir.model.Category
 import com.jesusmoreira.bir.model.Question
 
 interface IQuestionDao {
@@ -8,8 +7,9 @@ interface IQuestionDao {
     fun fetchQuestionById(questionId: Int): Question
     fun fetchQuestionByRef(questionRef: String): Question
     fun fetchAllQuestions(): List<Question>
-    fun fetchAllQuestionsByExam(exams: List<String>): List<Question>
+    fun fetchAllQuestionsByExam(exams: List<Int>): List<Question>
     fun fetchAllQuestionsByCategories(categories: List<String>): List<Question>
+    fun fetchRandomQuestions(limit: Int = 260): List<Question>
     // Add Questions
     fun addQuestion(question: Question): Boolean
     fun addQuestions(questions: List<Question>)
@@ -21,5 +21,6 @@ interface IQuestionDao {
     fun deleteQuestionByRef(questionRef: String): Boolean
     fun deleteAllQuestions(): Boolean
     // Utils
-    fun getAllCategories(): List<Category>
+    fun getAllYears(): List<Int>
+    fun getAllCategories(): List<String>
 }

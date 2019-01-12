@@ -17,6 +17,7 @@ import com.jesusmoreira.bir.R
 import com.jesusmoreira.bir.dao.Database
 import com.jesusmoreira.bir.model.Collection
 import com.jesusmoreira.bir.model.Exam
+import com.jesusmoreira.bir.model.Filters
 import com.jesusmoreira.bir.model.Question
 import com.jesusmoreira.bir.utils.FileUtils
 import com.jesusmoreira.bir.utils.PreferencesUtils
@@ -29,8 +30,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         private const val MAX_QUESTIONS: Int = 235
     }
 
-    var database = Database(this)
-    private var collection: List<Question>? = null
+    private var database = Database(this)
+//    private var collection: List<Question>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,12 +83,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun loadInitialData() {
         if (PreferencesUtils.getDbLastUpdate(this) > 0) {
-            collection = database.questionDao?.fetchAllQuestions()
+            database.questionDao?.fetchAllQuestions()
         } else {
-            collection = FileUtils.loadInitialData(this)?.getAllQuestions()?.toList()
-            if (collection != null && collection!!.isNotEmpty()) {
-                database.questionDao?.addQuestions(collection!!)
-                PreferencesUtils.setDbLastUpdate(this, System.currentTimeMillis())
+            FileUtils.loadInitialData(this).toList().let {
+                if (it.isNotEmpty()) {
+                    database.questionDao?.addQuestions(it)
+                    PreferencesUtils.setDbLastUpdate(this, System.currentTimeMillis())
+                }
             }
         }
     }
@@ -159,10 +161,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun goToRandomExam() {
-        if (collection != null) {
-            val exam = Exam("", questions = getRandomQuestions(collection).toTypedArray())
-            startActivity(ExamActivity.newIntent(this, exam))
-        }
+            startActivity(ExamActivity.newIntent(this, Filters(true).toString()))
     }
 
     private fun goToFilters() {

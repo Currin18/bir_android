@@ -13,6 +13,7 @@ import com.jesusmoreira.bir.dao.question.IQuestionScheme.COLUMN_REF
 import com.jesusmoreira.bir.dao.question.IQuestionScheme.COLUMN_STATEMENT
 import com.jesusmoreira.bir.dao.question.IQuestionScheme.COLUMN_TAGS
 import com.jesusmoreira.bir.dao.question.IQuestionScheme.COLUMN_YEAR
+import com.jesusmoreira.bir.dao.question.IQuestionScheme.COLUMN_NUMBER
 import com.jesusmoreira.bir.dao.question.IQuestionScheme.TABLE_NAME
 import com.jesusmoreira.bir.model.Category
 import com.jesusmoreira.bir.model.Question
@@ -22,11 +23,17 @@ class QuestionDao(db: SQLiteDatabase): DbContentProvider<Question>(db), IQuestio
     override fun cursorToEntity(cursor: Cursor): Question {
         val question = Question()
 
+        cursor.getColumnIndex(COLUMN_ID).let {
+            if (it != -1) question.id = cursor.getInt(it)
+        }
         cursor.getColumnIndex(COLUMN_REF).let {
-            if (it != -1) question.id = cursor.getString(it)
+            if (it != -1) question.ref = cursor.getString(it)
         }
         cursor.getColumnIndex(COLUMN_YEAR).let {
             if (it != -1) question.year = cursor.getInt(it)
+        }
+        cursor.getColumnIndex(COLUMN_NUMBER).let {
+            if (it != -1) question.number = cursor.getInt(it)
         }
         cursor.getColumnIndex(COLUMN_STATEMENT).let {
             if (it != -1) question.statement = cursor.getString(it)
@@ -50,8 +57,10 @@ class QuestionDao(db: SQLiteDatabase): DbContentProvider<Question>(db), IQuestio
     override fun entityToContentValues(entity: Question): ContentValues {
         val contentValues = ContentValues()
 
-        contentValues.put(COLUMN_REF, entity.id)
+        contentValues.put(COLUMN_ID, entity.id)
+        contentValues.put(COLUMN_REF, entity.ref)
         contentValues.put(COLUMN_YEAR, entity.year)
+        contentValues.put(COLUMN_NUMBER, entity.number)
         contentValues.put(COLUMN_STATEMENT, entity.statement)
         contentValues.put(COLUMN_ANSWERS, TextUtils.convertArrayToString(entity.answers))
         contentValues.put(COLUMN_TAGS, TextUtils.convertArrayToString(entity.tags))
@@ -110,9 +119,9 @@ class QuestionDao(db: SQLiteDatabase): DbContentProvider<Question>(db), IQuestio
         return questionList
     }
 
-    override fun fetchAllQuestionsByExam(exams: List<String>): List<Question> {
+    override fun fetchAllQuestionsByExam(exams: List<Int>): List<Question> {
         var selection = ""
-        val selectedArgs = exams.toTypedArray()
+        val selectedArgs = exams.map { it.toString() }.toTypedArray()
         val questionList = mutableListOf<Question>()
 
         if (selectedArgs.isNotEmpty()) {
@@ -143,10 +152,10 @@ class QuestionDao(db: SQLiteDatabase): DbContentProvider<Question>(db), IQuestio
         if (selectedArgs.isNotEmpty()) {
             for (i in 0 until selectedArgs.size) {
                 if (i != 0) selection += " OR "
-                selection += "$COLUMN_YEAR LIKE '%?%'"
+                selection += "$COLUMN_TAGS LIKE '%${selectedArgs[i]}%'"
             }
 
-            val cursor = super.query(TABLE_NAME, COLUMNS, selection, selectedArgs, COLUMN_ID)
+            val cursor = super.query(TABLE_NAME, COLUMNS, selection, null, COLUMN_ID)
 
             cursor.moveToFirst()
             while (!cursor.isAfterLast) {
@@ -156,6 +165,21 @@ class QuestionDao(db: SQLiteDatabase): DbContentProvider<Question>(db), IQuestio
             }
             cursor.close()
         }
+
+        return questionList
+    }
+
+    override fun fetchRandomQuestions(limit: Int): List<Question> {
+        val questionList = mutableListOf<Question>()
+        val cursor = super.query(TABLE_NAME, COLUMNS, null, null, "Random()", limit.toString())
+
+        cursor.moveToFirst()
+        while (!cursor.isAfterLast) {
+            val question = cursorToEntity(cursor)
+            questionList.add(question)
+            cursor.moveToNext()
+        }
+        cursor.close()
 
         return questionList
     }
@@ -184,8 +208,36 @@ class QuestionDao(db: SQLiteDatabase): DbContentProvider<Question>(db), IQuestio
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun getAllCategories(): List<Category> {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun getAllYears(): List<Int> {
+        val yearList = mutableListOf<Int>()
+        val cursor = super.query(TABLE_NAME, arrayOf(COLUMN_YEAR), null, null, COLUMN_YEAR, null, null, null)
+
+        cursor.moveToFirst()
+        while (!cursor.isAfterLast) {
+            cursor.getColumnIndex(COLUMN_YEAR).let {
+                if (it != -1) yearList.add(cursor.getInt(it))
+            }
+            cursor.moveToNext()
+        }
+        cursor.close()
+
+        return yearList
+    }
+
+    override fun getAllCategories(): List<String> {
+        val categoryList = mutableListOf<String>()
+        val cursor = super.query(TABLE_NAME, arrayOf(COLUMN_TAGS), null, null, COLUMN_TAGS, null, null, null)
+
+        cursor.moveToFirst()
+        while (!cursor.isAfterLast) {
+            cursor.getColumnIndex(COLUMN_TAGS).let {
+                if (it != -1) categoryList.addAll(TextUtils.convertStringToArray(cursor.getString(it)))
+            }
+            cursor.moveToNext()
+        }
+        cursor.close()
+
+        return categoryList.distinct()
     }
 
 }

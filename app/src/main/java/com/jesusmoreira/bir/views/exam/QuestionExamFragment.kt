@@ -61,7 +61,7 @@ class QuestionExamFragment : Fragment() {
 
             v.btn_let_pass.setOnClickListener { listener?.onLetPassInteraction() }
             v.btn_continue.setOnClickListener { listener?.onContinueInteraction() }
-
+/*
             if (question!!.selectedAnswer != null && question!!.selectedAnswer!! >= 0) {
                 val manager = (v.answers.layoutManager as LinearLayoutManager)
                 val correctAnswer = question!!.correctAnswer
@@ -77,7 +77,7 @@ class QuestionExamFragment : Fragment() {
             if ((question!!.selectedAnswer != null && question!!.selectedAnswer!! >= 0) || question!!.impugned) {
                 v.btn_let_pass.visibility = View.GONE
                 v.btn_continue.visibility = View.VISIBLE
-            }
+            }*/
         }
         return v
     }

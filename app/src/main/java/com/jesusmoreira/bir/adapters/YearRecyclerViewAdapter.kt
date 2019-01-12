@@ -15,12 +15,12 @@ import com.jesusmoreira.bir.model.Exam
 import kotlinx.android.synthetic.main.fragment_exam.view.*
 
 /**
- * [RecyclerView.Adapter] that can display a [DummyItem] and makes a call to the
+ * [RecyclerView.Adapter] that can display a [Int] and makes a call to the
  * specified [OnListFragmentInteractionListener].
  * TODO: Replace the implementation with code for your data type.
  */
 class YearRecyclerViewAdapter(
-        private val mValues: Array<Exam>,
+        private val items: List<Int>,
         private val mListener: OnListFragmentInteractionListener?)
     : RecyclerView.Adapter<YearRecyclerViewAdapter.ViewHolder>() {
 
@@ -28,7 +28,7 @@ class YearRecyclerViewAdapter(
 
     init {
         mOnClickListener = View.OnClickListener { v ->
-            val item = v.tag as Exam
+            val item = v.tag as Int
             // Notify the active callbacks interface (the activity, if the fragment is attached to
             // one) that an item has been selected.
             mListener?.onClickExam(item)
@@ -42,8 +42,8 @@ class YearRecyclerViewAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = mValues[position]
-        holder.mContentView.text = item.year
+        val item = items[position]
+        holder.mContentView.text = item.toString()
 
         with(holder.mView) {
             tag = item
@@ -51,7 +51,7 @@ class YearRecyclerViewAdapter(
         }
     }
 
-    override fun getItemCount(): Int = mValues.size
+    override fun getItemCount(): Int = items.size
 
     inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
         val mContentView: TextView = mView.content

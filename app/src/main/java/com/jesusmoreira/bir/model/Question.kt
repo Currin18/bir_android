@@ -10,13 +10,15 @@ import kotlin.collections.ArrayList
 
 @Parcelize
 data class Question(
-        var id: String? = "",
-        var year: Int = 0,
-        var statement: String? = "",
-        var answers: Array<String>? = arrayOf(),
-        var tags: Array<String>? = arrayOf(),
+        var ref: String = "",
+        var statement: String = "",
+        var answers: Array<String> = arrayOf(),
+        var tags: Array<String> = arrayOf(),
         var correctAnswer: Int = 0,
-        var impugned: Boolean = false
+        var impugned: Boolean = false,
+        var id: Int? = null,
+        var year: Int = 0,
+        var number: Int = 0
 ): Parcelable {
 
     companion object {
@@ -26,30 +28,19 @@ data class Question(
         private const val JSON_TAGS = "tags"
         private const val JSON_CORRECT_ANSWER = "correct-answer"
         private const val JSON_IMPUGNED = "impugned"
-
-        enum class Status {
-            Default,
-            Correct,
-            Error,
-            Passed
-        }
     }
 
-    var questionStatus: Status = Status.Default
-        get() {
-            return when(selectedAnswer) {
-                -1 -> Status.Passed
-                null, 0 -> Status.Default
-                correctAnswer -> Status.Correct
-                else -> Status.Error
-            }
-        }
-        private set
-    var selectedAnswer: Int? = null
-
-    constructor(json: JSONObject = JSONObject()) : this("") {
+    constructor(json: JSONObject) : this() {
         try {
-            if (json.has(JSON_ID)) id = json.getString(JSON_ID)
+            if (json.has(JSON_ID)) {
+                ref = json.getString(JSON_ID)
+                ref.split('-').let {
+                    if (it.size > 1) {
+                        year = it[0].toInt()
+                        number = it[1].toInt()
+                    }
+                }
+            }
             if (json.has(JSON_STATEMENT)) statement = json.getString(JSON_STATEMENT)
             if (json.has(JSON_ANSWERS)) {
                 val jsonArray = when (json.get(JSON_ANSWERS)) {
@@ -93,11 +84,11 @@ data class Question(
         json.put(JSON_IMPUGNED, impugned)
 
         val jsonAnswers = JSONArray()
-        answers?.forEach { jsonAnswers.put(it) }
+        answers.forEach { jsonAnswers.put(it) }
         json.put(JSON_ANSWERS, jsonAnswers)
 
         val jsonTags = JSONArray()
-        tags?.forEach { jsonTags.put(it) }
+        tags.forEach { jsonTags.put(it) }
         json.put(JSON_TAGS, jsonTags)
 
         return json
@@ -109,29 +100,29 @@ data class Question(
 
         other as Question
 
-        if (id != other.id) return false
+        if (ref != other.ref) return false
         if (statement != other.statement) return false
-        if (!Arrays.equals(answers, other.answers)) return false
-        if (!Arrays.equals(tags, other.tags)) return false
+        if (!answers.contentEquals(other.answers)) return false
+        if (!tags.contentEquals(other.tags)) return false
         if (correctAnswer != other.correctAnswer) return false
         if (impugned != other.impugned) return false
+        if (id != other.id) return false
+        if (year != other.year) return false
+        if (number != other.number) return false
 
         return true
     }
 
     override fun hashCode(): Int {
-        var result = id?.hashCode() ?: 0
-        result = 31 * result + (statement?.hashCode() ?: 0)
-        result = 31 * result + (answers?.let { Arrays.hashCode(it) } ?: 0)
-        result = 31 * result + (tags?.let { Arrays.hashCode(it) } ?: 0)
+        var result = ref.hashCode()
+        result = 31 * result + statement.hashCode()
+        result = 31 * result + answers.contentHashCode()
+        result = 31 * result + tags.contentHashCode()
         result = 31 * result + correctAnswer
         result = 31 * result + impugned.hashCode()
-        result = 31 * result + JSON_ID.hashCode()
-        result = 31 * result + JSON_STATEMENT.hashCode()
-        result = 31 * result + JSON_ANSWERS.hashCode()
-        result = 31 * result + JSON_TAGS.hashCode()
-        result = 31 * result + JSON_CORRECT_ANSWER.hashCode()
-        result = 31 * result + JSON_IMPUGNED.hashCode()
+        result = 31 * result + (id ?: 0)
+        result = 31 * result + year
+        result = 31 * result + number
         return result
     }
 }

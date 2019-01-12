@@ -1,4 +1,4 @@
-package com.jesusmoreira.bir.views
+package com.jesusmoreira.bir.views.exam
 
 import android.content.Context
 import android.os.Bundle
@@ -20,21 +20,16 @@ import com.jesusmoreira.bir.model.Question
  */
 class QuestionsListFragment : Fragment() {
 
-    private var items: Array<Question> = arrayOf()
+//    private var items: Array<Question> = arrayOf()
 
     private var listener: OnListFragmentInteractionListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        arguments?.let {
-            items = it.getParcelableArray(EXTRA_ARRAY_QUESTIONS) as Array<Question>
-        }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        listener?.onResume(items)
+//        arguments?.let {
+//            items = it.getParcelableArray(EXTRA_ARRAY_QUESTIONS) as Array<Question>
+//        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -45,7 +40,7 @@ class QuestionsListFragment : Fragment() {
         if (view is RecyclerView) {
             with(view) {
                 layoutManager =  LinearLayoutManager(context)
-                adapter = QuestionRecyclerViewAdapter(items, listener)
+                adapter = QuestionRecyclerViewAdapter((activity as ExamActivity).questions.toTypedArray(), listener)
             }
         }
         return view
@@ -85,14 +80,14 @@ class QuestionsListFragment : Fragment() {
 
     companion object {
 
-        const val EXTRA_ARRAY_QUESTIONS = "EXTRA_ARRAY_QUESTIONS"
-
-        @JvmStatic
-        fun newInstance(items: Array<Question>) =
-                QuestionsListFragment().apply {
-                    arguments = Bundle().apply {
-                        putParcelableArray(EXTRA_ARRAY_QUESTIONS, items)
-                    }
-                }
+//        const val EXTRA_ARRAY_QUESTIONS = "EXTRA_ARRAY_QUESTIONS"
+//
+//        @JvmStatic
+//        fun newInstance(items: Array<Question>) =
+//                QuestionsListFragment().apply {
+//                    arguments = Bundle().apply {
+//                        putParcelableArray(EXTRA_ARRAY_QUESTIONS, items)
+//                    }
+//                }
     }
 }

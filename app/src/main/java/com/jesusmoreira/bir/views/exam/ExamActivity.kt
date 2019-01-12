@@ -9,37 +9,31 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
-import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.jesusmoreira.bir.R
-import com.jesusmoreira.bir.model.Exam
+import com.jesusmoreira.bir.dao.Database
+import com.jesusmoreira.bir.model.Filters
 import com.jesusmoreira.bir.model.Question
-import com.jesusmoreira.bir.views.QuestionsListFragment
-import kotlinx.android.synthetic.main.fragment_question_answer.view.*
-import kotlinx.android.synthetic.main.toolbar_exam.*
+import org.json.JSONObject
 
 class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInteractionListener, QuestionsListFragment.OnListFragmentInteractionListener {
 
     companion object {
-        const val EXTRA_EXAM = "EXTRA_EXAM"
-        const val EXTRA_INITIAL_POSITION = "EXTRA_INITIAL_POSITION"
-        const val EXTRA_RAND = "EXTRA_RAND"
+        private const val EXTRA_FILTERS = "EXTRA_FILTERS"
 
-        fun newIntent(context: Context, exam: Exam, initialPosition: Int = 0, rand: Boolean = false) : Intent {
+        fun newIntent(context: Context, filters: String) : Intent {
             val intent = Intent(context, ExamActivity::class.java)
-            intent.putExtra(EXTRA_EXAM, exam)
-            intent.putExtra(EXTRA_INITIAL_POSITION, initialPosition - 1)
-            intent.putExtra(EXTRA_RAND, rand)
+            intent.putExtra(EXTRA_FILTERS, filters)
             return intent
         }
     }
 
-//    var question: Question? = null
-    var exam: Exam? = null
+    private var database = Database(this)
+
+    var questions: List<Question> = listOf()
+    var filters: Filters? = null
     var menuVisibility = true
 //    private var questionPosition = -1
 
@@ -47,17 +41,24 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exam)
 
-        if (intent != null && intent.hasExtra(EXTRA_EXAM)) {
-            exam = intent.getParcelableExtra(EXTRA_EXAM)
-
-            if (intent.hasExtra(EXTRA_INITIAL_POSITION)) exam!!.questionPosition = intent.getIntExtra(EXTRA_INITIAL_POSITION, -1)
-            if (intent.hasExtra(EXTRA_RAND)) exam!!.rand = intent.getBooleanExtra(EXTRA_RAND, false)
+        if (intent != null && intent.hasExtra(EXTRA_FILTERS)) {
+            filters = Filters(JSONObject(intent.getStringExtra(EXTRA_FILTERS)))
         }
 
         val toolbar : Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        goToNextQuestion()
+        database.open()
+        if (filters != null) {
+            questions = when {
+                filters!!.random -> database.questionDao?.fetchRandomQuestions() ?: listOf()
+                filters!!.years.isNotEmpty() -> database.questionDao?.fetchAllQuestionsByExam(filters!!.years.toList()) ?: listOf()
+                filters!!.categories.isNotEmpty() -> database.questionDao?.fetchAllQuestionsByCategories(filters!!.categories.toList()) ?: listOf()
+                else -> listOf()
+            }
+        }
+
+        goToListQuestions()
     }
 
 
@@ -71,12 +72,12 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when (item?.itemId) {
-            R.id.action_question_list -> {
-                updateFragment(QuestionsListFragment.newInstance(exam!!.questions), true)
-                updateMenu(false)
-            }
-        }
+//        when (item?.itemId) {
+//            R.id.action_question_list -> {
+//                updateFragment(QuestionsListFragment.newInstance(exam!!.questions), true)
+//                updateMenu(false)
+//            }
+//        }
         return true
     }
 
@@ -111,7 +112,7 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
         val buttonLetPass = findViewById<Button>(R.id.btn_let_pass)
         val buttonContinue = findViewById<Button>(R.id.btn_continue)
         if (buttonContinue.visibility == View.GONE) {
-            val setted = exam!!.setOnClickAnswer(item)
+            /*val setted = exam!!.setOnClickAnswer(item)
 
             val answers: RecyclerView? = findViewById(R.id.answers)
             if (answers != null && setted) {
@@ -127,45 +128,49 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
                     exam!!.questionsSuccess++
                 }
                 updateToolbarCounts()
-            }
+            }*/
             buttonLetPass.visibility = View.GONE
             buttonContinue.visibility = View.VISIBLE
         }
     }
 
     override fun onLetPassInteraction() {
-        exam!!.setLetPassInteraction()
+//        exam!!.setLetPassInteraction()
         goToNextQuestion()
     }
 
     override fun onContinueInteraction() {
-        exam!!.setContinueInteraction()
+//        exam!!.setContinueInteraction()
         goToNextQuestion()
     }
 
+    private fun goToListQuestions() {
+        updateFragment(QuestionsListFragment())
+    }
+
     private fun goToNextQuestion() {
-        val question = exam!!.nextQuestion()
+        /*val question = exam!!.nextQuestion()
         if (question != null) {
             updateFragment(QuestionExamFragment.newInstance(question.toJson().toString()))
             updateToolbarCounts()
         } else {
             Toast.makeText(applicationContext, "Exam finished", Toast.LENGTH_SHORT).show()
-        }
+        }*/
     }
 
     private fun goToQuestion(position : Int) {
-        exam!!.questionPosition = position
-        updateFragment(QuestionExamFragment.newInstance(exam!!.questions[position].toJson().toString()))
-        updateToolbarCounts()
+//        exam!!.questionPosition = position
+//        updateFragment(QuestionExamFragment.newInstance(exam!!.questions[position].toJson().toString()))
+//        updateToolbarCounts()
     }
 
     @SuppressLint("SetTextI18n")
     private fun updateToolbarCounts() {
-        toolbar_id_question.text = "#${exam!!.questions[exam!!.questionPosition].id}"
+        /*toolbar_id_question.text = "#${exam!!.questions[exam!!.questionPosition].id}"
         toolbar_count_question.text = "${getString(R.string.toolbar_count_question)} ${(exam!!.questionCount)}/${exam?.questions?.size}"
         toolbar_answer_success.text = "${getString(R.string.toolbar_answer_success)} ${exam?.questionsSuccess}"
         toolbar_answer_error.text = "${getString(R.string.toolbar_answer_error)} ${exam?.questionsError}"
         toolbar_answer_passed.text = "${getString(R.string.toolbar_answer_passed)} ${exam?.questionsPassed}"
-        toolbar_count_points.text = "${getString(R.string.toolbar_count_points)} ${(exam!!.questionsSuccess - (exam!!.questionsError / 3))}"
+        toolbar_count_points.text = "${getString(R.string.toolbar_count_points)} ${(exam!!.questionsSuccess - (exam!!.questionsError / 3))}"*/
     }
 }

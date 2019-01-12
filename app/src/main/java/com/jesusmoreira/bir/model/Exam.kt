@@ -9,81 +9,90 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 @Parcelize
-data class Exam (var year: String = "", var questions: Array<Question> = arrayOf()): Parcelable {
+data class Exam (
+        var filters: Filters,
+        var questions: Array<Question> = arrayOf(),
+        var selectedAnswers: Array<Int> = Array(questions.size) { i -> 0 },
+        var id: Int? = null,
+        var created: Long = System.currentTimeMillis(),
+        var finished: Long? = null,
+        var countCorrect: Int = 0,
+        var countErrors: Int = 0,
+        var countImpugned: Int = 0
+): Parcelable {
 
-    var questionPosition = -1
-        set(value) {
-            field = if (value < -1) -1
-                    else value
+    companion object {
+        enum class QuestionStatus {
+            Default,
+            Correct,
+            Error,
+            Passed
         }
-    var questionCount = 0
-    var questionsSuccess = 0
-    var questionsError = 0
-    var questionsPassed = 0
+    }
 
-    var rand = false
+    var selectedAnswerStatus: Array<QuestionStatus> = arrayOf(QuestionStatus.Default)
 
-    constructor(jsonArray: JSONArray = JSONArray(), year: String = "") : this(year) {
-        val arrayList: ArrayList<Question> = ArrayList()
-        if (jsonArray.length() > 0) {
-            for (i in 0 until jsonArray.length()) {
-                arrayList.add(Question(jsonArray.get(i) as JSONObject))
+    fun getQuestionStatus(position: Int) : QuestionStatus {
+        if (position >= 0 && position < questions.size) {
+            return when (selectedAnswers[position]) {
+                0 -> QuestionStatus.Default
+                -1 -> QuestionStatus.Passed
+                questions[position].correctAnswer -> QuestionStatus.Correct
+                else -> QuestionStatus.Error
             }
-            questions = arrayList.toTypedArray()
         }
+        return QuestionStatus.Default
     }
 
-    override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        if (javaClass != other?.javaClass) return false
-
-        other as Exam
-
-        if (year != other.year) return false
-        if (!Arrays.equals(questions, other.questions)) return false
-
-        return true
-    }
-
-    override fun hashCode(): Int {
-        var result = year.hashCode()
-        result = 31 * result + Arrays.hashCode(questions)
-        return result
-    }
-
-    fun nextQuestion(): Question? {
-        if (rand) {
-            val questionsRemaining = questions.filter { it.selectedAnswer == null }
-            questionPosition = if (questionsRemaining.isNotEmpty()) {
-                val randPosition = Random().nextInt(questionsRemaining.size)
-                questions.indexOf(questionsRemaining[randPosition])
-            } else { -1 }
-        } else {
-            questionPosition++
+    fun nextQuestion(questionId: Int?): Question? {
+        if (questionId != null) {
+            val position = questions.indexOfFirst { it.id == questionId } + 1
+            return if (position >= 0 && position < questions.size) {
+                questions[position]
+            } else {
+                null
+            }
         }
 
-        if (questionPosition >= 0 && questionPosition < questions.size) {
-            questionCount++
-            return questions[questionPosition]
-        }
-        return null
+        return questions[0]
     }
 
-    fun setOnClickAnswer(position: Int): Boolean {
-        if (questionPosition >= 0 && questionPosition < questions.size) {
-            questions[questionPosition].selectedAnswer = position
+    fun setOnClickAnswer(questionId: Int, answerSelected: Int): Boolean {
+        val position = questions.indexOfFirst { it.id == questionId }
+        if (position >= 0 && position < questions.size) {
+            selectedAnswers[position] = answerSelected
+            getQuestionStatus(position).let {
+                selectedAnswerStatus[position] = it
+                when(it) {
+                    QuestionStatus.Correct -> countCorrect++
+                    QuestionStatus.Error -> countErrors++
+                    else -> {}
+                }
+            }
             return true
         }
         return false
     }
 
-    fun setLetPassInteraction() {
-        if (questionPosition >= 0 && questionPosition < questions.size)
-            questions[questionPosition].selectedAnswer = -1
+    fun setLetPassInteraction(questionId: Int) {
+        val position = questions.indexOfFirst { it.id == questionId }
+        if (position >= 0 && position < questions.size) {
+            selectedAnswers[position] = -1
+            getQuestionStatus(position).let {
+                selectedAnswerStatus[position] = it
+                when(it) {
+                    QuestionStatus.Correct -> countCorrect++
+                    QuestionStatus.Error -> countErrors++
+                    else -> {}
+                }
+            }
+        }
     }
 
-    fun setContinueInteraction() {
-        if (questionPosition >= 0 && questionPosition < questions.size && questions[questionPosition].impugned)
-            questions[questionPosition].selectedAnswer = -2
+    fun setContinueInteraction(questionId: Int) {
+        val position = questions.indexOfFirst { it.id == questionId }
+        if (position >= 0 && position < questions.size && questions[position].impugned)
+            countImpugned++
     }
+
 }

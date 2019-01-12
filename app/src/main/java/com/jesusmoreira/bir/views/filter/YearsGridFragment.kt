@@ -20,16 +20,16 @@ import com.jesusmoreira.bir.model.Exam
  */
 class YearsGridFragment : Fragment() {
 
-    private var items: Array<Exam> = arrayOf()
+//    private var items: Array<Exam> = arrayOf()
 
     private var listener: OnListFragmentInteractionListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        arguments?.let {
-            items = it.getParcelableArray(EXTRA_ARRAY_EXAMS) as Array<Exam>
-        }
+//        arguments?.let {
+//            items = it.getParcelableArray(EXTRA_ARRAY_EXAMS) as Array<Exam>
+//        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +40,7 @@ class YearsGridFragment : Fragment() {
         if (view is RecyclerView) {
             with(view) {
                 layoutManager = GridLayoutManager(context, 2)
-                adapter = YearRecyclerViewAdapter(items, listener)
+                adapter = YearRecyclerViewAdapter((activity as FilterActivity).years ?: listOf(), listener)
             }
         }
         return view
@@ -72,19 +72,19 @@ class YearsGridFragment : Fragment() {
      * for more information.
      */
     interface OnListFragmentInteractionListener {
-        fun onClickExam(item: Exam)
+        fun onClickExam(item: Int)
     }
 
     companion object {
 
-        const val EXTRA_ARRAY_EXAMS = "EXTRA_ARRAY_EXAMS"
-
-        @JvmStatic
-        fun newInstance(items: Array<Exam> = arrayOf()) =
-                YearsGridFragment().apply {
-                    arguments = Bundle().apply {
-                        putParcelableArray(EXTRA_ARRAY_EXAMS, items)
-                    }
-                }
+//        const val EXTRA_ARRAY_EXAMS = "EXTRA_ARRAY_EXAMS"
+//
+//        @JvmStatic
+//        fun newInstance(items: Array<Exam> = arrayOf()) =
+//                YearsGridFragment().apply {
+//                    arguments = Bundle().apply {
+//                        putParcelableArray(EXTRA_ARRAY_EXAMS, items)
+//                    }
+//                }
     }
 }

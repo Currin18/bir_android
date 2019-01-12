@@ -8,10 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.jesusmoreira.bir.adapters.CategorieRecyclerViewAdapter
+import com.jesusmoreira.bir.adapters.CategoriesRecyclerViewAdapter
 import com.jesusmoreira.bir.R
-
-import com.jesusmoreira.bir.model.Category
 
 /**
  * A fragment representing a list of Items.
@@ -20,16 +18,16 @@ import com.jesusmoreira.bir.model.Category
  */
 class CategoriesListFragment : Fragment() {
 
-    private var items: Array<Category> = arrayOf()
+//    private var items: Array<Category> = arrayOf()
 
     private var listener: OnListFragmentInteractionListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        arguments?.let {
-            items = it.getParcelableArray(EXTRA_ARRAY_CATEGORIES) as Array<Category>
-        }
+//        arguments?.let {
+//            items = it.getParcelableArray(EXTRA_ARRAY_CATEGORIES) as Array<Category>
+//        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +38,7 @@ class CategoriesListFragment : Fragment() {
         if (view is RecyclerView) {
             with(view) {
                 layoutManager = LinearLayoutManager(context)
-                adapter = CategorieRecyclerViewAdapter(items, listener)
+                adapter = CategoriesRecyclerViewAdapter((activity as FilterActivity).categories ?: listOf(), listener)
             }
         }
         return view
@@ -72,19 +70,19 @@ class CategoriesListFragment : Fragment() {
      * for more information.
      */
     interface OnListFragmentInteractionListener {
-        fun onClickCategory(item: Category)
+        fun onClickCategory(item: String)
     }
 
     companion object {
 
-        const val EXTRA_ARRAY_CATEGORIES = "EXTRA_ARRAY_CATEGORIES"
-
-        @JvmStatic
-        fun newInstance(categories: Array<Category>) =
-                CategoriesListFragment().apply {
-                    arguments = Bundle().apply {
-                        putParcelableArray(EXTRA_ARRAY_CATEGORIES, categories)
-                    }
-                }
+//        const val EXTRA_ARRAY_CATEGORIES = "EXTRA_ARRAY_CATEGORIES"
+//
+//        @JvmStatic
+//        fun newInstance(categories: Array<Category>) =
+//                CategoriesListFragment().apply {
+//                    arguments = Bundle().apply {
+//                        putParcelableArray(EXTRA_ARRAY_CATEGORIES, categories)
+//                    }
+//                }
     }
 }

@@ -8,7 +8,7 @@ import android.widget.TextView
 import com.jesusmoreira.bir.R
 
 
-import com.jesusmoreira.bir.views.QuestionsListFragment.OnListFragmentInteractionListener
+import com.jesusmoreira.bir.views.exam.QuestionsListFragment.OnListFragmentInteractionListener
 import com.jesusmoreira.bir.dummy.DummyContent.DummyItem
 import com.jesusmoreira.bir.model.Question
 import com.jesusmoreira.bir.utils.TextUtils
@@ -16,9 +16,8 @@ import com.jesusmoreira.bir.utils.TextUtils
 import kotlinx.android.synthetic.main.fragment_question.view.*
 
 /**
- * [RecyclerView.Adapter] that can display a [DummyItem] and makes a call to the
+ * [RecyclerView.Adapter] that can display a [Question] and makes a call to the
  * specified [OnListFragmentInteractionListener].
- * TODO: Replace the implementation with code for your data type.
  */
 class QuestionRecyclerViewAdapter(
         private val mValues: Array<Question>,
@@ -44,8 +43,8 @@ class QuestionRecyclerViewAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = mValues[position]
-        holder.mIdView.text = "#${item.id}"
-        holder.mContentView.text = TextUtils.parseToHtml(item.statement!!)
+        holder.mIdView.text = "#${item.ref}"
+        holder.mContentView.text = TextUtils.parseToHtml(item.statement)
 
         with(holder.mView) {
             tag = position
