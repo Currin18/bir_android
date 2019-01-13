@@ -78,6 +78,15 @@ data class Filters(
         return json.toString()
     }
 
+    fun countFilters(): Int {
+        var count = 0
+        if (random) count++
+        if (years.isNotEmpty()) count++
+        if (categories.isNotEmpty()) count++
+        if (words.isNotEmpty()) count++
+        return count
+    }
+
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false

@@ -16,6 +16,7 @@ import com.jesusmoreira.bir.dao.question.IQuestionScheme.COLUMN_YEAR
 import com.jesusmoreira.bir.dao.question.IQuestionScheme.COLUMN_NUMBER
 import com.jesusmoreira.bir.dao.question.IQuestionScheme.TABLE_NAME
 import com.jesusmoreira.bir.model.Category
+import com.jesusmoreira.bir.model.Filters
 import com.jesusmoreira.bir.model.Question
 import com.jesusmoreira.bir.utils.TextUtils
 
@@ -169,9 +170,85 @@ class QuestionDao(db: SQLiteDatabase): DbContentProvider<Question>(db), IQuestio
         return questionList
     }
 
+    override fun fetchAllQuestionsByWords(words: List<String>, includeAnswers: Boolean): List<Question> {
+        var selection = ""
+        val selectedArgs = words.toTypedArray()
+        val questionList = mutableListOf<Question>()
+
+        if (selectedArgs.isNotEmpty()) {
+            for (i in 0 until selectedArgs.size) {
+                if (i != 0) selection += " OR "
+                selection += "$COLUMN_STATEMENT LIKE '%${selectedArgs[i]}%'"
+                if (includeAnswers) selection += " OR $COLUMN_ANSWERS LIKE '%${selectedArgs[i]}%'"
+            }
+
+            val cursor = super.query(TABLE_NAME, COLUMNS, selection, null, COLUMN_ID)
+
+            cursor.moveToFirst()
+            while (!cursor.isAfterLast) {
+                val question = cursorToEntity(cursor)
+                questionList.add(question)
+                cursor.moveToNext()
+            }
+            cursor.close()
+        }
+
+        return questionList
+    }
+
     override fun fetchRandomQuestions(limit: Int): List<Question> {
         val questionList = mutableListOf<Question>()
         val cursor = super.query(TABLE_NAME, COLUMNS, null, null, "Random()", limit.toString())
+
+        cursor.moveToFirst()
+        while (!cursor.isAfterLast) {
+            val question = cursorToEntity(cursor)
+            questionList.add(question)
+            cursor.moveToNext()
+        }
+        cursor.close()
+
+        return questionList
+    }
+
+    override fun fetchFilteredQuestions(filters: Filters, limit: Int): List<Question> {
+        var selection = ""
+        val questionList = mutableListOf<Question>()
+
+        if (filters.years.isNotEmpty()) {
+            if (selection.isNotBlank()) selection += "AND "
+            selection += "("
+            for (i in 0 until filters.years.size) {
+                if (i != 0) selection += " OR "
+                selection += "$COLUMN_YEAR LIKE '%${filters.years[i]}%'"
+            }
+            selection += ") "
+        }
+
+        if (filters.categories.isNotEmpty()) {
+            if (selection.isNotBlank()) selection += "AND "
+            selection += " ("
+            for (i in 0 until filters.categories.size) {
+                if (i != 0) selection += " OR "
+                selection += "$COLUMN_TAGS LIKE '%${filters.categories[i]}%'"
+            }
+            selection += ") "
+        }
+
+        if (filters.words.isNotEmpty()) {
+            if (selection.isNotBlank()) selection += "AND "
+            selection += " ("
+            for (i in 0 until filters.words.size) {
+                if (i != 0) selection += " OR "
+                selection += "$COLUMN_STATEMENT LIKE '%${filters.words[i]}%'"
+                if (filters.includeAnswers) selection += " OR $COLUMN_ANSWERS LIKE '%${filters.words[i]}%'"
+            }
+            selection += ") "
+        }
+
+        val cursor = if (filters.random) super.query(TABLE_NAME, COLUMNS, selection, null, "Random()", limit.toString())
+                             else super.query(TABLE_NAME, COLUMNS, selection, null, COLUMN_ID)
+
 
         cursor.moveToFirst()
         while (!cursor.isAfterLast) {

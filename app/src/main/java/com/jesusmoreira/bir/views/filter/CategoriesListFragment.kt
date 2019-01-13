@@ -38,7 +38,7 @@ class CategoriesListFragment : Fragment() {
         if (view is RecyclerView) {
             with(view) {
                 layoutManager = LinearLayoutManager(context)
-                adapter = CategoriesRecyclerViewAdapter((activity as FilterActivity).categories ?: listOf(), listener)
+                adapter = CategoriesRecyclerViewAdapter((activity as FilterActivity).categories, listener)
             }
         }
         return view

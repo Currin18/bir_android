@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.jesusmoreira.bir.R
 import com.jesusmoreira.bir.dao.Database
+import com.jesusmoreira.bir.model.Exam
 import com.jesusmoreira.bir.model.Filters
 import com.jesusmoreira.bir.model.Question
 import org.json.JSONObject
@@ -33,6 +34,7 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
     private var database = Database(this)
 
     var questions: List<Question> = listOf()
+    var exam: Exam? = null
     var filters: Filters? = null
     var menuVisibility = true
 //    private var questionPosition = -1
@@ -51,9 +53,11 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
         database.open()
         if (filters != null) {
             questions = when {
+                filters!!.countFilters() > 1 -> database.questionDao?.fetchFilteredQuestions(filters!!) ?: listOf()
                 filters!!.random -> database.questionDao?.fetchRandomQuestions() ?: listOf()
                 filters!!.years.isNotEmpty() -> database.questionDao?.fetchAllQuestionsByExam(filters!!.years.toList()) ?: listOf()
                 filters!!.categories.isNotEmpty() -> database.questionDao?.fetchAllQuestionsByCategories(filters!!.categories.toList()) ?: listOf()
+                filters!!.words.isNotEmpty() -> database.questionDao?.fetchAllQuestionsByWords(filters!!.words.toList(), filters!!.includeAnswers) ?: listOf()
                 else -> listOf()
             }
         }

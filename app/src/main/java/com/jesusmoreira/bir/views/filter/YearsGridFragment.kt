@@ -40,7 +40,7 @@ class YearsGridFragment : Fragment() {
         if (view is RecyclerView) {
             with(view) {
                 layoutManager = GridLayoutManager(context, 2)
-                adapter = YearRecyclerViewAdapter((activity as FilterActivity).years ?: listOf(), listener)
+                adapter = YearRecyclerViewAdapter((activity as FilterActivity).years, listener)
             }
         }
         return view

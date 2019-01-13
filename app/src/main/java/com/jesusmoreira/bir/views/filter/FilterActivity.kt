@@ -31,8 +31,8 @@ class FilterActivity : AppCompatActivity(),
     var fabFilters : FloatingActionButton? = null
     var bottomNavigation : BottomNavigationView? = null
 
-    var years: List<Int>? = null
-    var categories: List<String>? = null
+    var years: List<Int> = arrayListOf()
+    var categories: List<String> = arrayListOf()
 
     var examSelected: Exam? = null
 
@@ -73,8 +73,6 @@ class FilterActivity : AppCompatActivity(),
             }
         }
 
-        fabFilters = this.findViewById(R.id.filters_fab)
-
         database.open()
         years = database.questionDao?.getAllYears() ?: listOf()
         categories = database.questionDao?.getAllCategories() ?: listOf()
@@ -92,8 +90,15 @@ class FilterActivity : AppCompatActivity(),
         startExam(Filters(categories = arrayOf(item)))
     }
 
-    override fun onFilterInteraction(uri: Uri) {
-        Toast.makeText(this, "Advanced Filters: " + "interaction", Toast.LENGTH_SHORT).show()
+    override fun onFilterInteraction(years: List<Int>, categories: List<String>, words: List<String>, includeAnswers: Boolean) {
+//        Toast.makeText(this, "Advanced Filters: years-> $years, categories-> $categories, words-> $words, includeAnswers-> $includeAnswers", Toast.LENGTH_SHORT).show()
+        val filters = Filters()
+        if (years.isNotEmpty()) filters.years = years.toTypedArray()
+        if (categories.isNotEmpty()) filters.categories = categories.toTypedArray()
+        if (words.isNotEmpty()) filters.words = words.toTypedArray()
+        filters.includeAnswers = includeAnswers
+
+        startExam(filters)
     }
 
 //    var mSearch: MenuItem? = null
@@ -126,12 +131,6 @@ class FilterActivity : AppCompatActivity(),
 
     fun uploadExam(examSelected: Exam) { this.examSelected = examSelected }
 
-    private fun initialView() {
-        fab?.hide()
-        fabFilters?.hide()
-        bottomNavigation?.visibility = VISIBLE
-    }
-
     private fun startExam(filters: Filters) {
         startActivity(ExamActivity.newIntent(this, filters.toString()))
     }
@@ -145,38 +144,18 @@ class FilterActivity : AppCompatActivity(),
         fragmentTransaction.commit()
     }
 
-    private fun goToQuestionsList(questions: Array<Question>): Boolean {
-        initialView()
-        bottomNavigation?.visibility = GONE
-        fab?.show()
-//        supportActionBar?.setTitle(R.string.text_questions)
-//        if (questions == null) questions = collection!!.getAllQuestions()
-//        updateFragment(QuestionsListFragment.newInstance(questions!!), true)
-        return true
-    }
-
     private fun goToExamGrid(): Boolean {
-        initialView()
-//        fab?.show()
-//        supportActionBar?.setTitle(R.string.text_exams)
         updateFragment(YearsGridFragment())
         return true
     }
 
     private fun goToCategoriesList(): Boolean {
-        initialView()
-//        fab?.show()
-//        supportActionBar?.setTitle(R.string.text_categories)
         updateFragment(CategoriesListFragment())
         return true
     }
 
     private fun goToAdvancedFilters(): Boolean {
-        initialView()
-        fab?.hide()
-        fabFilters?.show()
-//        supportActionBar?.setTitle(R.string.text_advanced_filters)
-        updateFragment(AdvancedFiltersFragment.newInstance())
+        updateFragment(AdvancedFiltersFragment())
         return true
     }
 
