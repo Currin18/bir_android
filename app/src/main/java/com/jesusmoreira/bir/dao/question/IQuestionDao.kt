@@ -11,8 +11,8 @@ interface IQuestionDao {
     fun fetchAllQuestionsByExam(exams: List<Int>): List<Question>
     fun fetchAllQuestionsByCategories(categories: List<String>): List<Question>
     fun fetchAllQuestionsByWords(words: List<String>, includeAnswers: Boolean): List<Question>
-    fun fetchRandomQuestions(limit: Int = 260): List<Question>
-    fun fetchFilteredQuestions(filters: Filters, limit: Int = 260): List<Question>
+    fun fetchRandomQuestions(limit: Int = 235): List<Question>
+    fun fetchFilteredQuestions(filters: Filters, limit: Int = 235): List<Question>
     // Add Questions
     fun addQuestion(question: Question): Boolean
     fun addQuestions(questions: List<Question>)

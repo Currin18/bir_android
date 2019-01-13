@@ -1,5 +1,6 @@
 package com.jesusmoreira.bir.adapters
 
+import android.content.Context
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -8,9 +9,9 @@ import android.widget.TextView
 import com.jesusmoreira.bir.R
 
 
-import com.jesusmoreira.bir.views.exam.QuestionExamFragment.OnQuestionExamInteractionListener
 import com.jesusmoreira.bir.dummy.DummyContent.DummyItem
 import com.jesusmoreira.bir.utils.TextUtils
+import com.jesusmoreira.bir.views.exam.QuestionExamFragment
 
 import kotlinx.android.synthetic.main.fragment_category.view.*
 
@@ -19,8 +20,11 @@ import kotlinx.android.synthetic.main.fragment_category.view.*
  * specified [OnListFragmentInteractionListener].
  */
 class AnswerRecyclerViewAdapter(
+        private val context: Context,
         private val mValues: Array<String>,
-        private val mListener: OnQuestionExamInteractionListener?)
+        private val correctAnswer: Int?,
+        private val selectedAnswer: Int?,
+        private val mListener: QuestionExamFragment.OnQuestionExamInteractionListener?)
     : RecyclerView.Adapter<AnswerRecyclerViewAdapter.ViewHolder>() {
 
     private val mOnClickListener: View.OnClickListener
@@ -30,7 +34,8 @@ class AnswerRecyclerViewAdapter(
             val item = v.tag as Int
             // Notify the active callbacks interface (the activity, if the fragment is attached to
             // one) that an item has been selected.
-            mListener?.onClickAnswer(item)
+            if (correctAnswer == null && selectedAnswer == null)
+                mListener?.onClickAnswer(item + 1)
         }
     }
 
@@ -43,6 +48,12 @@ class AnswerRecyclerViewAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = mValues[position]
         holder.mContentView.text = TextUtils.parseToHtml(item)
+
+        if (position == correctAnswer) {
+            holder.mView.findViewById<View>(R.id.cardLayout).setBackgroundColor(context.getColor(R.color.colorPrimaryLight))
+        } else if (position == selectedAnswer) {
+            holder.mView.findViewById<View>(R.id.cardLayout).setBackgroundColor(context.getColor(R.color.red))
+        }
 
         with(holder.mView) {
             tag = position

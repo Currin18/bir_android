@@ -26,10 +26,6 @@ class QuestionsListFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-//        arguments?.let {
-//            items = it.getParcelableArray(EXTRA_ARRAY_QUESTIONS) as Array<Question>
-//        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +36,7 @@ class QuestionsListFragment : Fragment() {
         if (view is RecyclerView) {
             with(view) {
                 layoutManager =  LinearLayoutManager(context)
-                adapter = QuestionRecyclerViewAdapter((activity as ExamActivity).questions.toTypedArray(), listener)
+                adapter = QuestionRecyclerViewAdapter((activity as ExamActivity).exam.questions.toTypedArray(), listener)
             }
         }
         return view
@@ -76,18 +72,5 @@ class QuestionsListFragment : Fragment() {
         fun onClickQuestion(position: Int, item: Question)
         fun onResume(items: Array<Question>)
         fun onBackQuestion()
-    }
-
-    companion object {
-
-//        const val EXTRA_ARRAY_QUESTIONS = "EXTRA_ARRAY_QUESTIONS"
-//
-//        @JvmStatic
-//        fun newInstance(items: Array<Question>) =
-//                QuestionsListFragment().apply {
-//                    arguments = Bundle().apply {
-//                        putParcelableArray(EXTRA_ARRAY_QUESTIONS, items)
-//                    }
-//                }
     }
 }

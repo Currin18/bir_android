@@ -22,7 +22,8 @@ data class Question(
 ): Parcelable {
 
     companion object {
-        private const val JSON_ID = "id"
+        private const val JSON_ID = "_id"
+        private const val JSON_REF = "id"
         private const val JSON_STATEMENT = "statement"
         private const val JSON_ANSWERS = "answers"
         private const val JSON_TAGS = "tags"
@@ -32,8 +33,9 @@ data class Question(
 
     constructor(json: JSONObject) : this() {
         try {
-            if (json.has(JSON_ID)) {
-                ref = json.getString(JSON_ID)
+            if (json.has(JSON_ID)) id = json.getInt(JSON_ID)
+            if (json.has(JSON_REF)) {
+                ref = json.getString(JSON_REF)
                 ref.split('-').let {
                     if (it.size > 1) {
                         year = it[0].toInt()
@@ -68,7 +70,7 @@ data class Question(
                     tags = arrayList.toTypedArray()
                 }
             }
-            if (json.has(JSON_CORRECT_ANSWER)) correctAnswer = (json.getInt(JSON_CORRECT_ANSWER) - 1)
+            if (json.has(JSON_CORRECT_ANSWER)) correctAnswer = (json.getInt(JSON_CORRECT_ANSWER))
             if (json.has(JSON_IMPUGNED)) impugned = json.getBoolean(JSON_IMPUGNED)
         } catch (e : Throwable) {
             e.printStackTrace()
@@ -79,6 +81,7 @@ data class Question(
         val json = JSONObject()
 
         json.put(JSON_ID, id)
+        json.put(JSON_REF, ref)
         json.put(JSON_STATEMENT, statement)
         json.put(JSON_CORRECT_ANSWER, correctAnswer)
         json.put(JSON_IMPUGNED, impugned)

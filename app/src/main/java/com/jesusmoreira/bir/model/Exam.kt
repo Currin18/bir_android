@@ -10,11 +10,11 @@ import kotlin.collections.ArrayList
 
 @Parcelize
 data class Exam (
-        var filters: Filters,
-        var questions: Array<Question> = arrayOf(),
+        var filters: Filters = Filters(),
+        var questions: List<Question> = listOf(),
         var selectedAnswers: Array<Int> = Array(questions.size) { i -> 0 },
         var id: Int? = null,
-        var created: Long = System.currentTimeMillis(),
+        var created: Long? = null,
         var finished: Long? = null,
         var countCorrect: Int = 0,
         var countErrors: Int = 0,
@@ -31,6 +31,14 @@ data class Exam (
     }
 
     var selectedAnswerStatus: Array<QuestionStatus> = arrayOf(QuestionStatus.Default)
+
+    fun getPositionById(questionId: Int): Int {
+        return questions.indexOfFirst { it.id == questionId }
+    }
+
+    fun getSelectedAnswer(questionId: Int): Int {
+        return selectedAnswers[getPositionById(questionId)]
+    }
 
     fun getQuestionStatus(position: Int) : QuestionStatus {
         if (position >= 0 && position < questions.size) {
@@ -78,14 +86,14 @@ data class Exam (
         val position = questions.indexOfFirst { it.id == questionId }
         if (position >= 0 && position < questions.size) {
             selectedAnswers[position] = -1
-            getQuestionStatus(position).let {
-                selectedAnswerStatus[position] = it
-                when(it) {
-                    QuestionStatus.Correct -> countCorrect++
-                    QuestionStatus.Error -> countErrors++
-                    else -> {}
-                }
-            }
+//            getQuestionStatus(position).let {
+//                selectedAnswerStatus[position] = it
+//                when(it) {
+//                    QuestionStatus.Correct -> countCorrect++
+//                    QuestionStatus.Error -> countErrors++
+//                    else -> {}
+//                }
+//            }
         }
     }
 

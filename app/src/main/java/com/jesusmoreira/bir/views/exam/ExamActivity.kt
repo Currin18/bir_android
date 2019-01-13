@@ -17,6 +17,7 @@ import com.jesusmoreira.bir.dao.Database
 import com.jesusmoreira.bir.model.Exam
 import com.jesusmoreira.bir.model.Filters
 import com.jesusmoreira.bir.model.Question
+import kotlinx.android.synthetic.main.toolbar_exam.*
 import org.json.JSONObject
 
 class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInteractionListener, QuestionsListFragment.OnListFragmentInteractionListener {
@@ -33,11 +34,10 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
 
     private var database = Database(this)
 
-    var questions: List<Question> = listOf()
-    var exam: Exam? = null
-    var filters: Filters? = null
+    var exam: Exam = Exam()
+    var filters: Filters = Filters()
     var menuVisibility = true
-//    private var questionPosition = -1
+    var questionPosition : Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,18 +51,20 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
         setSupportActionBar(toolbar)
 
         database.open()
-        if (filters != null) {
-            questions = when {
-                filters!!.countFilters() > 1 -> database.questionDao?.fetchFilteredQuestions(filters!!) ?: listOf()
-                filters!!.random -> database.questionDao?.fetchRandomQuestions() ?: listOf()
-                filters!!.years.isNotEmpty() -> database.questionDao?.fetchAllQuestionsByExam(filters!!.years.toList()) ?: listOf()
-                filters!!.categories.isNotEmpty() -> database.questionDao?.fetchAllQuestionsByCategories(filters!!.categories.toList()) ?: listOf()
-                filters!!.words.isNotEmpty() -> database.questionDao?.fetchAllQuestionsByWords(filters!!.words.toList(), filters!!.includeAnswers) ?: listOf()
-                else -> listOf()
-            }
+
+        val questions: List<Question> = when {
+            filters.countFilters() > 1 -> database.questionDao?.fetchFilteredQuestions(filters) ?: listOf()
+            filters.random -> database.questionDao?.fetchRandomQuestions() ?: listOf()
+            filters.years.isNotEmpty() -> database.questionDao?.fetchAllQuestionsByExam(filters.years.toList()) ?: listOf()
+            filters.categories.isNotEmpty() -> database.questionDao?.fetchAllQuestionsByCategories(filters.categories.toList()) ?: listOf()
+            filters.words.isNotEmpty() -> database.questionDao?.fetchAllQuestionsByWords(filters.words.toList(), filters.includeAnswers) ?: listOf()
+            else -> listOf()
         }
 
+        exam = Exam(filters, questions)
+
         goToListQuestions()
+        updateToolbarCounts()
     }
 
 
@@ -105,54 +107,47 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
     }
 
     override fun onResume(items: Array<Question>) {
+        if (exam.created == null) {
 
+        }
     }
 
     override fun onBackQuestion() {
         updateMenu(true)
     }
 
-    override fun onClickAnswer(item: Int) {
-        val buttonLetPass = findViewById<Button>(R.id.btn_let_pass)
-        val buttonContinue = findViewById<Button>(R.id.btn_continue)
-        if (buttonContinue.visibility == View.GONE) {
-            /*val setted = exam!!.setOnClickAnswer(item)
+    override fun onClickAnswer(answerSelected: Int) {
+//        val buttonLetPass = findViewById<Button>(R.id.btn_let_pass)
+//        val buttonContinue = findViewById<Button>(R.id.btn_continue)
+//        if (buttonContinue.visibility == View.GONE) {
+            val question = exam.questions[questionPosition!!]
+//            exam.setOnClickAnswer(exam.getPositionById(question.id!!), answerSelected)
 
-            val answers: RecyclerView? = findViewById(R.id.answers)
-            if (answers != null && setted) {
-                val manager = (answers.layoutManager as LinearLayoutManager)
-                val correctRow= manager.findViewByPosition(exam!!.questions[exam!!.questionPosition].correctAnswer)!!
-                correctRow.cardLayout.setBackgroundColor(getColor(R.color.colorPrimaryLight))
+            updateFragment(QuestionExamFragment.newInstance(question.toJson().toString(), answerSelected))
 
-                if (item != exam!!.questions[exam!!.questionPosition].correctAnswer) {
-                    val selectedRow = manager.findViewByPosition(item)!!
-                    selectedRow.cardLayout.setBackgroundColor(getColor(R.color.red))
-                    exam!!.questionsError++
-                } else {
-                    exam!!.questionsSuccess++
-                }
-                updateToolbarCounts()
-            }*/
-            buttonLetPass.visibility = View.GONE
-            buttonContinue.visibility = View.VISIBLE
-        }
+            updateToolbarCounts()
+//            buttonLetPass.visibility = View.GONE
+//            buttonContinue.visibility = View.VISIBLE
+//        }
+
+
     }
 
-    override fun onLetPassInteraction() {
-//        exam!!.setLetPassInteraction()
-        goToNextQuestion()
+    override fun onLetPassInteraction(questionId: Int) {
+        exam.setLetPassInteraction(questionId)
+        goToNextQuestion(questionId)
     }
 
-    override fun onContinueInteraction() {
-//        exam!!.setContinueInteraction()
-        goToNextQuestion()
+    override fun onContinueInteraction(questionId: Int) {
+        exam.setContinueInteraction(questionId)
+        goToNextQuestion(questionId)
     }
 
     private fun goToListQuestions() {
         updateFragment(QuestionsListFragment())
     }
 
-    private fun goToNextQuestion() {
+    private fun goToNextQuestion(questionId: Int) {
         /*val question = exam!!.nextQuestion()
         if (question != null) {
             updateFragment(QuestionExamFragment.newInstance(question.toJson().toString()))
@@ -160,21 +155,26 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
         } else {
             Toast.makeText(applicationContext, "Exam finished", Toast.LENGTH_SHORT).show()
         }*/
+        val question = exam.nextQuestion(questionId)
+        if (question != null) {
+            updateFragment(QuestionExamFragment.newInstance(question.toJson().toString(), exam.getSelectedAnswer(question.id!!)))
+            questionPosition = exam.getPositionById(question.id!!)
+            updateToolbarCounts()
+        }
     }
 
     private fun goToQuestion(position : Int) {
-//        exam!!.questionPosition = position
-//        updateFragment(QuestionExamFragment.newInstance(exam!!.questions[position].toJson().toString()))
-//        updateToolbarCounts()
+        questionPosition = position
+        updateFragment(QuestionExamFragment.newInstance(exam.questions[position].toJson().toString(), exam.selectedAnswers[position]))
+        updateToolbarCounts()
     }
 
-    @SuppressLint("SetTextI18n")
     private fun updateToolbarCounts() {
-        /*toolbar_id_question.text = "#${exam!!.questions[exam!!.questionPosition].id}"
-        toolbar_count_question.text = "${getString(R.string.toolbar_count_question)} ${(exam!!.questionCount)}/${exam?.questions?.size}"
-        toolbar_answer_success.text = "${getString(R.string.toolbar_answer_success)} ${exam?.questionsSuccess}"
-        toolbar_answer_error.text = "${getString(R.string.toolbar_answer_error)} ${exam?.questionsError}"
-        toolbar_answer_passed.text = "${getString(R.string.toolbar_answer_passed)} ${exam?.questionsPassed}"
-        toolbar_count_points.text = "${getString(R.string.toolbar_count_points)} ${(exam!!.questionsSuccess - (exam!!.questionsError / 3))}"*/
+        if (questionPosition != null) toolbar_id_question.text = "#${exam.questions[questionPosition!!].ref}"
+        toolbar_count_question.text = "${getString(R.string.toolbar_count_question)} ${exam.selectedAnswers.count { it != 0 }}/${exam.questions.size}"
+        toolbar_answer_success.text = "${getString(R.string.toolbar_answer_success)} ${exam.countCorrect}"
+        toolbar_answer_error.text = "${getString(R.string.toolbar_answer_error)} ${exam.countErrors}"
+        toolbar_answer_passed.text = "${getString(R.string.toolbar_answer_passed)} ${exam.selectedAnswers.count { it == -1 }}"
+        toolbar_count_points.text = "${getString(R.string.toolbar_count_points)} ${(exam.countCorrect.toFloat()) - (exam.countErrors.toFloat() / 3)}"
     }
 }

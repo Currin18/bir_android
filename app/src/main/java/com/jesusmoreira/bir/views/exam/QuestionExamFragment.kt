@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 import com.jesusmoreira.bir.R
 import com.jesusmoreira.bir.adapters.AnswerRecyclerViewAdapter
+import com.jesusmoreira.bir.model.Exam
+import com.jesusmoreira.bir.model.Exam.Companion.QuestionStatus
 import com.jesusmoreira.bir.model.Question
 import com.jesusmoreira.bir.utils.TextUtils
 import kotlinx.android.synthetic.main.fragment_question_answer.view.*
@@ -28,7 +30,10 @@ import org.json.JSONObject
  *
  */
 class QuestionExamFragment : Fragment() {
-    private var question: Question? = null
+    private var question: Question = Question()
+    private var selectedAnswer: Int = 0
+    private var status: Exam.Companion.QuestionStatus = QuestionStatus.Default
+
     private var listener: OnQuestionExamInteractionListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +43,16 @@ class QuestionExamFragment : Fragment() {
                 val jsonQuestion = JSONObject(it.getString(EXTRA_QUESTION));
                 question = Question(jsonQuestion)
             }
+            if (it.containsKey(EXTRA_SELECTED_ANSWER)) {
+                selectedAnswer = it.getInt(EXTRA_SELECTED_ANSWER)
+
+                status =  when (selectedAnswer) {
+                    0 -> QuestionStatus.Default
+                    -1 -> QuestionStatus.Passed
+                    question.correctAnswer -> QuestionStatus.Correct
+                    else -> QuestionStatus.Error
+                }
+            }
         }
     }
 
@@ -45,40 +60,55 @@ class QuestionExamFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val v: View = inflater.inflate(R.layout.fragment_question_exam, container, false)
-        if (question != null) {
-            v.statement.text = TextUtils.parseToHtml(question!!.statement!!)
 
-            if (v.answers is RecyclerView) {
-                with(v.answers) {
-                    layoutManager = LinearLayoutManager(context)
-                    adapter = AnswerRecyclerViewAdapter(question!!.answers!!, listener)
-                }
+        v.statement.text = TextUtils.parseToHtml(question.statement)
+
+        var correctAnswer: Int? = null
+        var selectedRow: Int? = null
+
+        when(status) {
+            QuestionStatus.Correct -> {
+                correctAnswer = question.correctAnswer -1
+                selectedRow = question.correctAnswer -1
+//                correctRow?.cardLayout?.setBackgroundColor(context!!.getColor(R.color.colorPrimaryLight))
             }
-
-            if (question!!.impugned) {
-                v.impugned.visibility = VISIBLE
+            QuestionStatus.Error -> {
+                correctAnswer = question.correctAnswer -1
+                selectedRow = selectedAnswer -1
+//                correctRow?.cardLayout?.setBackgroundColor(context!!.getColor(R.color.colorPrimaryLight))
+//
+//                val selectedRow = manager.findViewByPosition(selectedAnswer)!!
+//                selectedRow.cardLayout.setBackgroundColor(context!!.getColor(R.color.red))
             }
+            QuestionStatus.Passed -> {
 
-            v.btn_let_pass.setOnClickListener { listener?.onLetPassInteraction() }
-            v.btn_continue.setOnClickListener { listener?.onContinueInteraction() }
-/*
-            if (question!!.selectedAnswer != null && question!!.selectedAnswer!! >= 0) {
-                val manager = (v.answers.layoutManager as LinearLayoutManager)
-                val correctAnswer = question!!.correctAnswer
-                val correctRow = manager.findViewByPosition(correctAnswer)
-                correctRow?.cardLayout?.setBackgroundColor(context!!.getColor(R.color.colorPrimaryLight))
-
-                if (question!!.selectedAnswer != question!!.correctAnswer) {
-                    val selectedRow = manager.findViewByPosition(question!!.selectedAnswer!!)!!
-                    selectedRow.cardLayout.setBackgroundColor(context!!.getColor(R.color.red))
-                }
             }
+            QuestionStatus.Default -> {
 
-            if ((question!!.selectedAnswer != null && question!!.selectedAnswer!! >= 0) || question!!.impugned) {
-                v.btn_let_pass.visibility = View.GONE
-                v.btn_continue.visibility = View.VISIBLE
-            }*/
+            }
         }
+
+        if (v.answers is RecyclerView) {
+            with(v.answers) {
+                layoutManager = LinearLayoutManager(context)
+                adapter = AnswerRecyclerViewAdapter(context, question.answers, correctAnswer, selectedRow, listener)
+            }
+        }
+
+        if (question.impugned) {
+            v.impugned.visibility = VISIBLE
+            v.btn_let_pass.visibility = View.GONE
+            v.btn_continue.visibility = View.VISIBLE
+        }
+
+        if (selectedAnswer > 0) {
+            v.btn_let_pass.visibility = View.GONE
+            v.btn_continue.visibility = View.VISIBLE
+        }
+
+        v.btn_let_pass.setOnClickListener { listener?.onLetPassInteraction(question.id ?: 0) }
+        v.btn_continue.setOnClickListener { listener?.onContinueInteraction(question.id ?: 0) }
+
         return v
     }
 
@@ -108,14 +138,15 @@ class QuestionExamFragment : Fragment() {
      * for more information.
      */
     interface OnQuestionExamInteractionListener {
-        fun onClickAnswer(item: Int)
-        fun onLetPassInteraction()
-        fun onContinueInteraction()
+        fun onClickAnswer(answerSelected: Int)
+        fun onLetPassInteraction(questionId: Int)
+        fun onContinueInteraction(questionId: Int)
     }
 
     companion object {
 
         private const val EXTRA_QUESTION = "EXTRA_QUESTION"
+        private const val EXTRA_SELECTED_ANSWER = "EXTRA_SELECTED_ANSWER"
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
@@ -124,10 +155,11 @@ class QuestionExamFragment : Fragment() {
          * @return A new instance of fragment QuestionExamFragment.
          */
         @JvmStatic
-        fun newInstance(question: String) =
+        fun newInstance(question: String, selectedAnswer: Int) =
                 QuestionExamFragment().apply {
                     arguments = Bundle().apply {
                         putString(EXTRA_QUESTION, question)
+                        putInt(EXTRA_SELECTED_ANSWER, selectedAnswer)
                     }
                 }
     }
