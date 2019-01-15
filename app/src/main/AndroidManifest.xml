@@ -11,7 +11,6 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".views.main.MainActivity"
-            android:label="@string/title_activity_main"
             android:parentActivityName=".views.exam.ExamActivity"
             android:theme="@style/AppTheme">
 

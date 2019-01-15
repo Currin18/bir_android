@@ -354,9 +354,9 @@
     "statement": "La estimulación de los cuerpos carotídeos:",
     "answers": [
       "Disminuye el pH en sangre arterial",
-      "Disminuye la PCO_2",
+      "Disminuye la P_(CO2)",
       "Aumenta la concentración de bicarbonato en sangre arterial",
-      "Disminuye la PO_2 en sangre arterial"
+      "Disminuye la P_(O2) en sangre arterial"
     ],
     "correct-answer": 2,
     "tags": [
@@ -408,7 +408,7 @@
   },
   {
     "id": "2015-30",
-    "statement": "La filtración renal de H_2O ocurre en los capilares glomerulares y su reabsorción en los peritubulares, porque los primeros tienen mayor:",
+    "statement": "La filtración renal de H_(2)O ocurre en los capilares glomerulares y su reabsorción en los peritubulares, porque los primeros tienen mayor:",
     "answers": [
       "Permeabilidad",
       "Presión hidrostática",
@@ -495,8 +495,8 @@
     "statement": "El riñón corrige la disminución de presión arterial aumentando la:",
     "answers": [
       "Diuresis",
-      "Reabsorción de K^+",
-      "Excreción de Na^+",
+      "Reabsorción de K^(+)",
+      "Excreción de Na^(+)",
       "Liberación de renina"
     ],
     "correct-answer": 4,
@@ -525,7 +525,7 @@
       "Leptina",
       "Colecistocinina",
       "Neuropéptido Y",
-      "Hormona estimulante del melanocito alfa (MSH-a)"
+      "Hormona estimulante del melanocito alfa (MSH-α)"
     ],
     "correct-answer": 3,
     "tags": [
@@ -607,9 +607,9 @@
     "id": "2015-44",
     "statement": "La aldosterona:",
     "answers": [
-      "Actúa en todos los túbulos de la nefrona son la misma intensidad",
-      "Disminuye la actividad Na+/K+/ATPasa",
-      "Estimula la síntesis de canales de Na+",
+      "Actúa en todos los túbulos de la nefrona con la misma intensidad",
+      "Disminuye la actividad Na^(+)/K^(+)/ATPasa",
+      "Estimula la síntesis de canales de Na^(+)",
       "Es una hormona peptídica"
     ],
     "correct-answer": 3,
@@ -1915,7 +1915,7 @@
   },
   {
     "id": "2015-136",
-    "statement": "En relación a los linfocitos T_H_1:",
+    "statement": "En relación a los linfocitos T_(H1):",
     "answers": [
       "Su diferencia está dirigida sobre todo por la IL-4",
       "Su principal función es activar los macrófagos",
@@ -1929,7 +1929,7 @@
   },
   {
     "id": "2015-137",
-    "statement": "En relación a los linfocitos T_H_2:",
+    "statement": "En relación a los linfocitos T_(H2):",
     "answers": [
       "Estimulan las reacciones mediadas por mastocitos y eosinófilos",
       "Producen IFN-gamma e IL-2",
@@ -1986,11 +1986,11 @@
   },
   {
     "id": "2015-141",
-    "statement": "Los linfocitos T_H_17:",
+    "statement": "Los linfocitos T_(H17):",
     "answers": [
       "Son inducidos por IL-17",
       "Median reacciones alérgicas",
-      "Cooperan con los T_H_1 en la inmunidad celular",
+      "Cooperan con los T_(H1) en la inmunidad celular",
       "Producen TGF-beta de manera importante"
     ],
     "correct-answer": 3,
@@ -2030,7 +2030,7 @@
     "id": "2015-144",
     "statement": "La mayoría de los linfocitos T reguladores:",
     "answers": [
-      "Son CD8^+",
+      "Son CD8^(+)",
       "Expresan niveles altos de CD25",
       "Expresan niveles altos de IL-7",
       "Suelen expresar cantidades bajas de CTLA-4"
@@ -3011,7 +3011,7 @@
     "statement": "Sobre la succinato deshidrogenasa es correcto afirmar:",
     "answers": [
       "Su producto es el malato",
-      "Genera poder reductor en forma de FADH_2",
+      "Genera poder reductor en forma de FADH_(2)",
       "Su sustrato es el fumarato",
       "Participa en la gluconeogénesis"
     ],
@@ -3026,8 +3026,8 @@
     "answers": [
       "Un inhibidor irreversible provoca la desnaturalización del enzima",
       "Los inhibidores acompetitivos se unen al sustrato de la reacción",
-      "Un inhibidor competitivo actúa aumentando el valor de K_m",
-      "Los inhibidores siempre modifican la V_max"
+      "Un inhibidor competitivo actúa aumentando el valor de K_(m)",
+      "Los inhibidores siempre modifican la V_(max)"
     ],
     "correct-answer": 3,
     "tags": [
@@ -3123,8 +3123,8 @@
     "statement": "¿Qué caracteriza a la lactato deshidrogenasa en la fermentación láctica?",
     "answers": [
       "Tener como sustrato el Acetil-CoA",
-      "Liberar CO_2",
-      "Consumir NADH y producir NAD^+",
+      "Liberar CO_(2)",
+      "Consumir NADH y producir NAD^(+)",
       "Permitir que continúe la glucolisis en condiciones aerobias"
     ],
     "correct-answer": 3,
@@ -3137,7 +3137,7 @@
     "id": "2015-222",
     "statement": "La ATP sintasa mitocondrial:",
     "answers": [
-      "Hidroliza ATP cuando los electrones pasan a través de su fracción F_0",
+      "Hidroliza ATP cuando los electrones pasan a través de su fracción F_(0)",
       "Presenta un único centro catalítico",
       "Produce ATP empleando la energía de un gradiente de protones",
       "Sintetiza un 10% del ATP del organismo"
@@ -3296,10 +3296,10 @@
     "id": "2015-233",
     "statement": "El número de genotipos heterocigóticos distintos en la descendencia de un polihíbrido es:",
     "answers": [
-      "2^n",
-      "4^n",
-      "3^n-2^n",
-      "4^n-3^n"
+      "2^(n)",
+      "4^(n)",
+      "3^(n)-2^(n)",
+      "4^(n)-3^(n)"
     ],
     "correct-answer": 3,
     "tags": [
@@ -3332,7 +3332,7 @@
     ],
     "correct-answer": 3,
     "tags": [
-      "Fisiología"
+      "Bioquímica"
     ]
   }
 ]

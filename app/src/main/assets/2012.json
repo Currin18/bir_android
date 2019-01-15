@@ -4,10 +4,10 @@
     "statement": "La fase de meseta del potencial de acción cardíaco:",
     "answers": [
       "Es característica de las células del nodo sinusal",
-      "Se origina por activación de canales de K^+",
+      "Se origina por activación de canales de K^(+)",
       "Se debe a una conductancia al Na+ no inactivante",
-      "Se origina por activación de canales de Ca^2+",
-      "Está medida por la inactivación de canales de K^+"
+      "Se origina por activación de canales de Ca^(2+)",
+      "Está medida por la inactivación de canales de K^(+)"
     ],
     "correct-answer": 4,
     "tags": [
@@ -16,7 +16,7 @@
   },
   {
     "id": "2012-2",
-    "statement": "Una solución 50 mM de CaCl_2 es isoosmótica con otra de:",
+    "statement": "Una solución 50 mM de CaCl_(2) es isoosmótica con otra de:",
     "answers": [
       "50 mM NaCl",
       "100 mM urea",
@@ -46,7 +46,7 @@
   },
   {
     "id": "2012-4",
-    "statement": "Permea Cl^- el receptor:",
+    "statement": "Permea Cl^(-) el receptor:",
     "answers": [
       "Glicinérgico",
       "Nicotínico",
@@ -172,7 +172,7 @@
       "Los potenciales postsinápticos son de tipo todo o nada",
       "Los potenciales postsinápticos se pueden sumar",
       "Después del potencial postsináptico hay un periodo refractario",
-      "El neurotransmisor abre canales de Cl^-"
+      "El neurotransmisor abre canales de Cl^(-)"
     ],
     "correct-answer": 3,
     "tags": [
@@ -286,7 +286,7 @@
   },
   {
     "id": "2012-20",
-    "statement": "La principal hormona implicada en la secreción pancreática de HCO_3^- es:",
+    "statement": "La principal hormona implicada en la secreción pancreática de HCO_(3)^(-) es:",
     "answers": [
       "Colecistocinina",
       "Secretina",
@@ -454,11 +454,11 @@
     "id": "2012-31",
     "statement": "Los quimiorreceptores centrales responden intensamente a:",
     "answers": [
-      "Reducción aguda de la pO_2 arterial",
+      "Reducción aguda de la pO_(2) arterial",
       "Reducción aguda del pH arterial",
       "Reducción aguda del pH en líquido cefalorraquídeo",
-      "Reducción crónica del la pO2 en líquido cefalorraquídeo",
-      "Elevación crónica de la pCO_2 arterial"
+      "Reducción crónica del la pO_(2) en líquido cefalorraquídeo",
+      "Elevación crónica de la pCO_(2) arterial"
     ],
     "correct-answer": 3,
     "tags": [
@@ -467,7 +467,7 @@
   },
   {
     "id": "2012-32",
-    "statement": "Estimula la secreción renal de K^+:",
+    "statement": "Estimula la secreción renal de K^(+):",
     "answers": [
       "Dieta pobre en K+",
       "Hipoaldosteronismo",
@@ -512,7 +512,7 @@
   },
   {
     "id": "2012-35",
-    "statement": "El cotransportador de Cl^-/Na^+/K^+ es característico de:",
+    "statement": "El cotransportador de Cl^(-)/Na^(+)/K^(+) es característico de:",
     "answers": [
       "El túbulo contorneado proximal",
       "La rama descendente del asa de Henle",
@@ -527,7 +527,7 @@
   },
   {
     "id": "2012-36",
-    "statement": "Disminuye la reabsorción renal de Na^+:",
+    "statement": "Disminuye la reabsorción renal de Na^(+):",
     "answers": [
       "Estimulación simpática",
       "Angiotensina II",
@@ -1019,7 +1019,7 @@
   },
   {
     "id": "2012-68",
-    "statement": "La ATPasa de Ca^2+ está en la membrana del:",
+    "statement": "La ATPasa de Ca^(2+) está en la membrana del:",
     "answers": [
       "Núcleo celular",
       "Retículo endoplásmico",
@@ -2045,7 +2045,7 @@
   },
   {
     "id": "2012-136",
-    "statement": "Las células T_H 1 son productoras muy activas de:",
+    "statement": "Las células T_(H1) son productoras muy activas de:",
     "answers": [
       "Granzimas",
       "IL-10",
@@ -2079,9 +2079,9 @@
     "answers": [
       "T reguladoras CD4",
       "T CD8",
-      "T_H1 CD4",
-      "T_H2 CD4",
-      "T_H17 CD4"
+      "T_(H1) CD4",
+      "T_(H2) CD4",
+      "T_(H17) CD4"
     ],
     "correct-answer": 4,
     "tags": [
@@ -2123,10 +2123,10 @@
     "statement": "La IL-12 y el IFN-γ (IFN-gamma) producidos por células presentadoras de antígenos son necesarios para que los linfocitos T CD4 indiferenciados se convierten en:",
     "answers": [
       "T reguladores",
-      "T_H1",
-      "T_H2",
-      "T_H17",
-      "T_R1/T_H3"
+      "T_(H1)",
+      "T_(H2)",
+      "T_(H17)",
+      "T_(R1)/T_(H3)"
     ],
     "correct-answer": 2,
     "tags": [
@@ -2225,7 +2225,7 @@
   },
   {
     "id": "2012-148",
-    "statement": "Si un test estadístico ofrece un valor p<0,05:",
+    "statement": "Si un test estadístico ofrece un valor p < 0,05:",
     "answers": [
       "Se acepta la hipótesis nula",
       "Se rechaza la hipótesis alternativa",
@@ -2668,7 +2668,7 @@
       "Estrógenos",
       "Testosterona",
       "FSH (hormona folículo estimulante)",
-      "LH (hormona leteinizante)",
+      "LH (hormona luteinizante)",
       "Progesterona"
     ],
     "correct-answer": 4,
@@ -2851,8 +2851,8 @@
     "answers": [
       "La glucólisis hepática suministra glucosa a la sangre",
       "La ruta de los fosfatos de pentosa suministra acetil CoA para procesos biosintéticos",
-      "La degradación de ác. Grasos suministra energía mediante la formación de NADH y FADH_2",
-      "La función del ciclo del ácido cítrico es la fijación de CO_2 en forma de azúcares",
+      "La degradación de ác. Grasos suministra energía mediante la formación de NADH y FADH_(2)",
+      "La función del ciclo del ácido cítrico es la fijación de CO_(2) en forma de azúcares",
       "La función de la gluconeogénesis es la formación de glucógeno en el riñón"
     ],
     "correct-answer": 3,
@@ -2864,7 +2864,7 @@
     "id": "2012-190",
     "statement": "El ciclo de la urea:",
     "answers": [
-      "Transforma urea en CO_2 e ión amonio",
+      "Transforma urea en CO_(2) e ión amonio",
       "Es la ruta metabólica más importante de incorporación del nitrógeno en los uricotélico",
       "No consume energía",
       "Tiene lugar en todos los tejidos de mamíferos",
@@ -2897,7 +2897,7 @@
       "En reponen los niveles de NAD+ citosólicos",
       "La enzima lactato deshidrogenada será más activa en presencia de oxígeno",
       "Tras ejercicio muscular intenso, el lactato será reconvertido en glucosa por el músculo",
-      "La fermentación láctica genera CO_2",
+      "La fermentación láctica genera CO_(2)",
       "Permite la generación de NADH"
     ],
     "correct-answer": 1,
@@ -3090,10 +3090,10 @@
     "id": "2012-205",
     "statement": "El 2,3 bisfosfoglicerato:",
     "answers": [
-      "Disminuye la afinidad de la mioglobina por el O_2",
-      "Aumenta la afinidad de la hemoglobina por el O_2",
+      "Disminuye la afinidad de la mioglobina por el O_(2)",
+      "Aumenta la afinidad de la hemoglobina por el O_(2)",
       "Se una a la desoxihemoglobina",
-      "Disminuye la liberación de O_2 de la mioglobina en los capilares de los tejidos",
+      "Disminuye la liberación de O_(2) de la mioglobina en los capilares de los tejidos",
       "Estabiliza la estructura cuaternaria de la oxihemoglobina"
     ],
     "correct-answer": 3,
@@ -3299,10 +3299,10 @@
   },
   {
     "id": "2012-219",
-    "statement": "El dióxido de carbono (CO_2):",
+    "statement": "El dióxido de carbono (CO_(2)):",
     "answers": [
-      "Aumenta la afinidad de la mioglobina por el O_2",
-      "Aumenta la afinidad de la hemoglobina por el O_2",
+      "Aumenta la afinidad de la mioglobina por el O_(2)",
+      "Aumenta la afinidad de la hemoglobina por el O_(2)",
       "Se une a la hemoglobina en los grupos C-terminale",
       "Se une a la hemoglobina en los grupos alfaamino",
       "Estabiliza la forma R de la hemoglobina"

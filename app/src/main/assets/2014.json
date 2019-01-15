@@ -5,8 +5,8 @@
     "answers": [
       "Acuaporinas",
       "Canales iónicos",
-      "La Na^+ /K^+ -ATPasa",
-      "Intercambiador Cl/HCO_3^-",
+      "La Na^(+)/K^(+) -ATPasa",
+      "Intercambiador Cl^(-)/HCO_(3)",
       "Su composición lipídica"
     ],
     "correct-answer": 1,
@@ -23,7 +23,7 @@
       "Ser el lugar donde se produce la sinapsis",
       "Tener un umbral de excitación mayor",
       "Presentar alta concentración de canales dependientes de voltaje",
-      "Presentar canales de Na^+ regulados por ligando",
+      "Presentar canales de Na^(+) regulados por ligando",
       "Empezar allí la vaina de mielina del axón"
     ],
     "correct-answer": 3,
@@ -278,7 +278,7 @@
       "Potencial de membrana estable",
       "Capacidad contráctil",
       "Despolarización más rápida que las fibras de Purkinje",
-      "Despolarización mediada por canales de Ca^2+",
+      "Despolarización mediada por canales de Ca^(2+)",
       "Larga meseta"
     ],
     "correct-answer": 4,
@@ -293,7 +293,7 @@
       "Activa los barorreceptores arteriales",
       "Produce vasoconstricción periférica",
       "Reduce los niveles de ADH",
-      "Inhibe el eje-renina-angiotensina-aldosterona",
+      "Inhibe el eje renina-angiotensina-aldosterona",
       "Libera péptido atrial natriurético"
     ],
     "correct-answer": 2,
@@ -305,7 +305,7 @@
     "id": "2014-21",
     "statement": "Vasoconstriñe las arteriolas sistémicas:",
     "answers": [
-      "Baja pO_2",
+      "Baja pO_(2)",
       "Bajo pH",
       "Angiotensina II",
       "Acetilcolina",
@@ -458,7 +458,7 @@
     "statement": "La estimulación de los cuerpos carotídeos:",
     "answers": [
       "Disminuye el pH de la sangre arterial",
-      "Disminuye la pCO_2 en sangre arterial",
+      "Disminuye la pCO_(2) en sangre arterial",
       "Aumenta la concentración arterial de bicarbonato",
       "Aumenta la excreción urinaria de sodio",
       "Disminuye la presión arterial"
@@ -491,7 +491,7 @@
       "Se diluye el líquido tubular",
       "La reabsorción de agua depende de ADH",
       "La reabsorción de urea depende de ADH",
-      "La aldosterona estimula la reabsorción de Na^+"
+      "La aldosterona estimula la reabsorción de Na^(+)"
     ],
     "correct-answer": 2,
     "tags": [
@@ -518,7 +518,7 @@
     "statement": "La ADH aumenta la osmolaridad del medio intersticial renal porque aumenta:",
     "answers": [
       "La permeabilidad a la urea en el tubo colector",
-      "La permeabilidad al gua del asa ascendente de Henle",
+      "La permeabilidad al agua del asa ascendente de Henle",
       "El flujo en los vasos rectos",
       "La reabsorción de NaCl en el túbulo colector",
       "La excreción renal de agua"
@@ -610,7 +610,7 @@
       "Se forma por acción de la renina sobre la angiotensina I",
       "Inhibe la secreción de aldosterona",
       "Inhibe la secreción de ADH",
-      "Induce reabsorción renal de Na^+",
+      "Induce reabsorción renal de Na^(+)",
       "Reduce la sed"
     ],
     "correct-answer": 4,
@@ -1088,8 +1088,7 @@
     ],
     "correct-answer": 3,
     "tags": [
-      "Citología",
-      "Fisiología"
+      "Citología"
     ]
   },
   {
@@ -1561,13 +1560,13 @@
   },
   {
     "id": "2014-104",
-    "statement": "Si tras sembrar 200 microlitos de una solución 10^-4 (10 exp. -4) de un caldo sobre placa de agar crecen 100 colonias, el número estimado de unidades formadoras de colonias por mL de caldo es: ",
+    "statement": "Si tras sembrar 200 microlitos de una solución 10^(-4) (10 exp. -4) de un caldo sobre placa de agar crecen 100 colonias, el número estimado de unidades formadoras de colonias por mL de caldo es: ",
     "answers": [
-      "0,2 x 10^4",
-      "2 x 10^6",
-      "5 x 10^4",
-      "5 x 10^5",
-      "5 x 10^6 "
+      "0,2 x 10^(4)",
+      "2 x 10^(6)",
+      "5 x 10^(4)",
+      "5 x 10^(5)",
+      "5 x 10^(6)"
     ],
     "correct-answer": 5,
     "tags": [
@@ -1609,7 +1608,7 @@
   },
   {
     "id": "2014-107",
-    "statement": "Si al añadir una gota de H_2O_2 a una suspensión bacteriana se generan burbujas (O_2), la bacteria produce:",
+    "statement": "Si al añadir una gota de H_(2)O_(2) a una suspensión bacteriana se generan burbujas (O_(2)), la bacteria produce:",
     "answers": [
       "Citocromo C oxidasa",
       "Oxigenasa",
@@ -2206,7 +2205,7 @@
       "Los linfocitos NK",
       "Los mastocitos",
       "Los neutrófilos",
-      "Los linfocitos CD8^+"
+      "Los linfocitos CD8^(+)"
     ],
     "correct-answer": 2,
     "tags": [
@@ -2381,7 +2380,7 @@
   },
   {
     "id": "2014-158",
-    "statement": "Los granzimas de los linfocitos T CD8^+ citotóxicos efectores:",
+    "statement": "Los granzimas de los linfocitos T CD8^(+) citotóxicos efectores:",
     "answers": [
       "Digieren la pared celular de las bacterias intracelulares",
       "Rompen la integridad de las membranas endosómicas",
@@ -2789,7 +2788,7 @@
     "statement": "Cada ciclo de oxidación de los ácidos grasos:",
     "answers": [
       "Genera dos moléculas de NADH",
-      "Genera dos moléculas de FADH_2",
+      "Genera dos moléculas de FADH_(2)",
       "Produce una deshidratación",
       "Libera un acetil-CoA",
       "Consume ATP"
@@ -2818,7 +2817,7 @@
     "id": "2014-187",
     "statement": "En las etapas del ciclo del ácido citrico se requiere:",
     "answers": [
-      "NADP^+",
+      "NADP^(+)",
       "FAD",
       "Acetil-coenzima A carboxilasa",
       "Glucosa",
@@ -2951,13 +2950,13 @@
   },
   {
     "id": "2014-196",
-    "statement": "La conversión del piruvato en etanol y CO_2 por las levaduras:",
+    "statement": "La conversión del piruvato en etanol y CO_(2) por las levaduras:",
     "answers": [
       "Produce una cantidad extra de ATP",
-      "Reduce el NAD^+",
+      "Reduce el NAD^(+)",
       "Reoxida el NADPH que se forma en la glicólisis",
       "Permite que la glicólisis pueda continuar aún en ausencia de oxígeno",
-      "Permite que el CO_2 se emplee en a síntesis de ácidos grasos"
+      "Permite que el CO_(2) se emplee en a síntesis de ácidos grasos"
     ],
     "correct-answer": 4,
     "tags": [

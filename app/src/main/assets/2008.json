@@ -21,7 +21,7 @@
       "Las células beta producen glucagón",
       "Las células acinares secretan enzimas digestivas",
       "Se secreta insulina en respuesta a un aumento de la glucemia",
-      "Las células ductulares producen HCO_3^-",
+      "Las células ductulares producen HCO_3^(-)",
       "Las células delta o D producen polipéptido pancreático"
     ],
     "correct-answer": 3,
@@ -108,11 +108,11 @@
     "id": "2008-8",
     "statement": "El potencial de membrana en reposo de una neurona:",
     "answers": [
-      "Coincide con el de equilibrio de K^+",
-      "Es un potencial de difusión de Cl^-",
+      "Coincide con el de equilibrio de K^(+)",
+      "Es un potencial de difusión de Cl^(-)",
       "Se calcula aplicando la ecuación de Nernst",
       "Es consecuencia de los gradientes de concentraciones iónicas a través de su membrana",
-      "Depende únicamente del gradiente eléctrico del Ca^2+"
+      "Depende únicamente del gradiente eléctrico del Ca^(2+)"
     ],
     "correct-answer": 4,
     "tags": [
@@ -382,9 +382,9 @@
     "answers": [
       "El aumento de la presión parcial de oxígeno en la sangre aumenta la frecuencia respiratoria",
       "La disminución del pH sistémico disminuye la frecuencia respiratoria",
-      "Los quimiorreceptores de CO_2 se localizan fundamentalmente en los cuerpos carotídeos",
+      "Los quimiorreceptores de CO_(2) se localizan fundamentalmente en los cuerpos carotídeos",
       "El reflejo de Hering-Breuer interviene en el control químico de la ventilación",
-      "El exceso de H^+ y CO_2 en sangre aumenta la frecuencia respiratoria"
+      "El exceso de H^(+) y CO_(2) en sangre aumenta la frecuencia respiratoria"
     ],
     "correct-answer": 5,
     "tags": [
@@ -414,7 +414,7 @@
       "Difusión simple",
       "Transcitosis",
       "Difusión facilitada",
-      "Transporte acoplado a Na^+"
+      "Transporte acoplado a Na^(+)"
     ],
     "correct-answer": 3,
     "tags": [
@@ -428,7 +428,7 @@
     "answers": [
       "Temperatura",
       "pH",
-      "Presión de CO_2",
+      "Presión de CO_(2)",
       "2,3 difosfoglicerato",
       "Metabolismo"
     ],
@@ -475,7 +475,7 @@
       "Los potenciales se transmiten más rápidamente que en la eléctrica",
       "La neurona presináptica convierte una señal eléctrica en química",
       "La neurona postsináptica convierte una señal eléctrica en química",
-      "La entrada de Na^+ desencadena la exocitosis del neurotransmisor"
+      "La entrada de Na^(+) desencadena la exocitosis del neurotransmisor"
     ],
     "correct-answer": 3,
     "tags": [
@@ -489,7 +489,7 @@
       "Es la adenohipófisis",
       "Contiene axones de neuronas hipotalámicas",
       "Sintetiza ADH y oxitocina",
-      "Responde a los  facores liberadores hipotalámicos",
+      "Responde a los  factores liberadores hipotalámicos",
       "Recibe sangre del sistema porta hipotálamo-hipofisario"
     ],
     "correct-answer": 2,
@@ -504,8 +504,8 @@
       "Es un glucocorticoide",
       "Se segrega tras un aumento de la presión arterial",
       "Aumenta la expresión de acuaporinas",
-      "Aumenta la excreción renal de K^+ ",
-      "Inhibe la Na^+-K^+-ATPasa"
+      "Aumenta la excreción renal de K^(+) ",
+      "Inhibe la Na^(+)-K^(+)-ATPasa"
     ],
     "correct-answer": 4,
     "tags": [
@@ -549,7 +549,7 @@
     "answers": [
       "Actividad simpática",
       "Actividad parasimpática",
-      "Concentración de H^+",
+      "Concentración de H^(+)",
       "Concetración de ácido láctico",
       "Concentración de ácido nítrico"
     ],
@@ -722,7 +722,6 @@
     ],
     "correct-answer": 1,
     "tags": [
-      "Fisiología",
       "Inmunología"
     ]
   },
@@ -1098,7 +1097,7 @@
     "id": "2008-73",
     "statement": "En las neuronas, los gránulos de Nissl corresponden a:",
     "answers": [
-      "Dictiosommas dispuestos alrededor del núcleo",
+      "Dictiosomas dispuestos alrededor del núcleo",
       "Vesículas sinápticas presentes en el terminal axónico",
       "Cisterna de  retículo endoplasmático rugoso dispuestas en grupos paralelos",
       "Ribosomas en formación presentes en el núcleo",
@@ -1117,7 +1116,7 @@
       "Los oligodendrocitos",
       "Los astrocitos",
       "La microglía",
-      "Las células de Schwann.e"
+      "Las células de Schwann"
     ],
     "correct-answer": 2,
     "tags": [
@@ -2167,7 +2166,7 @@
   },
   {
     "id": "2008-144",
-    "statement": "El subtipo celular T_H1 es responsable de:",
+    "statement": "El subtipo celular T_(H1) es responsable de:",
     "answers": [
       "La neutralización viral",
       "La secreación de IL-1, IL-11 e IL-18",
@@ -2302,7 +2301,7 @@
   },
   {
     "id": "2008-153",
-    "statement": "Si se trabaja con una muestra asimétrica positiva la distribución de probabilidad:",
+    "statement": "Si se trabaja con una muestra asimétrica positiva se utiliza la distribución de probabilidad:",
     "answers": [
       "Normal",
       "Uniforme",
@@ -3121,7 +3120,7 @@
       "Un inhibidor alostérico actúa por similitud estructural con el sustrato",
       "El producto de la reacción no puede ser un inhibidor del enzima",
       "Un inhibidor puede unirse de forma covalente al enzima",
-      "Los inhibidores siempre modifican la V_max",
+      "Los inhibidores siempre modifican la V_(max)",
       "Un inhibidor no competitivo no se une al enzima"
     ],
     "correct-answer": 3,
@@ -3408,7 +3407,7 @@
     "statement": "En el ciclo del ácido cítrico:",
     "answers": [
       "El oxalacetato se oxida dando directamente ceto-glutarato",
-      "El acetil CoA se sintetiza a partir de CO_2",
+      "El acetil CoA se sintetiza a partir de CO_(2)",
       "Se oxida el NADH",
       "Hay un paso asociado a una fosforilación a nivel de sustrato",
       "El fumarato se sintetiza directamente a partir de piruvato"
@@ -3468,7 +3467,7 @@
     "statement": "En la glicólisis se sintetiza ATP directamente en la etapa catalizada por el enzima:",
     "answers": [
       "Hexoquinasa",
-      "Fosfofructoquinasa -1",
+      "Fosfofructoquinasa-1",
       "Gliceraldehído-3-fosfato deshidrogenasa",
       "Piruvato quinasa",
       "Triosa-fosfato isomerasa"
@@ -3510,7 +3509,7 @@
   },
   {
     "id": "2008-232",
-    "statement": "En relación con la estructura de los aminoácidos: ",
+    "statement": "En relación con la estructura de los aminoácidos:",
     "answers": [
       "La Lys contiene un grupo de sulfhidrilo",
       "La cadena lateral de Arg es aromática",
@@ -3697,7 +3696,7 @@
     "id": "2008-244",
     "statement": "La actividad peptidil-transferasa está catalizada:",
     "answers": [
-      "Sólo por nucleótidos del RNA 23S ",
+      "Sólo por nucleótidos del RNA 23S",
       "Sólo por nucleótidos del RNA 16S",
       "Por los RNA 16S y 23S conjuntamente",
       "Por las cadenas laterales de los aminoácidos de determinadas proteínas de la subunidad grande",
@@ -3940,9 +3939,9 @@
     "statement": "El ciclo del glioxilato:",
     "answers": [
       "Es el ciclo de Krebs de las plantas",
-      "Permite la síntesis de glúcidos a partir de acetil-CoA porque no lo oxida a CO_2",
+      "Permite la síntesis de glúcidos a partir de acetil-CoA porque no lo oxida a CO_(2)",
       "Sólo se encuentra en procariotas",
-      "Permite que el CO_2, liberado en el ciclo de Krebs, se transforme en acetato",
+      "Permite que el CO_(2), liberado en el ciclo de Krebs, se transforme en acetato",
       "Sólo se encuentra en vertebrados"
     ],
     "correct-answer": 2,

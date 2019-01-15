@@ -242,7 +242,6 @@
     ],
     "correct-answer": 1,
     "tags": [
-      "Fisiología",
       "Inmunología"
     ]
   },
@@ -848,7 +847,7 @@
     "statement": "El hematocrito indica el:",
     "answers": [
       "% en volumen de hemoglobina respecto a plasma",
-      "Número de glóbulos rojos por mm^3",
+      "Número de glóbulos rojos por mm^(3)",
       "Volumen de plasma contenido en la sangre",
       "% en volumen de glóbulos rojos respecto a sangre"
     ],
@@ -1388,7 +1387,7 @@
     "answers": [
       "Sintetizar dipicolinato",
       "Dar resistencia mecánica al exosporio",
-      "Unir grandes cantidades de iones Ca^2+",
+      "Unir grandes cantidades de iones Ca^(2+)",
       "Unirse al ADN protegiéndolo del calor y la radiación ultravioleta"
     ],
     "correct-answer": 4,
@@ -2316,7 +2315,7 @@
   },
   {
     "id": "2016-163",
-    "statement": "La heredabilidad en sentido restringido h^2 se calcula dividiendo:",
+    "statement": "La heredabilidad en sentido restringido h^(2) se calcula dividiendo:",
     "answers": [
       "La varianza genética por la varianza genotípica",
       "La heredabilidad en sentido amplio por la varianza fenotípica",
@@ -2809,7 +2808,7 @@
       "Acetato y glioxilato",
       "Fumarato",
       "Oxaloacetato",
-      "Piruvato y CO_2"
+      "Piruvato y CO_(2)"
     ],
     "impugned": true,
     "tags": [
@@ -2949,7 +2948,7 @@
       "S-Adenosilmetionina",
       "Malonil-CoA",
       "Acetil-CoA",
-      "CO_2"
+      "CO_(2)"
     ],
     "correct-answer": 1,
     "tags": [
@@ -3240,7 +3239,7 @@
   },
   {
     "id": "2016-228",
-    "statement": "Los géneros ~Vibrio~, ~Yersinia~, ~Legionella~ y ~Pasteurella~ son todos proteobacterias:",
+    "statement": "Los géneros ~Vibrio, Yersinia, Legionella y Pasteurella~son todos proteobacterias:",
     "answers": [
       "Alfa",
       "Beta",
@@ -3270,9 +3269,9 @@
     "id": "2016-230",
     "statement": "En el ciclo celular:",
     "answers": [
-      "Los cromosomas se replican en la fase G_2",
-      "Existe un único punto de control, el del paso de la fase G_1 a la S",
-      "La fase G_2 es la más variable del ciclo celular",
+      "Los cromosomas se replican en la fase G_(2)",
+      "Existe un único punto de control, el del paso de la fase G_(1) a la S",
+      "La fase G_(2) es la más variable del ciclo celular",
       "El complejo proteico entre ciclina y la cinasa dependiente de ciclina (Cdk) es un importante factor regulador del ciclo"
     ],
     "correct-answer": 4,

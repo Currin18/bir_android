@@ -227,7 +227,7 @@
   },
   {
     "id": "2013-16",
-    "statement": "Aumenta la actividad de la Na^+/K^+-ATPasa:",
+    "statement": "Aumenta la actividad de la Na^(+)/K^(+)-ATPasa:",
     "answers": [
       "Insulina",
       "Aldosterona",
@@ -504,8 +504,8 @@
     "answers": [
       "Presión arterial",
       "Actividad parasimpática",
-      "Concentración de Ca^2+ en plasma",
-      "Concentración de Na^+ en plasma",
+      "Concentración de Ca^(2+) en plasma",
+      "Concentración de Na^(+) en plasma",
       "Actividad simpática"
     ],
     "correct-answer": 5,
@@ -608,7 +608,7 @@
     "statement": "La colecistocinina:",
     "answers": [
       "Inhibe la secreción de bicarbonato pancreático",
-      "Reduce la motilidad gástric",
+      "Reduce la motilidad gástrica",
       "Estimula el apetito",
       "Reduce la motilidad del colédoco",
       "Relaja el esfínter de Oddi"
@@ -652,7 +652,7 @@
     "id": "2013-44",
     "statement": "El espacio muerto anatómico:",
     "answers": [
-      "Es siempre mayor que el fisiológic",
+      "Es siempre mayor que el fisiológico",
       "Secreta surfactantes",
       "Incluye bronquiolos de mediano calibre",
       "Permite intercambio gaseoso",
@@ -665,7 +665,7 @@
   },
   {
     "id": "2013-45",
-    "statement": "Si la pO_2 arterial disminuye a 60 mm de Hg:",
+    "statement": "Si la pO_(2) arterial disminuye a 60 mm de Hg:",
     "answers": [
       "Disminuye la ventilación",
       "Se activan los quimiorreceptores centrales",
@@ -705,7 +705,6 @@
     ],
     "correct-answer": 3,
     "tags": [
-      "Fisiología",
       "Citología"
     ]
   },
@@ -807,9 +806,9 @@
     "answers": [
       "Está presente en todas las células musculares sin excepción",
       "Forma parte del retículo sarcoplásmico",
-      "Posee una ATPasa activada por Ca^2+",
+      "Posee una ATPasa activada por Ca^(2+)",
       "Es una invaginación tubular de la membrana plásmica",
-      "Libera Ca^2+ al citosol durante la contratación"
+      "Libera Ca^(2+) al citosol durante la contratación"
     ],
     "correct-answer": 4,
     "tags": [
@@ -1136,7 +1135,7 @@
   },
   {
     "id": "2013-76",
-    "statement": "Si un test estadístico ofrece un valor p<0,05:",
+    "statement": "Si un test estadístico ofrece un valor p < 0,05:",
     "answers": [
       "Se acepta la hipótesis nula",
       "Se rechaza la hipótesis alternativa",
@@ -1562,7 +1561,7 @@
       "Característica limitada por el sexo",
       "Característica ligada al sexo",
       "Herencia citoplasmática",
-      "Impronta genómicaa",
+      "Impronta genómica",
       "Efecto genético materno"
     ],
     "correct-answer": 4,
@@ -1788,7 +1787,7 @@
       "Los inhibidores acompetitivos se unen al sustrato de la reacción",
       "Un inhibidor no competitivo no necesita unirse al enzima para ejercer su actividad",
       "Todos los inhibidores modifican Vmáx",
-      "Un inhibidor competitivo aumenta el valor de K_m"
+      "Un inhibidor competitivo aumenta el valor de K_(m)"
     ],
     "correct-answer": 5,
     "tags": [
@@ -2024,11 +2023,11 @@
     "id": "2013-135",
     "statement": "La hemoglobina:",
     "answers": [
-      "Disminuye su afinidad por el O_2 a pH bajo",
-      "Presenta una curva de saturación con O_2 desplazada hacia la derecha al aumentar el pH",
-      "Cuando une O_2, une también H^+",
-      "Cuando pasa a la forma tensa libera H^+",
-      "Aumenta su afinidad por el O_2 al aumentar el pH"
+      "Disminuye su afinidad por el O_(2) a pH bajo",
+      "Presenta una curva de saturación con O_(2) desplazada hacia la derecha al aumentar el pH",
+      "Cuando une O_(2), une también H^(+)",
+      "Cuando pasa a la forma tensa libera H^(+)",
+      "Aumenta su afinidad por el O_(2) al aumentar el pH"
     ],
     "impugned": true,
     "tags": [
@@ -2134,7 +2133,7 @@
     "answers": [
       "Estammos en cinética de saturación",
       "La cinética es e orden 1",
-      "La Vo es la V_max",
+      "La Vo es la V_(max)",
       "La velocidad es independiente de la [s]",
       "Esa situación no se produce nunca"
     ],
@@ -2207,8 +2206,8 @@
     "id": "2013-147",
     "statement": "En la síntesis de una molécula de ácido graso:",
     "answers": [
-      "Se produce poder reductor en forma de NADPH + H^+",
-      "Se libera una molécula de CO_2",
+      "Se produce poder reductor en forma de NADPH + H^(+)",
+      "Se libera una molécula de CO_(2)",
       "Entra una molécula de agua",
       "La cadena aumenta en 3C en cada p",
       "Se libera acetil-CoA"
@@ -3537,9 +3536,9 @@
     "statement": "En la electroforesis de hemoglobina en acetato de celulosa:",
     "answers": [
       "Se emplean como colorantes el Rojo Neutro o el Azul de Evans",
-      "Se obtienen tres fracciones diferenciadas: Hb A, HbA_2 y anhidrasa carbónica",
-      "La fracción mayoritaria es la HbA_2",
-      "Se obtiene el hemolizado empleando CINH_4",
+      "Se obtienen tres fracciones diferenciadas: Hb A, HbA_(2) y anhidrasa carbónica",
+      "La fracción mayoritaria es la HbA_(2)",
+      "Se obtiene el hemolizado empleando CINH_(4)",
       "Se emplea como decolorante Acetona-Etanol (1:1)"
     ],
     "correct-answer": 2,

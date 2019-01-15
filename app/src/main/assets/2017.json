@@ -3,9 +3,9 @@
     "id": "2017-1",
     "statement": "El periodo refractario de una fibra nerviosa se debe a:",
     "answers": [
-      "Inactivación de canales Ca^2+",
-      "Inactivación de canales K^+",
-      "Inactivación de canales Na^+ ",
+      "Inactivación de canales Ca^(2+)",
+      "Inactivación de canales K^(+)",
+      "Inactivación de canales Na^(+) ",
       "La posthiperpolarización que sigue al potencial de acción"
     ],
     "correct-answer": 3,
@@ -17,7 +17,7 @@
     "id": "2017-2",
     "statement": "Las células ciliadas de la cóclea:",
     "answers": [
-      "Se despolarizan por entrada de K^+",
+      "Se despolarizan por entrada de K^(+)",
       "Tienen estereocilios embebidos en la membrana otolítica",
       "Tienen estereocilios embebidos en la cúpula",
       "Se activan con el giro de la cabeza"
@@ -32,7 +32,7 @@
     "statement": "En relación a los fotorreceptores:",
     "answers": [
       "Los bastones proporcionan visión en color",
-      "Al iluminarse aumenta la corriente de entrada de Na^+",
+      "Al iluminarse aumenta la corriente de entrada de Na^(+)",
       "La luz disocia la rodopsina en sus componentes",
       "Sinaptan con células ganglionares"
     ],
@@ -43,7 +43,7 @@
   },
   {
     "id": "2017-4",
-    "statement": "Para la contracción de fibras musculares estriadas, el Ca^2+ se une a:",
+    "statement": "Para la contracción de fibras musculares estriadas, el Ca^(2+) se une a:",
     "answers": [
       "Miosina",
       "Troponina",
@@ -102,10 +102,10 @@
     "id": "2017-8",
     "statement": "La despolarización del potencial de acción en células del nodo sinoauricular está mediada por:",
     "answers": [
-      "Na^+",
-      "Ca^2+",
-      "K^+",
-      "Cl^-"
+      "Na^(+)",
+      "Ca^(2+)",
+      "K^(+)",
+      "Cl^(-)"
     ],
     "correct-answer": 2,
     "tags": [
@@ -186,10 +186,10 @@
     "id": "2017-14",
     "statement": "La contracción del músculo liso del tubo digestivo:",
     "answers": [
-      "Requiere la unión del Ca^2+ a la troponina",
-      "Está mediada por Ca^2+ procedente, principalmente, del medio extracelular",
-      "A diferencia del músculo estriado, no está mediada por Ca^2+",
-      "Está mediada por el Na^+ que entra en cada potencial de acción"
+      "Requiere la unión del Ca^(2+) a la troponina",
+      "Está mediada por Ca^(2+) procedente, principalmente, del medio extracelular",
+      "A diferencia del músculo estriado, no está mediada por Ca^(2+)",
+      "Está mediada por el Na^(+) que entra en cada potencial de acción"
     ],
     "correct-answer": 2,
     "tags": [
@@ -453,7 +453,7 @@
     "id": "2017-33",
     "statement": "Las células del haz de His:",
     "answers": [
-      "Carecen de canales de Ca^2+ dependientes de voltaje",
+      "Carecen de canales de Ca^(2+) dependientes de voltaje",
       "Establecen la frecuencia cardíaca",
       "Su contracción determina el volumen sistólico",
       "Transmiten el impulso cardíaco más rápidamente que el nodo auriculo-ventricular"
@@ -497,7 +497,7 @@
     "answers": [
       "En las bases pulmonares que en los vértices",
       "En una espiración forzada",
-      "Cuando disminuye la P_O2 alveolar",
+      "Cuando disminuye la P_(O2) alveolar",
       "En hipotensión arterial"
     ],
     "correct-answer": 1,
@@ -509,9 +509,9 @@
     "id": "2017-37",
     "statement": "Si la ventilación alveolar se duplica (condiciones ambientales y metabólicas constantes):",
     "answers": [
-      "La P_O2 alveolar se reduce a la mitad",
-      "La P_CO2 alveolar se reduce a la mitad",
-      "El contenido de O_2 en sangre arterial se duplica",
+      "La p_(O2) alveolar se reduce a la mitad",
+      "La p_(CO2) alveolar se reduce a la mitad",
+      "El contenido de O_(2) en sangre arterial se duplica",
       "Se induce acidosis respiratoria"
     ],
     "correct-answer": 2,
@@ -773,7 +773,7 @@
     ],
     "correct-answer": 2,
     "tags": [
-      "Fisiología"
+      "Histología"
     ]
   },
   {
@@ -1494,7 +1494,7 @@
     "answers": [
       "Activación incontrolada de los macrófagos y defectos de la función de los linfocitos NK",
       "Defectos de la expresión de moléculas del complejo principal de histocompatibilidad (CPH) de clase II",
-      "Reducción de los linfocitos T CD8^+",
+      "Reducción de los linfocitos T CD8^(+)",
       "Defectos de la movilidad de los leucocitos"
     ],
     "correct-answer": 1,
@@ -1565,8 +1565,8 @@
     "answers": [
       "Los cuatro grupos hemo se saturan con 2,3-BPG",
       "Se estabiliza la conformación oxigenada",
-      "Aumenta la afinidad por el O_2",
-      "Disminuye la afinidad por el O_2"
+      "Aumenta la afinidad por el O_(2)",
+      "Disminuye la afinidad por el O_(2)"
     ],
     "correct-answer": 4,
     "tags": [
@@ -1648,10 +1648,10 @@
     "id": "2017-117",
     "statement": "Cada ciclo de la β-oxidación de los ácidos grasos sigue la siguiente secuencia de reacciones:",
     "answers": [
-      "Oxidación dependiente de NAD^+; oxidación dependiente de FAD; hidratación; tiolisis",
-      "Oxidación dependiente de FAD; oxidación dependiente de NAD^+; hidratación; tiolisis",
-      "Oxidación dependiente de FAD; hidratación; oxidación dependiente de NAD^+; tiolisis",
-      "Tiolisis; oxidación dependiente de FAD; hidratación; oxidación dependiente de NAD^+"
+      "Oxidación dependiente de NAD^(+); oxidación dependiente de FAD; hidratación; tiolisis",
+      "Oxidación dependiente de FAD; oxidación dependiente de NAD^(+); hidratación; tiolisis",
+      "Oxidación dependiente de FAD; hidratación; oxidación dependiente de NAD^(+); tiolisis",
+      "Tiolisis; oxidación dependiente de FAD; hidratación; oxidación dependiente de NAD^(+)"
     ],
     "correct-answer": 3,
     "tags": [
@@ -1721,7 +1721,7 @@
     "answers": [
       "Piridoxal-5’-fosfato",
       "Pirofosfato de tiamina",
-      "N^5-N^10-metilen-tetrahidrofolato",
+      "N^(5)-N^(10)-metilen-tetrahidrofolato",
       "Cobalamina"
     ],
     "correct-answer": 1,
@@ -1775,7 +1775,7 @@
     "id": "2017-126",
     "statement": "¿Cuál de los siguientes compuestos no puede ser sintetizado por los humanos?:",
     "answers": [
-      "Ácido oleico (Δ^9 18:1)",
+      "Ácido oleico (Δ^(9) 18:1)",
       "Fosfatidiletanolamina",
       "Carnitina",
       "Tetrahidrofolato"
@@ -1787,7 +1787,7 @@
   },
   {
     "id": "2017-127",
-    "statement": "Los electrones procedentes del FADH_2 de las flavoproteínas se incorporan a la cadena respiratoria a través de:",
+    "statement": "Los electrones procedentes del FADH_(2) de las flavoproteínas se incorporan a la cadena respiratoria a través de:",
     "answers": [
       "El complejo I",
       "El complejo III",
@@ -1806,7 +1806,7 @@
       "Coenzima A",
       "Biotina",
       "FAD",
-      "Vitamina B_12"
+      "Vitamina B_(12)"
     ],
     "correct-answer": 1,
     "tags": [
@@ -2749,7 +2749,7 @@
   },
   {
     "id": "2017-195",
-    "statement": "La prueba de la eliminación de urea marcada con ^13 C en el aire espirado sirve para la identificación de:",
+    "statement": "La prueba de la eliminación de urea marcada con ^13C en el aire espirado sirve para la identificación de:",
     "answers": [
       "~Helicobacter pylori~",
       "~Tropheryma whipplei~",

@@ -211,10 +211,10 @@
   },
   {
     "id": "2009-15",
-    "statement": "La Na^+/K^+ ATP-asa:",
+    "statement": "La Na^(+)/K^(+) ATP-asa:",
     "answers": [
       "Se bloquea selectivamente por tetrodotoxina",
-      "Intercambia 2Na^+ por 1K^+",
+      "Intercambia 2Na^(+) por 1K^(+)",
       "Transporta cualquier catión monovalente extracelular",
       "Es electrogénica",
       "Sólo está en neuronas"
@@ -350,7 +350,7 @@
     "statement": "El reflejo miotático:",
     "answers": [
       "Es polisináptico",
-      "Está mediado por fibras aferentes tipo la (?)",
+      "Está mediado por fibras aferentes tipo Ia",
       "Inhibe las motoneuronas alfa",
       "Participan los núcleos motores troncoencefálicos",
       "Evita el desarrollo de tensiones peligrosas para el músculo"
@@ -437,7 +437,7 @@
   },
   {
     "id": "2009-30",
-    "statement": "Las somatomedinas sanguíneas",
+    "statement": "Las somatomedinas sanguíneas:",
     "answers": [
       "Estimulan la secreción de hormona del crecimiento",
       "Se liberan en la neurohipófisis",
@@ -558,13 +558,13 @@
   },
   {
     "id": "2009-38",
-    "statement": "El transporte del CO_2 en sangre:",
+    "statement": "El transporte del CO_(2) en sangre:",
     "answers": [
       "En su mayor parte es como bicarbonato",
       "No depende de la presión parcial de oxígeno en sangre",
       "Va unido a la hemoglobina forma carboxihemoglobina",
       "Va unido al hierro del grupo hemo de la hemoglobina",
-      "Mayoritariamente va en forma de CO_2 disuelto"
+      "Mayoritariamente va en forma de CO_(2) disuelto"
     ],
     "correct-answer": 1,
     "tags": [
@@ -607,11 +607,11 @@
     "id": "2009-41",
     "statement": "Acopla la despolarización del terminal presináptico y la liberación de neurotransmisor la:",
     "answers": [
-      "Entrada de Na^+",
-      "Entrada de K^+",
-      "Entrada de Ca^2+",
-      "Entrada de Cl",
-      "Salida de K^+"
+      "Entrada de Na^(+)",
+      "Entrada de K^(+)",
+      "Entrada de Ca^(2+)",
+      "Entrada de Cl^(-)",
+      "Salida de K^(+)"
     ],
     "correct-answer": 3,
     "tags": [
@@ -626,7 +626,7 @@
       "Transporte activo",
       "Difusión facilitada",
       "Endocitosis",
-      "Intercambio con Na^+"
+      "Intercambio con Na^(+)"
     ],
     "correct-answer": 2,
     "tags": [
@@ -646,8 +646,7 @@
     ],
     "correct-answer": 1,
     "tags": [
-      "Fisiología",
-      "Histología"
+      "Fisiología"
     ]
   },
   {
@@ -717,7 +716,7 @@
     "statement": "La miosina es una proteína motora:",
     "answers": [
       "Exclusiva de células musculares",
-      "Con un sitio de unión a Ca^++",
+      "Con un sitio de unión a Ca^(2+)",
       "Dependiente de la energía procedente de la hidrólisis de GTP",
       "Responsable del deslizamiento de los filamentos de actina",
       "Responsable del movimiento de cilios y flagelos"
@@ -761,7 +760,7 @@
   },
   {
     "id": "2009-51",
-    "statement": "El periodo G_0 es una fase de:",
+    "statement": "El periodo G_(0) es una fase de:",
     "answers": [
       "Preparación para la división celular",
       "Reposo, apartada del ciclo celular normal",
@@ -972,7 +971,6 @@
     ],
     "correct-answer": 2,
     "tags": [
-      "Fisiología",
       "Citología"
     ]
   },
@@ -1960,10 +1958,10 @@
     "id": "2009-130",
     "statement": "Los polimorfismos de las moléculas de histocompatibilidad de clase II se concentran en:",
     "answers": [
-      "Los dominios V_α",
-      "Los dominios V_β",
-      "Los dominios β_2",
-      "Los dominios α_2",
+      "Los dominios V_(α)",
+      "Los dominios V_(β)",
+      "Los dominios β_(2)",
+      "Los dominios α_(2)",
       "La hendidura peptídica"
     ],
     "correct-answer": 5,
@@ -2108,7 +2106,7 @@
   },
   {
     "id": "2009-140",
-    "statement": "Los linfocitos Th_1 efectores:",
+    "statement": "Los linfocitos Th_(1) efectores:",
     "answers": [
       "Reconocen la moléculas de histocompatibilidad de clase I",
       "Secretan IL-10",
@@ -2200,7 +2198,7 @@
   },
   {
     "id": "2009-146",
-    "statement": "Si un test estadístico ofrece un valor p<0,05, ¿cómo se interpreta?",
+    "statement": "Si un test estadístico ofrece un valor p < 0,05, ¿cómo se interpreta?",
     "answers": [
       "Se acepta la hipótesis nula",
       "Se rechaza la hipótesis alternativa",
@@ -2439,8 +2437,7 @@
     ],
     "correct-answer": 2,
     "tags": [
-      "Embriología",
-      "Fisiología"
+      "Embriología"
     ]
   },
   {
@@ -2738,7 +2735,7 @@
     "answers": [
       "Repara por combinación de cromátidas no homólogas",
       "Repara por combinación de cromátidas hermanas",
-      "Repara roturas de dobles hebra",
+      "Repara roturas de doble hebra",
       "Repara roturas de hebra sencilla",
       "Ocurre sólo durante la fase S"
     ],
@@ -2779,7 +2776,7 @@
   },
   {
     "id": "2009-184",
-    "statement": "La heredabilidad en sentido restringido h^2 se calcula dividiendo:",
+    "statement": "La heredabilidad en sentido restringido h^(2) se calcula dividiendo:",
     "answers": [
       "La varianza genética por la varianza genotípica",
       "La heredabilidad en sentido amplio por la varianza fenotípica",
@@ -2824,7 +2821,7 @@
   },
   {
     "id": "2009-187",
-    "statement": "El doblete CG es un \"hospot\" (punto caliente) de mutación porque:",
+    "statement": "El doblete CG es un \"hotspot\" (punto caliente) de mutación porque:",
     "answers": [
       "Es muy frecuente en el genoma humano",
       "CG tiende a duplicarse",
@@ -3236,11 +3233,11 @@
     "id": "2009-214",
     "statement": "En cada vuelta del ciclo de Krebs se:",
     "answers": [
-      "Reducen 3 moléculas de NAD^+ a NADH",
-      "Obtienen intermediarios de 4 C a partir de acetil-CoA",
-      "Liberan 3 moléculas de CO_2",
+      "Reducen 3 moléculas de NAD^(+) a NADH",
+      "Obtienen intermediarios de 4C a partir de acetil-CoA",
+      "Liberan 3 moléculas de CO_(2)",
       "Consume un GTP que se hidroliza a GDP+Pi",
-      "Liberan 2 moléculas de H_2O"
+      "Liberan 2 moléculas de H_(2)O"
     ],
     "correct-answer": 1,
     "tags": [
@@ -3252,7 +3249,7 @@
     "statement": "En la cadena transportadora de electrones mitocondrial:",
     "answers": [
       "La energía de transferencia de electrones genera un gradiente de protones",
-      "Los electrones se ceden finalmente al H_2O que se oxida a O_2",
+      "Los electrones se ceden finalmente al H_(2)O que se oxida a O_(2)",
       "Algunos componentes de la cadena bombean electrones hacia el interior de la mitocondria",
       "Se consume ATP para llevar a cabo la transferencia de electrones",
       "Se produce poder reductor en forma de NADH"
@@ -3315,7 +3312,7 @@
       "La síntesis de ácidos grasos se produce en la mitocondria",
       "El hidroxi-metil-glutaril-CoA es un intermediariio de la síntesis de ácidos grasos de número impar de carbonos",
       "Las insaturaciones  de los ácidos grasos se forman por acción de deshidratasas ",
-      "La síntesis de ácidos grasos consume FADH_2"
+      "La síntesis de ácidos grasos consume FADH_(2)"
     ],
     "correct-answer": 1,
     "tags": [
@@ -3386,7 +3383,7 @@
     "id": "2009-224",
     "statement": "Sobre el ciclo del ácido cítrico se puede afirmar que:",
     "answers": [
-      "Produce la mayor parte del CO_2 en organismos anaerobios",
+      "Produce la mayor parte del CO_(2) en organismos anaerobios",
       "Es una vía metabólica catabólica, pero también anabólica",
       "Siempre se localiza en la matriz mitocondrial",
       "No hay reacciones de reposición de sus intermediarios",
@@ -3701,10 +3698,10 @@
     "id": "2009-245",
     "statement": "En relación con la conversión de piruvato a lactato, es cierto que:",
     "answers": [
-      "Genera DNA^+ citosólico",
+      "Genera DNA^(+) citosólico",
       "La lactato deshidrogenasa será más activa en presencia de oxígeno",
       "Después de realizar ejerciio muscular intenso, el lactato será convertido en glucosa por el músculo",
-      "Genera CO_2",
+      "Genera CO_(2)",
       "Permite la generación de NADPH "
     ],
     "correct-answer": 1,

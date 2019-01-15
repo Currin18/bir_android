@@ -140,7 +140,7 @@
     "answers": [
       "Óxido nítrico",
       "Aumento de la temperatura corporal",
-      "Aumento de la presión parcial de CO_2",
+      "Aumento de la presión parcial de CO_(2)",
       "Aumento del tono simpático",
       "Reducción de la viscosidad sanguínea"
     ],
@@ -318,7 +318,7 @@
     "id": "2011-22",
     "statement": "En la absorción de proteínas participan:",
     "answers": [
-      "Cotransportadores K^+/aminoácidos",
+      "Cotransportadores K^(+)/aminoácidos",
       "Micelas mixtas",
       "Peptidasas",
       "Factor intrínseco",
@@ -365,7 +365,7 @@
     "answers": [
       "Aminoácidos",
       "Sales biliares conjugadas",
-      "Ca^2+",
+      "Ca^(2+)",
       "Azúcares",
       "Ácido fólico"
     ],
@@ -635,11 +635,11 @@
     "id": "2011-43",
     "statement": "La aldosterona aumenta la excreción renal de:",
     "answers": [
-      "Na^+",
-      "K^+",
+      "Na^(+)",
+      "K^(+)",
       "Agua",
-      "H^+",
-      "Ca^++"
+      "H^(+)",
+      "Ca^(++)"
     ],
     "correct-answer": 2,
     "tags": [
@@ -962,7 +962,7 @@
       "Periostio",
       "Endostio",
       "Líneas cementantes",
-      "Fibras de sharpey",
+      "Fibras de Sharpey",
       "Articulaciones óseas internas"
     ],
     "correct-answer": 3,
@@ -1474,11 +1474,11 @@
     "id": "2011-98",
     "statement": "Puede ser un aceptor terminal de electrones de la respiración:",
     "answers": [
-      "H_2S",
-      "H_2",
+      "H_(2)S",
+      "H_(2)",
       "Pirúvico",
-      "NO_3^-",
-      "NH^4+"
+      "NO_3^(-)",
+      "NH^(4+)"
     ],
     "correct-answer": 4,
     "tags": [
@@ -1914,7 +1914,7 @@
       "Cuyo TCR ha sido reordenado y se expresa correctamente",
       "αβ y γδ que reconocen los complejos MHC-péptido con alta afinidad ",
       "Doble positivos que interaccionan con MHC propio",
-      "TCR^+ CD3^- CD4^+ CD8^+ restringidos por MHC autólogo"
+      "TCR^(+) CD3^(-) CD4^(+) CD8^(+) restringidos por MHC autólogo"
     ],
     "correct-answer": 4,
     "tags": [
@@ -2000,10 +2000,10 @@
     "id": "2011-133",
     "statement": "En una molécula de anticuerpo, el lugar de unión al complemento sérico reside en:",
     "answers": [
-      "Los dominios C_L",
-      "Los dominios V_H",
+      "Los dominios C_(L)",
+      "Los dominios V_(H)",
       "La región bisagra",
-      "Los dominios C_H2",
+      "Los dominios C_(H2)",
       "El extremo carboxilo"
     ],
     "correct-answer": 4,
@@ -2032,9 +2032,9 @@
     "answers": [
       "Las regiones FR",
       "Las regiones CDRs",
-      "Los dominios C_H1",
-      "Los dominios C_L",
-      "Los dominios C_H3"
+      "Los dominios C_(H1)",
+      "Los dominios C_(L)",
+      "Los dominios C_(H3)"
     ],
     "correct-answer": 2,
     "tags": [
@@ -2093,7 +2093,7 @@
       "Células endoteliales",
       "Macrófagos tisulares",
       "Mastocitos y basófilos",
-      "Linfocitos T_H1",
+      "Linfocitos T_(H1)",
       "Eosinófilos"
     ],
     "correct-answer": 3,
@@ -2106,9 +2106,9 @@
     "statement": "Las reacciones de hipersensibilidad de tipo retardado están medidas por:",
     "answers": [
       "IgE",
-      "Linfocitos T_H2",
+      "Linfocitos T_(H2)",
       "Mastocitos",
-      "Linfocitos T_H1",
+      "Linfocitos T_(H1)",
       "Eosinófilos"
     ],
     "correct-answer": 4,
@@ -2122,8 +2122,8 @@
     "answers": [
       "Una enfermedad autoinmune sistémica",
       "Un ejemplo de inmudeficiencia primaria congénita",
-      "Producida cuando la madre es Rh^+ y el feto Rh^-",
-      "Una reacción por transfusión de eritrocitos de un individuo A^+ a uno AB^+",
+      "Producida cuando la madre es Rh^(+) y el feto Rh^(-)",
+      "Una reacción por transfusión de eritrocitos de un individuo A^(+) a uno AB^(+)",
       "Causada por una reacción de hipersensibilidad dependiente de anticuerpos"
     ],
     "correct-answer": 5,
@@ -2194,7 +2194,7 @@
   },
   {
     "id": "2011-146",
-    "statement": "El intervalo comprendido entre aproximadamenbte dos errores estándar alrededor de la media se conoce como intervalo de:",
+    "statement": "El intervalo comprendido entre aproximadamente dos errores estándar alrededor de la media se conoce como intervalo de:",
     "answers": [
       "Confianza de 1%",
       "Probabilidad del 95%",
@@ -2609,7 +2609,7 @@
   },
   {
     "id": "2011-173",
-    "statement": "El fenotipo con una persona con cariotipo constitucional 48,XXXY puede corresponder a:",
+    "statement": "El fenotipo de una persona con cariotipo constitucional 48,XXXY puede corresponder a:",
     "answers": [
       "Síndrome de Turner ",
       "Síndrome de Jacobs",
@@ -3003,7 +3003,7 @@
     "id": "2011-199",
     "statement": "El mecanismo de reparación por escisión de bases repara:",
     "answers": [
-      "Citosinas diseminadas",
+      "Citosinas desaminadas",
       "Dímeros de timina",
       "Roturas de hebra única",
       "Roturas de doble hebra",
@@ -3034,7 +3034,7 @@
     "statement": "Elija la afirmación correcta sobre la histidina:",
     "answers": [
       "Es un aminoácido ácido",
-      "Tiene un valor de pK_R cercano a valores de pH fisiológico",
+      "Tiene un valor de pK_(R) cercano a valores de pH fisiológico",
       "Su cadena lateral es aromática",
       "Nunca está presente en centros activos de enzimas ",
       "Tiene una cadena lateral de naturaleza polar sin carga"
@@ -3061,12 +3061,12 @@
   },
   {
     "id": "2011-203",
-    "statement": "Elija la afirmación correcta sobre los valores de pK_1 y pK_2 de los aminoácidos:",
+    "statement": "Elija la afirmación correcta sobre los valores de pK_(1) y pK_(2) de los aminoácidos:",
     "answers": [
       "Son valores muy variables para un mismo aminoácido",
-      "En todos los aminoácidos básicos pK_2 es mayor que pK_R",
-      "En los aminoácidos ácidos pK_R es menor que pK_1",
-      "pK_1 tiene en todos los casos un valor inferior a pK_2",
+      "En todos los aminoácidos básicos pK_(2) es mayor que pK_(R)",
+      "En los aminoácidos ácidos pK_(R) es menor que pK_(1)",
+      "pK_(1) tiene en todos los casos un valor inferior a pK_(2)",
       "No se pueden determinar experimentalmente"
     ],
     "correct-answer": 4,
@@ -3138,8 +3138,8 @@
     "id": "2011-208",
     "statement": "La curva de saturación con oxígeno de la hemoglobina:",
     "answers": [
-      "No se afecta por la concentración de CO_2",
-      "Refleja un fenómeno de cooperatividad negativa (cada molécula de O_2 se une con mayor dificultad que la anterior)",
+      "No se afecta por la concentración de CO_(2)",
+      "Refleja un fenómeno de cooperatividad negativa (cada molécula de O_(2) se une con mayor dificultad que la anterior)",
       "Se desplaza hacia la izquierda en presencia de 2,3-bifosfoglicerato",
       "Se desplaza hacia la derecha conforme aumenta el pH",
       "Se desplaza a la derecha conforme disminuye el pH"
@@ -3347,11 +3347,11 @@
   },
   {
     "id": "2011-222",
-    "statement": "En la cinética de Michaelis-Menten, cuando coinciden los valores de concentración de susbtrato y K_m:",
+    "statement": "En la cinética de Michaelis-Menten, cuando coinciden los valores de concentración de susbtrato y K_(m):",
     "answers": [
       "Estamos en saturación",
       "La cinética es de orden 1",
-      "La V_0 es la mitad de la V_max",
+      "La V_(0) es la mitad de la V_(max)",
       "La velocidad es independiente de la concentración de substrato",
       "Esa situación no se produce nunca"
     ],
@@ -3364,9 +3364,9 @@
     "id": "2011-223",
     "statement": "En la inhibición enzimática competitiva:",
     "answers": [
-      "La V_max aumenta en presencia del inhibidor",
-      "La K_max aumenta en presencia del inhibidor",
-      "La V_max y la K_m cambian en presencia del inhibidor",
+      "La V_(max) aumenta en presencia del inhibidor",
+      "La K_(max) aumenta en presencia del inhibidor",
+      "La V_(max) y la K_(m) cambian en presencia del inhibidor",
       "Al aumentar la concentración de inhibidor se recupera la velocidad máxima de la reacción",
       "El inhibidor no compite con el sustrato por el sitio activo"
     ],
@@ -3530,7 +3530,7 @@
     "statement": "La beta oxidación:",
     "answers": [
       "Se produce en el citoplasma",
-      "Genera poder reductor en forma de NADPH+H^+",
+      "Genera poder reductor en forma de NADPH+H^(+)",
       "Es una vía anabólica",
       "Varias de sus reacciones las catalizan quinasas que producen ATP",
       "Su producto es principalmente acetil-CoA"
@@ -3542,7 +3542,7 @@
   },
   {
     "id": "2011-235",
-    "statement": "Cuál de las siguientes enzimas del ciclo de Krebs generan poder reductor en forma de NADH+H^+:",
+    "statement": "Cuál de las siguientes enzimas del ciclo de Krebs generan poder reductor en forma de NADH+H^(+):",
     "answers": [
       "Citrato sintasa",
       "Succinato deshidrogenasa",
@@ -3561,7 +3561,7 @@
     "answers": [
       "No está regulada",
       "Su producto es el propionil-CoA",
-      "Consume CO_2",
+      "Consume CO_(2)",
       "Consume dos enlaces ricos en energía",
       "Produce NADH"
     ],
@@ -3665,11 +3665,11 @@
     "id": "2011-243",
     "statement": "La velocidad de una reacción anzimática se puede expresar como:",
     "answers": [
-      "Cal. mol^-1",
+      "Cal. mol^(-1)",
       "Min",
       "Mol centro activo. min",
-      "Moles. L^-1. min^-1",
-      "Moles x L^-1"
+      "Moles. L^(-1). min^(-1)",
+      "Moles x L^(-1)"
     ],
     "correct-answer": 4,
     "tags": [
@@ -3743,8 +3743,8 @@
       "Es un nucleósido",
       "Carece de azúcar en su estructura",
       "Su hidrólisis libera un átomo de fósforo inorgánico",
-      "Se une convalentemente a Mg^2",
-      "Posee un ΔG^o' de hidrólisis muy negativo"
+      "Se une convalentemente a Mg^(2+)",
+      "Posee un ΔG^(o') de hidrólisis muy negativo"
     ],
     "correct-answer": 5,
     "tags": [
@@ -3909,8 +3909,8 @@
     "answers": [
       "Producir aminoácidos para la síntesis de proteínas",
       "Generar un gradiente de protones para la síntesis de ATP",
-      "Regenerar NAD^+ desde NADH para asegurar que la glicosis continúe",
-      "Oxidar la glucosa hasta CO_2 y agua",
+      "Regenerar NAD^(+) desde NADH para asegurar que la glicosis continúe",
+      "Oxidar la glucosa hasta CO_(2) y agua",
       "Producir pentosas"
     ],
     "correct-answer": 3,

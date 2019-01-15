@@ -10,7 +10,9 @@
       "Sueño profundo"
     ],
     "correct-answer": 3,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-2",
@@ -23,7 +25,10 @@
       "Na^(+)-K^(+)-ATPasa"
     ],
     "correct-answer": 4,
-    "tags": ["Fisiología","Bioquímica"]
+    "tags": [
+      "Fisiología",
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-3",
@@ -36,7 +41,10 @@
       "Factor de células madre"
     ],
     "correct-answer": 2,
-    "tags": ["Fisiología","Bioquímica"]
+    "tags": [
+      "Fisiología",
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-4",
@@ -49,7 +57,9 @@
       "Estimulación simpática"
     ],
     "correct-answer": 5,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-5",
@@ -62,7 +72,9 @@
       "Ileon y colon"
     ],
     "correct-answer": 2,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-6",
@@ -75,7 +87,9 @@
       "GIP"
     ],
     "correct-answer": 1,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-7",
@@ -88,7 +102,9 @@
       "Lipasa"
     ],
     "correct-answer": 5,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-8",
@@ -101,7 +117,10 @@
       "Produce secreción hipertónica"
     ],
     "correct-answer": 1,
-    "tags": ["Fisiología","Histología"]
+    "tags": [
+      "Fisiología",
+      "Histología"
+    ]
   },
   {
     "id": "2010-9",
@@ -114,7 +133,9 @@
       "VIP"
     ],
     "correct-answer": 4,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-10",
@@ -127,7 +148,9 @@
       "Estimulación vagal"
     ],
     "correct-answer": 3,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-11",
@@ -140,7 +163,9 @@
       "Relaja el esfínter externo"
     ],
     "correct-answer": 4,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-12",
@@ -153,7 +178,9 @@
       "Es hiperosmolar respecto al plasma"
     ],
     "correct-answer": 1,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-13",
@@ -166,7 +193,9 @@
       "Factor natriurético"
     ],
     "correct-answer": 5,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-14",
@@ -179,7 +208,9 @@
       "El túbulo colector medular"
     ],
     "correct-answer": 3,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-15",
@@ -192,7 +223,9 @@
       "Mecanorreceptores de faringe y laringe"
     ],
     "correct-answer": 2,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-16",
@@ -205,7 +238,9 @@
       "Sólo está en los neonatos"
     ],
     "correct-answer": 2,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-17",
@@ -218,7 +253,9 @@
       "De la concentración de CO_(2)"
     ],
     "correct-answer": 3,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-18",
@@ -231,7 +268,9 @@
       "Volumen corriente"
     ],
     "correct-answer": 1,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-19",
@@ -244,7 +283,10 @@
       "Su síntesis requiere la captación de hierro del plasma"
     ],
     "correct-answer": 3,
-    "tags": ["Fisiología","Bioquímica"]
+    "tags": [
+      "Fisiología",
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-20",
@@ -257,7 +299,9 @@
       "Reabsorción de bicarbonato en el túbulo distal"
     ],
     "correct-answer": 5,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-21",
@@ -270,7 +314,9 @@
       "Aumenta el filtrado glomerular"
     ],
     "correct-answer": 3,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-22",
@@ -283,7 +329,9 @@
       "Recibe con la contracción auricular"
     ],
     "correct-answer": 1,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-23",
@@ -296,7 +344,9 @@
       "Es igual en todas las células cardiacas"
     ],
     "correct-answer": 4,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-24",
@@ -309,7 +359,9 @@
       "Aparece la onda T del ECG"
     ],
     "correct-answer": 3,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-25",
@@ -322,7 +374,9 @@
       "Aumenta el tono vagal"
     ],
     "correct-answer": 1,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-26",
@@ -335,7 +389,9 @@
       "Fase de llenado rápido"
     ],
     "correct-answer": 4,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-27",
@@ -348,7 +404,9 @@
       "Presenta tres valvas"
     ],
     "correct-answer": 3,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-28",
@@ -361,7 +419,9 @@
       "La poscarga mayor"
     ],
     "correct-answer": 5,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-29",
@@ -374,7 +434,9 @@
       "Las cuerdas tendinosas"
     ],
     "correct-answer": 3,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-30",
@@ -387,7 +449,9 @@
       "Presión hidrostática capilar"
     ],
     "correct-answer": 5,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-31",
@@ -400,7 +464,9 @@
       "Motoras gamma"
     ],
     "correct-answer": 3,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-32",
@@ -413,7 +479,9 @@
       "A través del vermis"
     ],
     "correct-answer": 4,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-33",
@@ -426,7 +494,9 @@
       "Somáticas"
     ],
     "correct-answer": 1,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-34",
@@ -439,7 +509,9 @@
       "Activados, producen la contracción del músculo"
     ],
     "correct-answer": 1,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-35",
@@ -452,7 +524,9 @@
       "Gasto cardiaco"
     ],
     "correct-answer": 5,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-36",
@@ -465,7 +539,9 @@
       "Descenso de pH"
     ],
     "correct-answer": 3,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-37",
@@ -478,7 +554,9 @@
       "Es refractario al estímulo aplicado"
     ],
     "correct-answer": 1,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-38",
@@ -491,7 +569,9 @@
       "Se hiperpolarizan con la luz"
     ],
     "correct-answer": 5,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-39",
@@ -504,7 +584,9 @@
       "Fastigial"
     ],
     "correct-answer": 3,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-40",
@@ -517,7 +599,9 @@
       "Aumento de adrenalina"
     ],
     "correct-answer": 4,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-41",
@@ -530,7 +614,9 @@
       "GRH"
     ],
     "correct-answer": 3,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-42",
@@ -543,7 +629,9 @@
       "Es sintetizado por la médula adrenal"
     ],
     "correct-answer": 3,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-43",
@@ -556,7 +644,10 @@
       "Progesterona"
     ],
     "correct-answer": 1,
-    "tags": ["Fisiología","Embriología"]
+    "tags": [
+      "Fisiología",
+      "Embriología"
+    ]
   },
   {
     "id": "2010-44",
@@ -569,7 +660,10 @@
       "Inhibina"
     ],
     "correct-answer": 2,
-    "tags": ["Fisiología","Embriología"]
+    "tags": [
+      "Fisiología",
+      "Embriología"
+    ]
   },
   {
     "id": "2010-45",
@@ -582,7 +676,9 @@
       "Es la principal secreción del tiroides"
     ],
     "correct-answer": 5,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-46",
@@ -595,7 +691,10 @@
       "Origina los nucleosomas"
     ],
     "correct-answer": 4,
-    "tags": ["Genética","Citología"]
+    "tags": [
+      "Genética",
+      "Citología"
+    ]
   },
   {
     "id": "2010-47",
@@ -608,7 +707,9 @@
       "Focales"
     ],
     "correct-answer": 4,
-    "tags": ["Citología"]
+    "tags": [
+      "Citología"
+    ]
   },
   {
     "id": "2010-48",
@@ -621,7 +722,9 @@
       "Golgi a endosomas"
     ],
     "correct-answer": 5,
-    "tags": ["Citología"]
+    "tags": [
+      "Citología"
+    ]
   },
   {
     "id": "2010-49",
@@ -634,7 +737,9 @@
       "Fagosomas"
     ],
     "correct-answer": 2,
-    "tags": ["Citología"]
+    "tags": [
+      "Citología"
+    ]
   },
   {
     "id": "2010-50",
@@ -647,7 +752,9 @@
       "Cuerpo basal"
     ],
     "correct-answer": 3,
-    "tags": ["Citología"]
+    "tags": [
+      "Citología"
+    ]
   },
   {
     "id": "2010-51",
@@ -660,7 +767,9 @@
       "Sus diferentes compartimentos realizan funciones diferentes"
     ],
     "correct-answer": 2,
-    "tags": ["Citología"]
+    "tags": [
+      "Citología"
+    ]
   },
   {
     "id": "2010-52",
@@ -673,7 +782,9 @@
       "Lamelipodios y filopodios"
     ],
     "correct-answer": 1,
-    "tags": ["Citología"]
+    "tags": [
+      "Citología"
+    ]
   },
   {
     "id": "2010-53",
@@ -686,7 +797,10 @@
       "Comienzo de G1"
     ],
     "correct-answer": 4,
-    "tags": ["Citología","Genética"]
+    "tags": [
+      "Citología",
+      "Genética"
+    ]
   },
   {
     "id": "2010-54",
@@ -699,7 +813,10 @@
       "Microtúbulos al polo del huso"
     ],
     "correct-answer": 4,
-    "tags": ["Citología","Genética"]
+    "tags": [
+      "Citología",
+      "Genética"
+    ]
   },
   {
     "id": "2010-55",
@@ -712,7 +829,9 @@
       "Metacéntricos"
     ],
     "correct-answer": 3,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-56",
@@ -725,7 +844,10 @@
       "Las fibras del huso mitótico"
     ],
     "correct-answer": 2,
-    "tags": ["Citología","Genética"]
+    "tags": [
+      "Citología",
+      "Genética"
+    ]
   },
   {
     "id": "2010-57",
@@ -738,7 +860,9 @@
       "G2-G1-S-M"
     ],
     "correct-answer": 2,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-58",
@@ -751,7 +875,9 @@
       "Está en mitosis"
     ],
     "correct-answer": 4,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-59",
@@ -764,7 +890,10 @@
       "Córtex celular"
     ],
     "correct-answer": 2,
-    "tags": ["Citología","Histología"]
+    "tags": [
+      "Citología",
+      "Histología"
+    ]
   },
   {
     "id": "2010-60",
@@ -777,7 +906,9 @@
       "Nervioso"
     ],
     "correct-answer": 2,
-    "tags": ["Histología"]
+    "tags": [
+      "Histología"
+    ]
   },
   {
     "id": "2010-61",
@@ -790,7 +921,9 @@
       "El cartílago está altamente vascularizado"
     ],
     "correct-answer": 3,
-    "tags": ["Histología"]
+    "tags": [
+      "Histología"
+    ]
   },
   {
     "id": "2010-62",
@@ -803,7 +936,10 @@
       "Mioepitelial"
     ],
     "correct-answer": 3,
-    "tags": ["Histología","Fisiología"]
+    "tags": [
+      "Histología",
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-63",
@@ -816,7 +952,10 @@
       "Cardiacas presentan bandas transversales similares a las esqueléticas"
     ],
     "correct-answer": 5,
-    "tags": ["Histología","Fisiología"]
+    "tags": [
+      "Histología",
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-64",
@@ -829,7 +968,9 @@
       "Conjuntivas"
     ],
     "correct-answer": 2,
-    "tags": ["Histología"]
+    "tags": [
+      "Histología"
+    ]
   },
   {
     "id": "2010-65",
@@ -842,7 +983,9 @@
       "Elástico se asemeja mucho al fibrocartílago"
     ],
     "correct-answer": 3,
-    "tags": ["Histología"]
+    "tags": [
+      "Histología"
+    ]
   },
   {
     "id": "2010-66",
@@ -855,7 +998,10 @@
       "K"
     ],
     "correct-answer": 1,
-    "tags": ["Fisiología","Histología"]
+    "tags": [
+      "Fisiología",
+      "Histología"
+    ]
   },
   {
     "id": "2010-67",
@@ -868,7 +1014,9 @@
       "Osteoblastos y osteoclastos conjuntamente"
     ],
     "correct-answer": 1,
-    "tags": ["Histología"]
+    "tags": [
+      "Histología"
+    ]
   },
   {
     "id": "2010-68",
@@ -881,7 +1029,9 @@
       "Autocrina"
     ],
     "correct-answer": 4,
-    "tags": ["Histología"]
+    "tags": [
+      "Histología"
+    ]
   },
   {
     "id": "2010-69",
@@ -894,7 +1044,9 @@
       "Lamelipodios de células en cultivo"
     ],
     "correct-answer": 3,
-    "tags": ["Histología"]
+    "tags": [
+      "Histología"
+    ]
   },
   {
     "id": "2010-70",
@@ -907,7 +1059,10 @@
       "La cromatina sexual"
     ],
     "correct-answer": 1,
-    "tags": ["Genética","Citología"]
+    "tags": [
+      "Genética",
+      "Citología"
+    ]
   },
   {
     "id": "2010-71",
@@ -920,7 +1075,9 @@
       "De transición"
     ],
     "correct-answer": 2,
-    "tags": ["Histología"]
+    "tags": [
+      "Histología"
+    ]
   },
   {
     "id": "2010-72",
@@ -933,7 +1090,9 @@
       "Miofibroblastos"
     ],
     "correct-answer": 3,
-    "tags": ["Histología"]
+    "tags": [
+      "Histología"
+    ]
   },
   {
     "id": "2010-73",
@@ -946,7 +1105,9 @@
       "Conexina"
     ],
     "correct-answer": 1,
-    "tags": ["Citología"]
+    "tags": [
+      "Citología"
+    ]
   },
   {
     "id": "2010-74",
@@ -959,7 +1120,9 @@
       "Es una ATP-asa"
     ],
     "impugned": true,
-    "tags": ["Citología"]
+    "tags": [
+      "Citología"
+    ]
   },
   {
     "id": "2010-75",
@@ -972,7 +1135,9 @@
       "Que la Anafase II tiene cromosomas con una sola cromátida"
     ],
     "correct-answer": 1,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-76",
@@ -985,7 +1150,9 @@
       "Siempre contiene polimerasas para la replicación de su material genético"
     ],
     "correct-answer": 4,
-    "tags": ["Virología"]
+    "tags": [
+      "Virología"
+    ]
   },
   {
     "id": "2010-77",
@@ -998,7 +1165,9 @@
       "RNA circular de caxdena doble"
     ],
     "correct-answer": 3,
-    "tags": ["Virología"]
+    "tags": [
+      "Virología"
+    ]
   },
   {
     "id": "2010-78",
@@ -1011,7 +1180,9 @@
       "Contiene una RNA polimerasa dependiente de DNA"
     ],
     "correct-answer": 1,
-    "tags": ["Virología"]
+    "tags": [
+      "Virología"
+    ]
   },
   {
     "id": "2010-79",
@@ -1024,7 +1195,9 @@
       "De la rabia"
     ],
     "correct-answer": 2,
-    "tags": ["Virología"]
+    "tags": [
+      "Virología"
+    ]
   },
   {
     "id": "2010-80",
@@ -1037,7 +1210,9 @@
       "Ambos se transmiten vía oral-fecal"
     ],
     "correct-answer": 3,
-    "tags": ["Virología"]
+    "tags": [
+      "Virología"
+    ]
   },
   {
     "id": "2010-81",
@@ -1050,7 +1225,9 @@
       "Esférica"
     ],
     "correct-answer": 2,
-    "tags": ["Virología"]
+    "tags": [
+      "Virología"
+    ]
   },
   {
     "id": "2010-82",
@@ -1063,7 +1240,9 @@
       "Su baja eficiencia de traducción por los ribosomas"
     ],
     "correct-answer": 4,
-    "tags": ["Virología"]
+    "tags": [
+      "Virología"
+    ]
   },
   {
     "id": "2010-83",
@@ -1076,7 +1255,9 @@
       "La oral-fecal"
     ],
     "correct-answer": 4,
-    "tags": ["Virología"]
+    "tags": [
+      "Virología"
+    ]
   },
   {
     "id": "2010-84",
@@ -1089,7 +1270,9 @@
       "Nuclear"
     ],
     "correct-answer": 5,
-    "tags": ["Virología"]
+    "tags": [
+      "Virología"
+    ]
   },
   {
     "id": "2010-85",
@@ -1102,7 +1285,9 @@
       "Coronavirus"
     ],
     "correct-answer": 2,
-    "tags": ["Virología"]
+    "tags": [
+      "Virología"
+    ]
   },
   {
     "id": "2010-86",
@@ -1115,7 +1300,9 @@
       "Carcinoma hepatocelular"
     ],
     "correct-answer": 3,
-    "tags": ["Virología"]
+    "tags": [
+      "Virología"
+    ]
   },
   {
     "id": "2010-87",
@@ -1128,7 +1315,9 @@
       "Pinocitosis"
     ],
     "correct-answer": 1,
-    "tags": ["Virología"]
+    "tags": [
+      "Virología"
+    ]
   },
   {
     "id": "2010-88",
@@ -1141,7 +1330,9 @@
       "Deben contener algún tRNA en su virión para poder desarrollar el proceso infectivo"
     ],
     "correct-answer": 3,
-    "tags": ["Virología"]
+    "tags": [
+      "Virología"
+    ]
   },
   {
     "id": "2010-89",
@@ -1154,7 +1345,9 @@
       "En la fase de eclosión"
     ],
     "correct-answer": 4,
-    "tags": ["Virología"]
+    "tags": [
+      "Virología"
+    ]
   },
   {
     "id": "2010-90",
@@ -1167,7 +1360,9 @@
       "Disminuyendo la afinidad de la polimerasa vírica por sus promotores"
     ],
     "correct-answer": 1,
-    "tags": ["Virología"]
+    "tags": [
+      "Virología"
+    ]
   },
   {
     "id": "2010-91",
@@ -1180,7 +1375,9 @@
       "Entre el portaobjetos y el cubreobjetos"
     ],
     "correct-answer": 3,
-    "tags": ["Técnicas"]
+    "tags": [
+      "Técnicas"
+    ]
   },
   {
     "id": "2010-92",
@@ -1193,7 +1390,10 @@
       "Fucsina"
     ],
     "correct-answer": 4,
-    "tags": ["Técnicas","Microbiología"]
+    "tags": [
+      "Técnicas",
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-93",
@@ -1206,7 +1406,10 @@
       "Microbiostático"
     ],
     "correct-answer": 3,
-    "tags": ["Microbiología","Técnicas"]
+    "tags": [
+      "Microbiología",
+      "Técnicas"
+    ]
   },
   {
     "id": "2010-94",
@@ -1219,7 +1422,9 @@
       "De fluorescencia"
     ],
     "correct-answer": 5,
-    "tags": ["Técnicas"]
+    "tags": [
+      "Técnicas"
+    ]
   },
   {
     "id": "2010-95",
@@ -1232,7 +1437,9 @@
       "De enriquecimiento"
     ],
     "correct-answer": 2,
-    "tags": ["Técnicas"]
+    "tags": [
+      "Técnicas"
+    ]
   },
   {
     "id": "2010-96",
@@ -1245,7 +1452,10 @@
       "Filtración y siembra en placa"
     ],
     "correct-answer": 1,
-    "tags": ["Microbiología","Técnicas"]
+    "tags": [
+      "Microbiología",
+      "Técnicas"
+    ]
   },
   {
     "id": "2010-97",
@@ -1258,7 +1468,10 @@
       "6"
     ],
     "correct-answer": 3,
-    "tags": ["Microbiología","Técnicas"]
+    "tags": [
+      "Microbiología",
+      "Técnicas"
+    ]
   },
   {
     "id": "2010-98",
@@ -1271,7 +1484,9 @@
       "Inhibe la síntesis de RNA ribosomal"
     ],
     "correct-answer": 4,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-99",
@@ -1284,7 +1499,9 @@
       "El péptidoglicano"
     ],
     "correct-answer": 1,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-100",
@@ -1297,7 +1514,9 @@
       "Las tetraciclinas"
     ],
     "correct-answer": 1,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-101",
@@ -1310,7 +1529,9 @@
       "Las quinolonas"
     ],
     "correct-answer": 2,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-102",
@@ -1323,7 +1544,9 @@
       "Microaerófila"
     ],
     "correct-answer": 3,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-103",
@@ -1336,7 +1559,9 @@
       "Son todas fermentadoras"
     ],
     "correct-answer": 3,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-104",
@@ -1349,7 +1574,9 @@
       "Estar asociados a virus lisogénicos"
     ],
     "correct-answer": 4,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-105",
@@ -1362,7 +1589,9 @@
       "Bdellovibrios"
     ],
     "correct-answer": 1,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-106",
@@ -1375,7 +1604,9 @@
       "~Pasteurellaceae~"
     ],
     "correct-answer": 2,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-107",
@@ -1388,7 +1619,9 @@
       "~Pseudomonas~"
     ],
     "correct-answer": 4,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-108",
@@ -1401,7 +1634,9 @@
       "Se pueden adquirir en un centro hospitalario"
     ],
     "correct-answer": 5,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-109",
@@ -1414,7 +1649,10 @@
       "Agar de Thayer-Martin"
     ],
     "correct-answer": 5,
-    "tags": ["Microbiología","Técnicas"]
+    "tags": [
+      "Microbiología",
+      "Técnicas"
+    ]
   },
   {
     "id": "2010-110",
@@ -1427,7 +1665,9 @@
       "Se agrupan en cadenas"
     ],
     "correct-answer": 2,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-111",
@@ -1440,7 +1680,9 @@
       "~Mycoplasma~"
     ],
     "correct-answer": 1,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-112",
@@ -1453,7 +1695,9 @@
       "Ser ácido-alcohol resistente"
     ],
     "correct-answer": 5,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-113",
@@ -1466,7 +1710,10 @@
       "No es posible cultivar rickettsias"
     ],
     "correct-answer": 4,
-    "tags": ["Microbiología","Técnicas"]
+    "tags": [
+      "Microbiología",
+      "Técnicas"
+    ]
   },
   {
     "id": "2010-114",
@@ -1479,7 +1726,9 @@
       "La vagina"
     ],
     "correct-answer": 4,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-115",
@@ -1492,7 +1741,9 @@
       "Urinarias"
     ],
     "correct-answer": 4,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-116",
@@ -1505,7 +1756,9 @@
       "Pustulación"
     ],
     "correct-answer": 2,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-117",
@@ -1518,11 +1771,13 @@
       "Enterotoxina"
     ],
     "correct-answer": 1,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-118",
-    "statement": "Son a menudo responsables de la \"diarrea del viajero\" ciertas cepas de:"  ,
+    "statement": "Son a menudo responsables de la \"diarrea del viajero\" ciertas cepas de:",
     "answers": [
       "~Haemophilus influenzae~",
       "~Escherichia coli~",
@@ -1531,7 +1786,9 @@
       "~Helibacter pylori~"
     ],
     "correct-answer": 2,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-119",
@@ -1544,7 +1801,9 @@
       "~Vibrio cholerae~"
     ],
     "correct-answer": 1,
-    "tags": ["Microbiología"]
+    "tags": [
+      "Microbiología"
+    ]
   },
   {
     "id": "2010-120",
@@ -1557,7 +1816,10 @@
       "Selectivo para ~Neisseria~"
     ],
     "correct-answer": 3,
-    "tags": ["Microbiología","Técnicas"]
+    "tags": [
+      "Microbiología",
+      "Técnicas"
+    ]
   },
   {
     "id": "2010-121",
@@ -1570,7 +1832,9 @@
       "CD8^(+) CD45RO^(+) CD62L^(+)"
     ],
     "correct-answer": 4,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-122",
@@ -1583,7 +1847,9 @@
       "Reconocen específicamente superantígenos"
     ],
     "correct-answer": 2,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-123",
@@ -1596,7 +1862,9 @@
       "IFN-γ/linfocitos Th2"
     ],
     "correct-answer": 4,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-124",
@@ -1609,7 +1877,9 @@
       "Las dendríticas, los macrófagos y los linfocitos B"
     ],
     "correct-answer": 5,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-125",
@@ -1622,7 +1892,9 @@
       "Interaccionar con el correceptor CD8 expresado en los linfocitos T"
     ],
     "correct-answer": 3,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-126",
@@ -1635,7 +1907,10 @@
       "Células NKT"
     ],
     "correct-answer": 1,
-    "tags": ["Inmunología","Técnicas"]
+    "tags": [
+      "Inmunología",
+      "Técnicas"
+    ]
   },
   {
     "id": "2010-127",
@@ -1648,7 +1923,9 @@
       "Vaina periarteriolar"
     ],
     "correct-answer": 4,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-128",
@@ -1661,7 +1938,9 @@
       "Modifica progresivamente sus carecterísticas"
     ],
     "correct-answer": 4,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-129",
@@ -1674,7 +1953,9 @@
       "Tiene una masa molecular del orden de 100 kDa"
     ],
     "correct-answer": 1,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-130",
@@ -1687,7 +1968,9 @@
       "Extremos carbolíxicos"
     ],
     "correct-answer": 3,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-131",
@@ -1700,7 +1983,9 @@
       "El receptor poli-IgR"
     ],
     "correct-answer": 5,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-132",
@@ -1713,7 +1998,9 @@
       "Linfocitos B maduros"
     ],
     "correct-answer": 4,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-133",
@@ -1726,7 +2013,9 @@
       "No tienen distribución clonotípica"
     ],
     "correct-answer": 2,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-134",
@@ -1739,7 +2028,9 @@
       "Se comportan como activadores policlonales de linfocitos T"
     ],
     "correct-answer": 5,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-135",
@@ -1752,7 +2043,9 @@
       "Producida por los linfocitos Th1"
     ],
     "correct-answer": 1,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-136",
@@ -1765,7 +2058,9 @@
       "Predomina la selección negativa de timocitos autorreactivos"
     ],
     "correct-answer": 5,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-137",
@@ -1778,7 +2073,9 @@
       "IL-4 e IL-5"
     ],
     "correct-answer": 4,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-138",
@@ -1791,7 +2088,9 @@
       "Tiene también efectos en la afinidad de sus receptores antigénicos"
     ],
     "correct-answer": 2,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-139",
@@ -1804,7 +2103,9 @@
       "Expresan inmunoglobulinas de membranas"
     ],
     "correct-answer": 2,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-140",
@@ -1817,7 +2118,9 @@
       "Su desarrollo en el plazo de 24-48 horas"
     ],
     "correct-answer": 3,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-141",
@@ -1830,7 +2133,9 @@
       "Reconocen específicamente antígenos virales"
     ],
     "correct-answer": 2,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-142",
@@ -1843,7 +2148,9 @@
       "Eosinófilos activados"
     ],
     "correct-answer": 3,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-143",
@@ -1856,7 +2163,9 @@
       "Linfocitos T citotóxicos"
     ],
     "correct-answer": 3,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-144",
@@ -1869,7 +2178,9 @@
       "Hiper-respuesta"
     ],
     "correct-answer": 1,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-145",
@@ -1882,11 +2193,14 @@
       "Antígeno y anticuerpo han de tener carga de signo opuesto"
     ],
     "correct-answer": 3,
-    "tags": ["Inmunología","Técnicas"]
+    "tags": [
+      "Inmunología",
+      "Técnicas"
+    ]
   },
   {
     "id": "2010-146",
-    "statement": "Si un test estadístico ofrece un valor p<0,05, ¿cómo se interpreta?",
+    "statement": "Si un test estadístico ofrece un valor p < 0,05, ¿cómo se interpreta?",
     "answers": [
       "Se acepta la hipótesis nula",
       "Se rechaza la hipótesis alternativa",
@@ -1895,7 +2209,9 @@
       "No existen evidencias a favor de la hipótesis alternativa"
     ],
     "correct-answer": 3,
-    "tags": ["Estadística"]
+    "tags": [
+      "Estadística"
+    ]
   },
   {
     "id": "2010-147",
@@ -1908,7 +2224,9 @@
       "Desviación típica supone el 75% de la media"
     ],
     "correct-answer": 1,
-    "tags": ["Estadística"]
+    "tags": [
+      "Estadística"
+    ]
   },
   {
     "id": "2010-148",
@@ -1921,7 +2239,9 @@
       "De U de Mann-Whitney"
     ],
     "correct-answer": 4,
-    "tags": ["Estadística"]
+    "tags": [
+      "Estadística"
+    ]
   },
   {
     "id": "2010-149",
@@ -1934,20 +2254,24 @@
       "De Cochran"
     ],
     "correct-answer": 4,
-    "tags": ["Estadística"]
+    "tags": [
+      "Estadística"
+    ]
   },
   {
     "id": "2010-150",
     "statement": "Una distribución normal se caracteriza, entre otras propiedades, por:",
     "answers": [
       "Ser asimétrica",
-      "Tener aproximadamente al 99% de sus valores dentro del intervalo μ+-2σ",
-      "Tener aproximadamente al 95% de sus valores dentro del intervalo μ+-3σ ",
-      "Tener aproximadamente al 95% de sus valores dentro del intervalo μ+-2σ",
-      "Tener aproximadamente al 95% de sus valores fuera del intervalo μ+-2σ"
+      "Tener aproximadamente al 99% de sus valores dentro del intervalo μ±2σ",
+      "Tener aproximadamente al 95% de sus valores dentro del intervalo μ±3σ ",
+      "Tener aproximadamente al 95% de sus valores dentro del intervalo μ±2σ",
+      "Tener aproximadamente al 95% de sus valores fuera del intervalo μ±2σ"
     ],
     "correct-answer": 4,
-    "tags": ["Estadística"]
+    "tags": [
+      "Estadística"
+    ]
   },
   {
     "id": "2010-151",
@@ -1960,7 +2284,9 @@
       "Su infestación se diagnostica por inmunofluorescencia indirecta"
     ],
     "correct-answer": 2,
-    "tags": ["Parasitología"]
+    "tags": [
+      "Parasitología"
+    ]
   },
   {
     "id": "2010-152",
@@ -1973,7 +2299,9 @@
       "Su ciclo no posee una fase pulmonar"
     ],
     "correct-answer": 4,
-    "tags": ["Parasitología"]
+    "tags": [
+      "Parasitología"
+    ]
   },
   {
     "id": "2010-153",
@@ -1986,7 +2314,9 @@
       "Espiramicina"
     ],
     "correct-answer": 1,
-    "tags": ["Parasitología"]
+    "tags": [
+      "Parasitología"
+    ]
   },
   {
     "id": "2010-154",
@@ -1999,7 +2329,9 @@
       "~Fasciola gigantita~"
     ],
     "correct-answer": 3,
-    "tags": ["Parasitología"]
+    "tags": [
+      "Parasitología"
+    ]
   },
   {
     "id": "2010-155",
@@ -2012,7 +2344,9 @@
       "Praziquantel"
     ],
     "correct-answer": 3,
-    "tags": ["Parasitología"]
+    "tags": [
+      "Parasitología"
+    ]
   },
   {
     "id": "2010-156",
@@ -2025,7 +2359,9 @@
       "Ácido acético"
     ],
     "correct-answer": 1,
-    "tags": ["Técnicas"]
+    "tags": [
+      "Técnicas"
+    ]
   },
   {
     "id": "2010-157",
@@ -2038,7 +2374,9 @@
       "Fluoroinmunoensayo"
     ],
     "correct-answer": 1,
-    "tags": ["Técnicas"]
+    "tags": [
+      "Técnicas"
+    ]
   },
   {
     "id": "2010-158",
@@ -2051,7 +2389,10 @@
       "Páncreas"
     ],
     "correct-answer": 2,
-    "tags": ["Técnicas","Genética"]
+    "tags": [
+      "Técnicas",
+      "Genética"
+    ]
   },
   {
     "id": "2010-159",
@@ -2064,7 +2405,9 @@
       "RT-PCR"
     ],
     "correct-answer": 3,
-    "tags": ["Técnicas"]
+    "tags": [
+      "Técnicas"
+    ]
   },
   {
     "id": "2010-160",
@@ -2077,7 +2420,9 @@
       "Ninguna de las anteriores"
     ],
     "correct-answer": 2,
-    "tags": ["Técnicas"]
+    "tags": [
+      "Técnicas"
+    ]
   },
   {
     "id": "2010-161",
@@ -2090,7 +2435,9 @@
       "Son eyaculados"
     ],
     "correct-answer": 2,
-    "tags": ["Embriología"]
+    "tags": [
+      "Embriología"
+    ]
   },
   {
     "id": "2010-162",
@@ -2103,7 +2450,9 @@
       "Crestas genitales"
     ],
     "correct-answer": 4,
-    "tags": ["Embriología"]
+    "tags": [
+      "Embriología"
+    ]
   },
   {
     "id": "2010-163",
@@ -2116,7 +2465,9 @@
       "Dos núcleos haploides y dos corpúsculos polares"
     ],
     "correct-answer": 2,
-    "tags": ["Embriología"]
+    "tags": [
+      "Embriología"
+    ]
   },
   {
     "id": "2010-164",
@@ -2129,7 +2480,9 @@
       "Diacinesis"
     ],
     "correct-answer": 1,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-165",
@@ -2142,7 +2495,9 @@
       "Diacinesis"
     ],
     "impugned": true,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-166",
@@ -2155,7 +2510,9 @@
       "Mónadas"
     ],
     "correct-answer": 3,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-167",
@@ -2168,7 +2525,9 @@
       "Adenina y guanina"
     ],
     "correct-answer": 2,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-168",
@@ -2181,7 +2540,9 @@
       "Después del codón de terminación"
     ],
     "correct-answer": 5,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-169",
@@ -2194,7 +2555,9 @@
       "Factores de transcripción"
     ],
     "correct-answer": 5,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-170",
@@ -2207,7 +2570,9 @@
       "m^(7)G"
     ],
     "correct-answer": 5,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-171",
@@ -2220,7 +2585,10 @@
       "YAC"
     ],
     "correct-answer": 5,
-    "tags": ["Genética","Técnicas"]
+    "tags": [
+      "Genética",
+      "Técnicas"
+    ]
   },
   {
     "id": "2010-172",
@@ -2233,7 +2601,9 @@
       "ARN-ADN polimerasa"
     ],
     "correct-answer": 4,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-173",
@@ -2246,7 +2616,9 @@
       "1/32"
     ],
     "correct-answer": 2,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-174",
@@ -2259,7 +2631,9 @@
       "Enfermedad de Huntington"
     ],
     "correct-answer": 5,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-175",
@@ -2272,7 +2646,9 @@
       "Dificultan la reparación"
     ],
     "correct-answer": 2,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-176",
@@ -2285,7 +2661,9 @@
       "Las diferencias entre distintos individuos"
     ],
     "correct-answer": 3,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-177",
@@ -2298,7 +2676,9 @@
       "1"
     ],
     "correct-answer": 3,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-178",
@@ -2311,7 +2691,9 @@
       "Aparecen mutaciones resesivas"
     ],
     "correct-answer": 2,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-179",
@@ -2324,7 +2706,9 @@
       "Copiar en el origen de replicación"
     ],
     "impugned": true,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-180",
@@ -2337,7 +2721,9 @@
       "Varía según el tipo celular"
     ],
     "correct-answer": 3,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-181",
@@ -2350,7 +2736,9 @@
       "DNA ligasas"
     ],
     "impugned": true,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-182",
@@ -2363,7 +2751,9 @@
       "Inducir cromosomas en anillo"
     ],
     "correct-answer": 4,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-183",
@@ -2376,7 +2766,9 @@
       "mar"
     ],
     "correct-answer": 2,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-184",
@@ -2389,7 +2781,9 @@
       "Colorrectal"
     ],
     "correct-answer": 5,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-185",
@@ -2402,7 +2796,9 @@
       "t(21;8)"
     ],
     "correct-answer": 3,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-186",
@@ -2415,7 +2811,9 @@
       "tRNA genes"
     ],
     "correct-answer": 2,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-187",
@@ -2428,7 +2826,9 @@
       "ADN microsatélite"
     ],
     "correct-answer": 1,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-188",
@@ -2441,7 +2841,9 @@
       "Aumento de hidrólisis de ATP"
     ],
     "correct-answer": 2,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-189",
@@ -2454,7 +2856,9 @@
       "Factores de transcripción"
     ],
     "correct-answer": 2,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-190",
@@ -2467,7 +2871,9 @@
       "Se han producido menos entrecruzamientos simples de los que se esperaba"
     ],
     "correct-answer": 1,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-191",
@@ -2480,7 +2886,9 @@
       "En la detección del daño del ADN y la respuesta"
     ],
     "correct-answer": 2,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-192",
@@ -2493,7 +2901,9 @@
       "0 MN"
     ],
     "correct-answer": 2,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-193",
@@ -2506,7 +2916,9 @@
       "Triploidía"
     ],
     "correct-answer": 1,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-194",
@@ -2519,7 +2931,9 @@
       "Suprime el efecto de una mutación previa"
     ],
     "correct-answer": 4,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-195",
@@ -2532,7 +2946,9 @@
       "Genocopia"
     ],
     "correct-answer": 4,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-196",
@@ -2545,7 +2961,9 @@
       "La lisina es un aminoácido con carácter aromático"
     ],
     "correct-answer": 2,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-197",
@@ -2558,7 +2976,9 @@
       "A valores bajos de pH el grupo amino no presenta carga"
     ],
     "correct-answer": 4,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-198",
@@ -2571,7 +2991,9 @@
       "En su formación elimina una molécula de agua"
     ],
     "correct-answer": 5,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-199",
@@ -2584,7 +3006,9 @@
       "Estar estabilizada por enlaces salinos"
     ],
     "correct-answer": 1,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-200",
@@ -2597,7 +3021,9 @@
       "Son formas anoméricas del mismo monosacárido"
     ],
     "correct-answer": 2,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-201",
@@ -2610,7 +3036,9 @@
       "Siempre se requiere suministrar energía a la reacción "
     ],
     "correct-answer": 1,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-202",
@@ -2623,7 +3051,9 @@
       "De procariotas hay solo una cadena"
     ],
     "correct-answer": 4,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-203",
@@ -2636,7 +3066,9 @@
       "Función de la gluconeogénesis es la formación de glucógeno en el riñón"
     ],
     "correct-answer": 3,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-204",
@@ -2649,7 +3081,10 @@
       "En ningún caso pueden dar acetona"
     ],
     "correct-answer": 4,
-    "tags": ["Bioquímica","Fisiología"]
+    "tags": [
+      "Bioquímica",
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-205",
@@ -2662,7 +3097,9 @@
       "Es imposible sintetizar ATP a partir de ADP y P_(i)"
     ],
     "correct-answer": 2,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-206",
@@ -2675,7 +3112,9 @@
       "Transfieren los electrones desde el oxígeno al NAD^(+)"
     ],
     "correct-answer": 4,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-207",
@@ -2688,7 +3127,9 @@
       "Descarboxilación oxidativa del piruvato"
     ],
     "correct-answer": 3,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-208",
@@ -2701,7 +3142,9 @@
       "Pueden poseer actividad enzimática"
     ],
     "correct-answer": 5,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-209",
@@ -2714,7 +3157,9 @@
       "Funciona siempre a la misma velocidad"
     ],
     "correct-answer": 2,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-210",
@@ -2727,7 +3172,9 @@
       "Regenerar NAD^(+) desde NADH"
     ],
     "correct-answer": 5,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-211",
@@ -2740,7 +3187,9 @@
       "Que el alargamiento o acortamiento de la cadena alifática se produce de dos en dos carbonos"
     ],
     "correct-answer": 5,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-212",
@@ -2753,7 +3202,9 @@
       "Tiene lugar sólo en bacterias"
     ],
     "correct-answer": 1,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-213",
@@ -2766,7 +3217,9 @@
       "Activar la glicólisis"
     ],
     "correct-answer": 1,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-214",
@@ -2779,7 +3232,9 @@
       "Se permite la generación de NADH"
     ],
     "correct-answer": 1,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-215",
@@ -2792,7 +3247,9 @@
       "Se rompen por tratamiento con β-mercaptoetanol (HS-CH_(2)-CH_(2)-OH)"
     ],
     "correct-answer": 5,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-216",
@@ -2805,7 +3262,9 @@
       "Siempre se presenta en configuración beta"
     ],
     "correct-answer": 3,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-217",
@@ -2818,7 +3277,9 @@
       "Son lípidos de membrana"
     ],
     "correct-answer": 4,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-218",
@@ -2831,7 +3292,9 @@
       "Posee glicerol en su estructura"
     ],
     "correct-answer": 1,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-219",
@@ -2844,7 +3307,9 @@
       "En los nucleótidos sólo aparecen unidas a desoxirribosa"
     ],
     "correct-answer": 1,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-220",
@@ -2857,7 +3322,9 @@
       "Se lleva a cabo mediante una reación que no consume ni produce energía "
     ],
     "correct-answer": 3,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-221",
@@ -2870,7 +3337,10 @@
       "Ser el principal órgano regulador de la glucemia"
     ],
     "correct-answer": 1,
-    "tags": ["Bioquímica","Fisiología"]
+    "tags": [
+      "Bioquímica",
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-222",
@@ -2883,7 +3353,9 @@
       "Tiene una baja capacidad de eliminar sustancias tóxicas"
     ],
     "correct-answer": 3,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-223",
@@ -2896,7 +3368,10 @@
       "Son el hidroximetilglutaril-CoA y la urea"
     ],
     "correct-answer": 1,
-    "tags": ["Bioquímica","Fisiología"]
+    "tags": [
+      "Bioquímica",
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-224",
@@ -2909,7 +3384,9 @@
       "Fumarato es una molécula asimétrica"
     ],
     "correct-answer": 1,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-225",
@@ -2922,7 +3399,9 @@
       "La adrenalina no regula el metabolismo del glucógeno"
     ],
     "correct-answer": 4,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-226",
@@ -2935,7 +3414,9 @@
       "Sólo se produce en organismos eucariotas"
     ],
     "correct-answer": 1,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-227",
@@ -2948,7 +3429,9 @@
       "Es el activador más potente del complejo de la piruvato-deshidrogenasa"
     ],
     "correct-answer": 4,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-228",
@@ -2961,7 +3444,9 @@
       "Un inhibidor competitivo actúa aumentado el valor de K_(m)"
     ],
     "correct-answer": 5,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-229",
@@ -2974,7 +3459,9 @@
       "Requiere transportadores de membrana específicos para determinados metabolitos"
     ],
     "correct-answer": 5,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-230",
@@ -2987,7 +3474,9 @@
       "Necesita poder reductor"
     ],
     "correct-answer": 1,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-231",
@@ -3000,7 +3489,9 @@
       "Cuya unidad repetitiva es una base púrica o pirimidínica"
     ],
     "correct-answer": 2,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-232",
@@ -3013,7 +3504,9 @@
       "Es un \"bolsillo\" hidrofílico con muchas moléculas de agua en su interior"
     ],
     "correct-answer": 4,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-233",
@@ -3026,7 +3519,9 @@
       "Al menos una transaminasa"
     ],
     "correct-answer": 2,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-234",
@@ -3039,7 +3534,9 @@
       "Son utilizados por el hígado para sentetizar ácidos grasos"
     ],
     "correct-answer": 1,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-235",
@@ -3052,7 +3549,9 @@
       "Todo los anterior es falso"
     ],
     "correct-answer": 4,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-236",
@@ -3065,7 +3564,9 @@
       "Es apolar"
     ],
     "correct-answer": 3,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-237",
@@ -3078,7 +3579,9 @@
       "Requiere dos cadenas polipeptídicas o dos secciones de la misma cadena"
     ],
     "correct-answer": 5,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-238",
@@ -3091,7 +3594,9 @@
       "Fibrosas son muy solubles en agua"
     ],
     "correct-answer": 2,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-239",
@@ -3104,7 +3609,9 @@
       "Las células que se dividen activamente presentan bajos niveles de telomerasa"
     ],
     "correct-answer": 3,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-240",
@@ -3117,7 +3624,9 @@
       "Presenta cargas positivas"
     ],
     "correct-answer": 1,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-241",
@@ -3130,7 +3639,9 @@
       "Es un tipo de ligasa"
     ],
     "correct-answer": 1,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-242",
@@ -3143,7 +3654,9 @@
       "Las enzimas modifican los niveles energéticos de reactivos y productos"
     ],
     "correct-answer": 4,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-243",
@@ -3156,7 +3669,9 @@
       "El tipo de enlace peptídico que forman"
     ],
     "correct-answer": 3,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-244",
@@ -3169,7 +3684,9 @@
       "Únicamente tienen dos grupos funcionales ionizables"
     ],
     "correct-answer": 3,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-245",
@@ -3182,7 +3699,9 @@
       "Met y Cys pueden formar un puente disulfuro"
     ],
     "correct-answer": 2,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-246",
@@ -3195,7 +3714,9 @@
       "Interviene en reacciones catalizadas por deshidrogenasas"
     ],
     "impugned": true,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-247",
@@ -3208,7 +3729,9 @@
       "Se inhibe por falta de oxígeno"
     ],
     "impugned": true,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-248",
@@ -3221,7 +3744,9 @@
       "Permite obtener energía a partir de la ingesta de alcohol"
     ],
     "correct-answer": 2,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-249",
@@ -3234,7 +3759,9 @@
       "Ruta de los fosfatos de pentosa"
     ],
     "correct-answer": 3,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-250",
@@ -3247,7 +3774,9 @@
       "Su función es el almacenamiento de energía"
     ],
     "correct-answer": 1,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-251",
@@ -3260,7 +3789,9 @@
       "Estimula la secreción de parathormonas (PTH)"
     ],
     "correct-answer": 3,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-252",
@@ -3273,7 +3804,9 @@
       "Los astrocitos pueden presentar función macrofágica"
     ],
     "correct-answer": 2,
-    "tags": ["Fisiología"]
+    "tags": [
+      "Fisiología"
+    ]
   },
   {
     "id": "2010-253",
@@ -3286,7 +3819,9 @@
       "Fiebres hemorrágicas"
     ],
     "correct-answer": 5,
-    "tags": ["Virología"]
+    "tags": [
+      "Virología"
+    ]
   },
   {
     "id": "2010-254",
@@ -3299,7 +3834,9 @@
       "Se encuentran sólo en la mitocondria"
     ],
     "correct-answer": 1,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-255",
@@ -3312,7 +3849,9 @@
       "Los linfocitos Th son defectivos en CD40L"
     ],
     "correct-answer": 5,
-    "tags": ["Inmunología"]
+    "tags": [
+      "Inmunología"
+    ]
   },
   {
     "id": "2010-256",
@@ -3325,7 +3864,9 @@
       "U de Mann-Whitney"
     ],
     "correct-answer": 4,
-    "tags": ["Estadística"]
+    "tags": [
+      "Estadística"
+    ]
   },
   {
     "id": "2010-257",
@@ -3338,7 +3879,9 @@
       "Inv(8)(p21.1p22.1)"
     ],
     "correct-answer": 1,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-258",
@@ -3351,7 +3894,9 @@
       "47,XXY"
     ],
     "correct-answer": 1,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   },
   {
     "id": "2010-259",
@@ -3364,7 +3909,9 @@
       "Libera ATP"
     ],
     "correct-answer": 2,
-    "tags": ["Bioquímica"]
+    "tags": [
+      "Bioquímica"
+    ]
   },
   {
     "id": "2010-260",
@@ -3377,6 +3924,8 @@
       "Un producto de la reparación del ADN"
     ],
     "correct-answer": 3,
-    "tags": ["Genética"]
+    "tags": [
+      "Genética"
+    ]
   }
 ]
