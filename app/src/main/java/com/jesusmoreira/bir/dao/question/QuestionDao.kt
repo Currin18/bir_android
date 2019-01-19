@@ -314,7 +314,7 @@ class QuestionDao(db: SQLiteDatabase): DbContentProvider<Question>(db), IQuestio
         }
         cursor.close()
 
-        return categoryList.distinct()
+        return categoryList.distinct().filter { it.isNotBlank() }
     }
 
 }

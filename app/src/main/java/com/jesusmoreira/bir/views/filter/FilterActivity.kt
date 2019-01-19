@@ -27,14 +27,10 @@ class FilterActivity : AppCompatActivity(),
 
     private var database = Database(this)
 
-    var fab : FloatingActionButton? = null
-    var fabFilters : FloatingActionButton? = null
-    var bottomNavigation : BottomNavigationView? = null
+    private var bottomNavigation : BottomNavigationView? = null
 
     var years: List<Int> = arrayListOf()
     var categories: List<String> = arrayListOf()
-
-    var examSelected: Exam? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,9 +43,6 @@ class FilterActivity : AppCompatActivity(),
         bottomNavigation = findViewById(R.id.bottom_navigation)
         bottomNavigation?.setOnNavigationItemSelectedListener {
             when (it.itemId) {
-//                R.id.action_questions -> {
-//                    goToQuestionsList()
-//                }
                 R.id.action_exams -> {
                     goToExamGrid()
                 }
@@ -62,14 +55,6 @@ class FilterActivity : AppCompatActivity(),
                 else -> {
                     true
                 }
-            }
-        }
-
-        fab = this.findViewById(R.id.fab)
-        fab?.setOnClickListener { _ ->
-            //            Toast.makeText(this, "FAB: ${collection?.exams?.get(0)?.questions?.get(0)?.statement}", Toast.LENGTH_SHORT).show()
-            examSelected?.let {
-//                startExam(it)
             }
         }
 
@@ -90,37 +75,17 @@ class FilterActivity : AppCompatActivity(),
         startExam(Filters(categories = arrayOf(item)))
     }
 
-    override fun onFilterInteraction(years: List<Int>, categories: List<String>, words: List<String>, includeAnswers: Boolean) {
+    override fun onFilterInteraction(years: List<Int>, categories: List<String>, words: List<String>, includeAnswers: Boolean, random: Boolean) {
 //        Toast.makeText(this, "Advanced Filters: years-> $years, categories-> $categories, words-> $words, includeAnswers-> $includeAnswers", Toast.LENGTH_SHORT).show()
         val filters = Filters()
         if (years.isNotEmpty()) filters.years = years.toTypedArray()
         if (categories.isNotEmpty()) filters.categories = categories.toTypedArray()
         if (words.isNotEmpty()) filters.words = words.toTypedArray()
         filters.includeAnswers = includeAnswers
+        filters.random = random
 
         startExam(filters)
     }
-
-//    var mSearch: MenuItem? = null
-//    var mSearchView: SearchView? = null
-//
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        menuInflater.inflate(R.menu.toolbar_filter, menu)
-//        mSearch = menu?.findItem(R.id.action_search)
-//        mSearchView = mSearch?.actionView as SearchView?
-//
-//        mSearchView?.setOnQueryTextListener(object: androidx.appcompat.widget.SearchView.OnQueryTextListener {
-//            override fun onQueryTextSubmit(query: String?): Boolean {
-//                return false
-//            }
-//
-//            override fun onQueryTextChange(newText: String?): Boolean {
-//                return false
-//            }
-//
-//        })
-//        return super.onCreateOptionsMenu(menu)
-//    }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item!!.itemId) {
@@ -128,8 +93,6 @@ class FilterActivity : AppCompatActivity(),
         }
         return super.onOptionsItemSelected(item)
     }
-
-    fun uploadExam(examSelected: Exam) { this.examSelected = examSelected }
 
     private fun startExam(filters: Filters) {
         startActivity(ExamActivity.newIntent(this, filters.toString()))

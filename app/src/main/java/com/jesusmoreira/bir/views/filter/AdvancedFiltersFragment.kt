@@ -29,9 +29,6 @@ class AdvancedFiltersFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        yearsChecked = BooleanArray((activity as FilterActivity).years.size) { false }
-//        arguments?.let {
-//        }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -57,7 +54,8 @@ class AdvancedFiltersFragment : Fragment() {
                     v.input_years.text.toString(),
                     v.input_categories.text.toString(),
                     v.input_words.text.toString(),
-                    v.input_words_checkbox.isChecked
+                    v.input_words_checkbox.isChecked,
+                    v.input_random_checkbox.isChecked
             )
         }
         return v
@@ -98,7 +96,7 @@ class AdvancedFiltersFragment : Fragment() {
         builder.create().show()
     }
 
-    private fun onSearchPressed(years: String, categories: String, words: String, includeAnswers: Boolean = true) {
+    private fun onSearchPressed(years: String, categories: String, words: String, includeAnswers: Boolean = true, random: Boolean =  true) {
         listener?.onFilterInteraction(
                 when (years.isNotBlank()) {
                     true -> years.trim().split(", ", ",").map { year -> year.toInt() }
@@ -109,7 +107,8 @@ class AdvancedFiltersFragment : Fragment() {
                     else -> arrayListOf()
                 },
                 words.trim().split(", ", ","),
-                includeAnswers
+                includeAnswers,
+                random
         )
     }
 
@@ -139,7 +138,7 @@ class AdvancedFiltersFragment : Fragment() {
      * for more information.
      */
     interface OnFragmentInteractionListener {
-        fun onFilterInteraction(years: List<Int>, categories: List<String>, words: List<String>, includeAnswers: Boolean)
+        fun onFilterInteraction(years: List<Int>, categories: List<String>, words: List<String>, includeAnswers: Boolean, random: Boolean)
     }
 
     companion object {

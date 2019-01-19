@@ -1,12 +1,11 @@
 package com.jesusmoreira.bir.views.exam
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
 import android.view.View.VISIBLE
-import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -18,7 +17,11 @@ import com.jesusmoreira.bir.model.Question
 import com.jesusmoreira.bir.utils.TextUtils
 import kotlinx.android.synthetic.main.fragment_question_answer.view.*
 import kotlinx.android.synthetic.main.fragment_question_exam.view.*
+import kotlinx.android.synthetic.main.toolbar_exam.*
+import kotlinx.android.synthetic.main.toolbar_exam.view.*
 import org.json.JSONObject
+import java.math.BigDecimal
+import java.math.RoundingMode
 
 /**
  * A simple [Fragment] subclass.
@@ -38,6 +41,10 @@ class QuestionExamFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+        setHasOptionsMenu(true)
+
         arguments?.let {
             if (it.containsKey(EXTRA_QUESTION)) {
                 val jsonQuestion = JSONObject(it.getString(EXTRA_QUESTION));
@@ -56,6 +63,7 @@ class QuestionExamFragment : Fragment() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -70,15 +78,10 @@ class QuestionExamFragment : Fragment() {
             QuestionStatus.Correct -> {
                 correctAnswer = question.correctAnswer -1
                 selectedRow = question.correctAnswer -1
-//                correctRow?.cardLayout?.setBackgroundColor(context!!.getColor(R.color.colorPrimaryLight))
             }
             QuestionStatus.Error -> {
                 correctAnswer = question.correctAnswer -1
                 selectedRow = selectedAnswer -1
-//                correctRow?.cardLayout?.setBackgroundColor(context!!.getColor(R.color.colorPrimaryLight))
-//
-//                val selectedRow = manager.findViewByPosition(selectedAnswer)!!
-//                selectedRow.cardLayout.setBackgroundColor(context!!.getColor(R.color.red))
             }
             QuestionStatus.Passed -> {
 
@@ -91,19 +94,29 @@ class QuestionExamFragment : Fragment() {
         if (v.answers is RecyclerView) {
             with(v.answers) {
                 layoutManager = LinearLayoutManager(context)
-                adapter = AnswerRecyclerViewAdapter(context, question.answers, correctAnswer, selectedRow, listener)
+                adapter = AnswerRecyclerViewAdapter(context, question.id!!, question.answers, correctAnswer, selectedRow, listener)
             }
         }
 
         if (question.impugned) {
             v.impugned.visibility = VISIBLE
-            v.btn_let_pass.visibility = View.GONE
+            v.btn_let_pass.visibility = View.INVISIBLE
             v.btn_continue.visibility = View.VISIBLE
         }
 
         if (selectedAnswer > 0) {
-            v.btn_let_pass.visibility = View.GONE
+            v.btn_let_pass.visibility = View.INVISIBLE
             v.btn_continue.visibility = View.VISIBLE
+        }
+
+        (activity as ExamActivity).exam.let { exam ->
+            v.toolbar_id_question.text = "#${question.ref}"
+            v.toolbar_count_question.text = "${getString(R.string.toolbar_count_question)} ${exam.selectedAnswers.count { it != 0 }}/${exam.questions.size}"
+            v.toolbar_answer_success.text = "${getString(R.string.toolbar_answer_success)} ${exam.countCorrect}"
+            v.toolbar_answer_error.text = "${getString(R.string.toolbar_answer_error)} ${exam.countErrors}"
+            v.toolbar_answer_passed.text = "${getString(R.string.toolbar_answer_passed)} ${exam.selectedAnswers.count { it == -1 }}"
+
+            v.toolbar_count_points.text = "${getString(R.string.toolbar_count_points)} ${BigDecimal((exam.countCorrect.toDouble()) - (exam.countErrors.toDouble() / 3)).setScale(2, RoundingMode.HALF_EVEN)}"
         }
 
         v.btn_let_pass.setOnClickListener { listener?.onLetPassInteraction(question.id ?: 0) }
@@ -126,6 +139,13 @@ class QuestionExamFragment : Fragment() {
         listener = null
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?, menuInflater: MenuInflater?) {
+        menuInflater?.inflate(R.menu.toolbar_exam, menu)
+        menu?.findItem(R.id.action_question_list)
+        menu?.findItem(R.id.action_report_error)
+        return super.onCreateOptionsMenu(menu, menuInflater)
+    }
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -138,7 +158,7 @@ class QuestionExamFragment : Fragment() {
      * for more information.
      */
     interface OnQuestionExamInteractionListener {
-        fun onClickAnswer(answerSelected: Int)
+        fun onClickAnswer(questionId: Int, answerSelected: Int)
         fun onLetPassInteraction(questionId: Int)
         fun onContinueInteraction(questionId: Int)
     }

@@ -30,8 +30,6 @@ data class Exam (
         }
     }
 
-    var selectedAnswerStatus: Array<QuestionStatus> = arrayOf(QuestionStatus.Default)
-
     fun getPositionById(questionId: Int): Int {
         return questions.indexOfFirst { it.id == questionId }
     }
@@ -70,7 +68,6 @@ data class Exam (
         if (position >= 0 && position < questions.size) {
             selectedAnswers[position] = answerSelected
             getQuestionStatus(position).let {
-                selectedAnswerStatus[position] = it
                 when(it) {
                     QuestionStatus.Correct -> countCorrect++
                     QuestionStatus.Error -> countErrors++

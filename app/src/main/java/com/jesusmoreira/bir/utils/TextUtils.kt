@@ -23,7 +23,7 @@ class TextUtils {
 
         private const val strSeparator: String = "__,__"
 
-        fun convertArrayToString(array: Array<String>?): String {
+        fun convertArrayToString(array: Array<String>?): String? {
             var str = ""
             if (array != null) {
                 for (i in 0 until array.size) {

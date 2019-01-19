@@ -19,6 +19,7 @@ import com.jesusmoreira.bir.model.Collection
 import com.jesusmoreira.bir.model.Exam
 import com.jesusmoreira.bir.model.Filters
 import com.jesusmoreira.bir.model.Question
+import com.jesusmoreira.bir.utils.Constants
 import com.jesusmoreira.bir.utils.FileUtils
 import com.jesusmoreira.bir.utils.PreferencesUtils
 import com.jesusmoreira.bir.views.exam.ExamActivity
@@ -82,7 +83,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun loadInitialData() {
-        if (PreferencesUtils.getDbLastUpdate(this) > 0) {
+        if (PreferencesUtils.getDbLastUpdate(this) >= Constants.databaseUpdated) {
             database.questionDao?.fetchAllQuestions()
         } else {
             FileUtils.loadInitialData(this).toList().let {

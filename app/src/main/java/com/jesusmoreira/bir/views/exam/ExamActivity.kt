@@ -1,15 +1,10 @@
 package com.jesusmoreira.bir.views.exam
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import android.widget.Button
-import androidx.appcompat.widget.Toolbar
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.jesusmoreira.bir.R
@@ -17,7 +12,7 @@ import com.jesusmoreira.bir.dao.Database
 import com.jesusmoreira.bir.model.Exam
 import com.jesusmoreira.bir.model.Filters
 import com.jesusmoreira.bir.model.Question
-import kotlinx.android.synthetic.main.toolbar_exam.*
+import com.jesusmoreira.bir.utils.Constants
 import org.json.JSONObject
 
 class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInteractionListener, QuestionsListFragment.OnListFragmentInteractionListener {
@@ -36,7 +31,6 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
 
     var exam: Exam = Exam()
     var filters: Filters = Filters()
-    var menuVisibility = true
     var questionPosition : Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,11 +41,28 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
             filters = Filters(JSONObject(intent.getStringExtra(EXTRA_FILTERS)))
         }
 
-        val toolbar : Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
-
         database.open()
 
+        initExam(filters)
+
+        if (exam.questions.size > Constants.numberOfQuestions) {
+            AlertDialog.Builder(this)
+                    .setCancelable(false)
+                    .setMessage(getString(R.string.alert_too_many_questions)
+                            .replace("$1", exam.questions.size.toString())
+                            .replace("$2", Constants.numberOfQuestions.toString()))
+                    .setPositiveButton(getString(R.string.button_accept)) { _, _ ->
+                        filters.random = true
+                        initExam(filters)
+                    }
+                    .setNegativeButton(getString(R.string.button_cancel)) { dialog, _ ->
+                        dialog.dismiss()
+                    }
+                    .show()
+        }
+    }
+
+    private fun initExam(filters: Filters) {
         val questions: List<Question> = when {
             filters.countFilters() > 1 -> database.questionDao?.fetchFilteredQuestions(filters) ?: listOf()
             filters.random -> database.questionDao?.fetchRandomQuestions() ?: listOf()
@@ -64,33 +75,48 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
         exam = Exam(filters, questions)
 
         goToListQuestions()
-        updateToolbarCounts()
     }
 
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        menuInflater.inflate(R.menu.toolbar_exam, menu)
+//        if (!menuVisibility && menu != null) {
+//            menu.findItem(R.id.action_question_list).setVisible(false)
+//            menu.findItem(R.id.action_report_error).isVisible = false
+//        }
+//        return super.onCreateOptionsMenu(menu)
+//    }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.toolbar_exam, menu)
-        if (!menuVisibility && menu != null) {
-            menu.findItem(R.id.action_question_list).setVisible(false)
-            menu.findItem(R.id.action_report_error).isVisible = false
+    override fun onBackPressed() {
+        if (exam.created != null) {
+            AlertDialog.Builder(this)
+                    .setCancelable(false)
+                    .setMessage(getString(R.string.alert_leave_exam))
+                    .setPositiveButton(getString(R.string.button_accept)) { _, _ ->
+                        super.onBackPressed()
+                    }
+                    .setNegativeButton(getString(R.string.button_cancel)) { dialog, _ ->
+                        dialog.dismiss()
+                    }
+                    .show()
+        } else {
+            super.onBackPressed()
         }
-        return super.onCreateOptionsMenu(menu)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+//    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
 //        when (item?.itemId) {
 //            R.id.action_question_list -> {
 //                updateFragment(QuestionsListFragment.newInstance(exam!!.questions), true)
 //                updateMenu(false)
 //            }
 //        }
-        return true
-    }
+//        return true
+//    }
 
-    private fun updateMenu(visible: Boolean) {
-        menuVisibility = visible
-        invalidateOptionsMenu()
-    }
+//    private fun updateMenu(visible: Boolean) {
+//        menuVisibility = visible
+//        invalidateOptionsMenu()
+//    }
 
     private fun updateFragment(fragment: Fragment, stacked: Boolean = false) {
         val fragmentTransaction: FragmentTransaction = supportFragmentManager.beginTransaction()
@@ -103,7 +129,6 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
 
     override fun onClickQuestion(position: Int, item: Question) {
         goToQuestion(position)
-        updateMenu(true)
     }
 
     override fun onResume(items: Array<Question>) {
@@ -113,24 +138,14 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
     }
 
     override fun onBackQuestion() {
-        updateMenu(true)
+//        updateMenu(true)
     }
 
-    override fun onClickAnswer(answerSelected: Int) {
-//        val buttonLetPass = findViewById<Button>(R.id.btn_let_pass)
-//        val buttonContinue = findViewById<Button>(R.id.btn_continue)
-//        if (buttonContinue.visibility == View.GONE) {
-            val question = exam.questions[questionPosition!!]
-//            exam.setOnClickAnswer(exam.getPositionById(question.id!!), answerSelected)
+    override fun onClickAnswer(questionId: Int, answerSelected: Int) {
+        val question = exam.questions[questionPosition!!]
+        exam.setOnClickAnswer(questionId, answerSelected)
 
-            updateFragment(QuestionExamFragment.newInstance(question.toJson().toString(), answerSelected))
-
-            updateToolbarCounts()
-//            buttonLetPass.visibility = View.GONE
-//            buttonContinue.visibility = View.VISIBLE
-//        }
-
-
+        updateFragment(QuestionExamFragment.newInstance(question.toJson().toString(), answerSelected))
     }
 
     override fun onLetPassInteraction(questionId: Int) {
@@ -148,33 +163,15 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
     }
 
     private fun goToNextQuestion(questionId: Int) {
-        /*val question = exam!!.nextQuestion()
-        if (question != null) {
-            updateFragment(QuestionExamFragment.newInstance(question.toJson().toString()))
-            updateToolbarCounts()
-        } else {
-            Toast.makeText(applicationContext, "Exam finished", Toast.LENGTH_SHORT).show()
-        }*/
         val question = exam.nextQuestion(questionId)
         if (question != null) {
-            updateFragment(QuestionExamFragment.newInstance(question.toJson().toString(), exam.getSelectedAnswer(question.id!!)))
             questionPosition = exam.getPositionById(question.id!!)
-            updateToolbarCounts()
+            updateFragment(QuestionExamFragment.newInstance(question.toJson().toString(), exam.getSelectedAnswer(question.id!!)))
         }
     }
 
     private fun goToQuestion(position : Int) {
         questionPosition = position
         updateFragment(QuestionExamFragment.newInstance(exam.questions[position].toJson().toString(), exam.selectedAnswers[position]))
-        updateToolbarCounts()
-    }
-
-    private fun updateToolbarCounts() {
-        if (questionPosition != null) toolbar_id_question.text = "#${exam.questions[questionPosition!!].ref}"
-        toolbar_count_question.text = "${getString(R.string.toolbar_count_question)} ${exam.selectedAnswers.count { it != 0 }}/${exam.questions.size}"
-        toolbar_answer_success.text = "${getString(R.string.toolbar_answer_success)} ${exam.countCorrect}"
-        toolbar_answer_error.text = "${getString(R.string.toolbar_answer_error)} ${exam.countErrors}"
-        toolbar_answer_passed.text = "${getString(R.string.toolbar_answer_passed)} ${exam.selectedAnswers.count { it == -1 }}"
-        toolbar_count_points.text = "${getString(R.string.toolbar_count_points)} ${(exam.countCorrect.toFloat()) - (exam.countErrors.toFloat() / 3)}"
     }
 }
