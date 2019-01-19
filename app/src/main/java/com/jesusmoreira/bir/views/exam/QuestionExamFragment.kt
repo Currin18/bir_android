@@ -42,9 +42,6 @@ class QuestionExamFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
-        setHasOptionsMenu(true)
-
         arguments?.let {
             if (it.containsKey(EXTRA_QUESTION)) {
                 val jsonQuestion = JSONObject(it.getString(EXTRA_QUESTION));
@@ -68,6 +65,9 @@ class QuestionExamFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val v: View = inflater.inflate(R.layout.fragment_question_exam, container, false)
+
+        (activity as ExamActivity).setSupportActionBar(v.toolbar)
+        setHasOptionsMenu(true)
 
         v.statement.text = TextUtils.parseToHtml(question.statement)
 
@@ -94,7 +94,7 @@ class QuestionExamFragment : Fragment() {
         if (v.answers is RecyclerView) {
             with(v.answers) {
                 layoutManager = LinearLayoutManager(context)
-                adapter = AnswerRecyclerViewAdapter(context, question.id!!, question.answers, correctAnswer, selectedRow, listener)
+                adapter = AnswerRecyclerViewAdapter(context, question.id!!, question.answers, question.impugned, correctAnswer, selectedRow, listener)
             }
         }
 
@@ -139,12 +139,25 @@ class QuestionExamFragment : Fragment() {
         listener = null
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?, menuInflater: MenuInflater?) {
-        menuInflater?.inflate(R.menu.toolbar_exam, menu)
-        menu?.findItem(R.id.action_question_list)
-        menu?.findItem(R.id.action_report_error)
-        return super.onCreateOptionsMenu(menu, menuInflater)
+    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+        inflater?.inflate(R.menu.toolbar_exam, menu)
+        super.onCreateOptionsMenu(menu, inflater)
     }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            R.id.action_question_list -> {
+                listener?.onClickListAction()
+                return true
+            }
+        }
+        return false
+    }
+
+//    private fun updateMenu(visible: Boolean) {
+//        menuVisibility = visible
+//        invalidateOptionsMenu()
+//    }
 
     /**
      * This interface must be implemented by activities that contain this
@@ -158,6 +171,7 @@ class QuestionExamFragment : Fragment() {
      * for more information.
      */
     interface OnQuestionExamInteractionListener {
+        fun onClickListAction()
         fun onClickAnswer(questionId: Int, answerSelected: Int)
         fun onLetPassInteraction(questionId: Int)
         fun onContinueInteraction(questionId: Int)

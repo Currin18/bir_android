@@ -32,11 +32,28 @@ class QuestionsListFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_question_list, container, false)
 
+        var questionId: Int? = null
+        (activity as ExamActivity).questionPosition.let { questionPosition ->
+            if (questionPosition != null) {
+                questionId = (activity as ExamActivity).exam.questions[questionPosition].id
+            }
+        }
+
         // Set the adapter
         if (view is RecyclerView) {
             with(view) {
                 layoutManager =  LinearLayoutManager(context)
-                adapter = QuestionRecyclerViewAdapter((activity as ExamActivity).exam.questions.toTypedArray(), listener)
+                adapter = QuestionRecyclerViewAdapter(
+                        context,
+                        (activity as ExamActivity).exam.questions.toTypedArray(),
+                        (activity as ExamActivity).exam.selectedAnswers,
+                        questionId,
+                        listener
+                )
+
+                (activity as ExamActivity).questionPosition.let {
+                    if (it != null && layoutManager != null) (layoutManager as LinearLayoutManager).scrollToPositionWithOffset(it, 0)
+                }
             }
         }
         return view

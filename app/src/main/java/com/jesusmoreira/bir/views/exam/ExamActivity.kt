@@ -77,15 +77,6 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
         goToListQuestions()
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        menuInflater.inflate(R.menu.toolbar_exam, menu)
-//        if (!menuVisibility && menu != null) {
-//            menu.findItem(R.id.action_question_list).setVisible(false)
-//            menu.findItem(R.id.action_report_error).isVisible = false
-//        }
-//        return super.onCreateOptionsMenu(menu)
-//    }
-
     override fun onBackPressed() {
         if (exam.created != null) {
             AlertDialog.Builder(this)
@@ -102,21 +93,6 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
             super.onBackPressed()
         }
     }
-
-//    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-//        when (item?.itemId) {
-//            R.id.action_question_list -> {
-//                updateFragment(QuestionsListFragment.newInstance(exam!!.questions), true)
-//                updateMenu(false)
-//            }
-//        }
-//        return true
-//    }
-
-//    private fun updateMenu(visible: Boolean) {
-//        menuVisibility = visible
-//        invalidateOptionsMenu()
-//    }
 
     private fun updateFragment(fragment: Fragment, stacked: Boolean = false) {
         val fragmentTransaction: FragmentTransaction = supportFragmentManager.beginTransaction()
@@ -139,6 +115,10 @@ class ExamActivity : AppCompatActivity(), QuestionExamFragment.OnQuestionExamInt
 
     override fun onBackQuestion() {
 //        updateMenu(true)
+    }
+
+    override fun onClickListAction() {
+        goToListQuestions()
     }
 
     override fun onClickAnswer(questionId: Int, answerSelected: Int) {

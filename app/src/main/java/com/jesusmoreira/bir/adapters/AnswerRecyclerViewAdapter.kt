@@ -23,6 +23,7 @@ class AnswerRecyclerViewAdapter(
         private val context: Context,
         private val questionId: Int,
         private val mValues: Array<String>,
+        private val impugned: Boolean,
         private val correctAnswer: Int?,
         private val selectedAnswer: Int?,
         private val mListener: QuestionExamFragment.OnQuestionExamInteractionListener?)
@@ -35,7 +36,7 @@ class AnswerRecyclerViewAdapter(
             val item = v.tag as Int
             // Notify the active callbacks interface (the activity, if the fragment is attached to
             // one) that an item has been selected.
-            if (correctAnswer == null && selectedAnswer == null)
+            if (correctAnswer == null && selectedAnswer == null && !impugned)
                 mListener?.onClickAnswer(questionId, item + 1)
         }
     }

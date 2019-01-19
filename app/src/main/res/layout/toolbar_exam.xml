@@ -30,8 +30,8 @@
         android:layout_marginStart="8dp"
         android:textSize="14sp"
         android:text="@string/toolbar_count_points"
-        app:layout_constraintStart_toEndOf="@+id/toolbar_count_question"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar_id_question"/>
+        app:layout_constraintStart_toEndOf="@+id/toolbar_answer_passed"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_answer_success"/>
 
     <TextView
         android:id="@+id/toolbar_answer_success"
