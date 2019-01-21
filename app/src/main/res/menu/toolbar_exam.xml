@@ -12,4 +12,9 @@
         android:title="@string/action_report_error"
         android:visible="true"
         app:showAsAction="withText" />
+    <item
+        android:id="@+id/action_finish_exam"
+        android:title="@string/action_finish_exam"
+        android:visible="true"
+        app:showAsAction="withText" />
 </menu>

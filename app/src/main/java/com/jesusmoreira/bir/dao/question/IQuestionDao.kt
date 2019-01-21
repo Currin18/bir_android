@@ -9,6 +9,7 @@ interface IQuestionDao {
     fun fetchQuestionById(questionId: Int): Question
     fun fetchQuestionByRef(questionRef: String): Question
     fun fetchAllQuestions(): List<Question>
+    fun fetchAllQuestionsByIds(ids: List<Int>): List<Question>
     fun fetchAllQuestionsByExam(exams: List<Int>): List<Question>
     fun fetchAllQuestionsByCategories(categories: List<String>): List<Question>
     fun fetchAllQuestionsByWords(words: List<String>, includeAnswers: Boolean): List<Question>

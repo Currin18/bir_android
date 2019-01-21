@@ -5,7 +5,7 @@
     android:orientation="horizontal">
     <View
         android:id="@+id/question_status"
-        android:layout_width="5dp"
+        android:layout_width="8dp"
         android:layout_height="match_parent"/>
     <TextView
         android:id="@+id/question_id"

@@ -40,7 +40,25 @@ class TextUtils {
         fun convertStringToArray(str: String): Array<String> {
             val arr = str.split(strSeparator)
             return arr.toTypedArray()
+        }
 
+        fun convertArrayOfIntToString(array: Array<Int>?): String? {
+            var str = ""
+            if (array != null) {
+                for (i in 0 until array.size) {
+                    str += array[i].toString()
+                    // Do not append comma at the end of last element
+                    if (i < array.size - 1) {
+                        str += strSeparator
+                    }
+                }
+            }
+            return str
+        }
+
+        fun convertStringToArrayOfInt(str: String): Array<Int> {
+            val arr = str.split(strSeparator).map { it.toInt() }
+            return arr.toTypedArray()
         }
     }
 }

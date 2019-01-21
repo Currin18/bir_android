@@ -1,7 +1,9 @@
 package com.jesusmoreira.bir.views.main
 
+import android.content.Context
+import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.core.view.GravityCompat
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -9,16 +11,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
 import com.jesusmoreira.bir.R
 import com.jesusmoreira.bir.dao.Database
-import com.jesusmoreira.bir.model.Collection
 import com.jesusmoreira.bir.model.Exam
 import com.jesusmoreira.bir.model.Filters
-import com.jesusmoreira.bir.model.Question
 import com.jesusmoreira.bir.utils.Constants
 import com.jesusmoreira.bir.utils.FileUtils
 import com.jesusmoreira.bir.utils.PreferencesUtils
@@ -28,11 +28,15 @@ import com.jesusmoreira.bir.views.filter.FilterActivity
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     companion object {
-        private const val MAX_QUESTIONS: Int = 235
+
+        fun newIntent(context: Context) : Intent {
+            return Intent(context, MainActivity::class.java)
+        }
     }
 
     private var database = Database(this)
-//    private var collection: List<Question>? = null
+
+    private var showed: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,35 +45,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         database.open()
 
-        fab.setOnClickListener { fab ->
-//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show()
-            if (fab_filters.visibility == View.VISIBLE) {
-                if (fab is FloatingActionButton) {
-                    fab.setImageDrawable(getDrawable(R.drawable.ic_add))
-                }
-                fab_filters.hide()
-                label_filters.visibility = View.INVISIBLE
+        fab.setOnClickListener {
+            val unfinishedExam = database.examDao?.fetchExamUnfinished()
 
-                fab_random.hide()
-                label_random.visibility = View.INVISIBLE
+            if (showed) {
+                hideFABs()
             } else {
-                if (fab is FloatingActionButton) {
-                    fab.setImageDrawable(getDrawable(R.drawable.ic_clear))
-                }
-                fab_filters.show()
-                label_filters.visibility = View.VISIBLE
-
-                fab_random.show()
-                label_random.visibility = View.VISIBLE
+                showFABs(unfinishedExam)
             }
-        }
-
-        fab_random.setOnClickListener{
-            goToRandomExam()
-        }
-
-        fab_filters.setOnClickListener {
-            goToFilters()
         }
 
         val toggle = ActionBarDrawerToggle(
@@ -80,6 +63,80 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         nav_view.setNavigationItemSelectedListener(this)
 
         loadInitialData()
+    }
+
+    private fun showFABs(exam: Exam?) {
+        fab.setImageDrawable(getDrawable(R.drawable.ic_clear))
+
+        fab_filters.show()
+        label_filters.visibility = View.VISIBLE
+
+        fab_random.show()
+        label_random.visibility = View.VISIBLE
+
+        if (exam != null) {
+            fab_continue.show()
+            fab_continue.setOnClickListener {
+                hideFABs()
+                goToContinueExam(exam.id!!)
+            }
+            label_continue.visibility = View.VISIBLE
+
+            fab_random.setOnClickListener{
+                hideFABs()
+                showUnfinishedExamAlert { _, _ ->
+                    exam.finished = System.currentTimeMillis()
+                    database.examDao?.updateExam(exam)
+                    goToRandomExam()
+                }
+            }
+
+            fab_filters.setOnClickListener {
+                hideFABs()
+                showUnfinishedExamAlert { _, _ ->
+                    exam.finished = System.currentTimeMillis()
+                    database.examDao?.updateExam(exam)
+                    goToFilters()
+                }
+            }
+        } else {
+            fab_random.setOnClickListener{
+                hideFABs()
+                goToRandomExam()
+            }
+
+            fab_filters.setOnClickListener {
+                hideFABs()
+                goToFilters()
+            }
+        }
+
+        showed = true
+    }
+
+    private fun hideFABs() {
+        fab.setImageDrawable(getDrawable(R.drawable.ic_add))
+
+        fab_filters.hide()
+        label_filters.visibility = View.INVISIBLE
+
+        fab_random.hide()
+        label_random.visibility = View.INVISIBLE
+
+        fab_continue.hide()
+        label_continue.visibility = View.INVISIBLE
+
+        showed = false
+    }
+
+    private fun showUnfinishedExamAlert(listener: (DialogInterface, Int) -> Unit) {
+        AlertDialog.Builder(this)
+            .setMessage(getString(R.string.alert_unfinished_exam))
+            .setPositiveButton(getString(R.string.button_accept), listener)
+            .setNegativeButton(getString(R.string.button_cancel)) { dialog, _ ->
+                dialog.dismiss()
+            }
+            .show()
     }
 
     private fun loadInitialData() {
@@ -146,23 +203,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
-    private fun getRandomQuestions(collection: List<Question>?): List<Question> {
-        var questions = emptyList<Question>()
-        var copy = collection
-        if (copy != null && copy.isNotEmpty()) {
-            val random = java.util.Random(System.currentTimeMillis())
-            var question: Question?
-            do {
-                val rand = random.nextInt(copy!!.size)
-                questions = questions.plus(copy[rand])
-                copy = copy.minus(copy[rand])
-            } while (questions.size < MAX_QUESTIONS && copy!!.isNotEmpty())
-        }
-        return questions
+    private fun goToContinueExam(examId: Int) {
+        startActivity(ExamActivity.newIntent(this, examId = examId))
     }
 
     private fun goToRandomExam() {
-            startActivity(ExamActivity.newIntent(this, Filters(true).toString()))
+        startActivity(ExamActivity.newIntent(this, filters = Filters(true).toString()))
     }
 
     private fun goToFilters() {

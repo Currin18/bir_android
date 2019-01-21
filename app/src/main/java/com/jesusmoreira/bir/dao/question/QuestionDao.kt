@@ -120,6 +120,39 @@ class QuestionDao(db: SQLiteDatabase): DbContentProvider<Question>(db), IQuestio
         return questionList
     }
 
+    override fun fetchAllQuestionsByIds(ids: List<Int>): List<Question> {
+        var selection = ""
+        var order: String? = null
+        val selectedArgs = ids.toTypedArray()
+        val questionList = mutableListOf<Question>()
+
+        if (selectedArgs.isNotEmpty()) {
+            selection += "$COLUMN_ID in("
+            order = " CASE $COLUMN_ID\n"
+
+            for (i in 0 until selectedArgs.size) {
+                if (i != 0) selection += ", "
+                selection += "${selectedArgs[i]}"
+                order += "\tWHEN ${selectedArgs[i]} THEN $i\n"
+            }
+
+            selection += ")"
+            order += "END"
+
+            val cursor = super.query(TABLE_NAME, COLUMNS, selection, null, order)
+
+            cursor.moveToFirst()
+            while (!cursor.isAfterLast) {
+                val question = cursorToEntity(cursor)
+                questionList.add(question)
+                cursor.moveToNext()
+            }
+            cursor.close()
+        }
+
+        return questionList
+    }
+
     override fun fetchAllQuestionsByExam(exams: List<Int>): List<Question> {
         var selection = ""
         val selectedArgs = exams.map { it.toString() }.toTypedArray()

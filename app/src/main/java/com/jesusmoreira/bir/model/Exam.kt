@@ -1,6 +1,7 @@
 package com.jesusmoreira.bir.model
 
 import android.os.Parcelable
+import com.jesusmoreira.bir.utils.Constants
 import kotlinx.android.parcel.IgnoredOnParcel
 import kotlinx.android.parcel.Parcelize
 import org.json.JSONArray
@@ -83,14 +84,6 @@ data class Exam (
         val position = questions.indexOfFirst { it.id == questionId }
         if (position >= 0 && position < questions.size) {
             selectedAnswers[position] = -1
-//            getQuestionStatus(position).let {
-//                selectedAnswerStatus[position] = it
-//                when(it) {
-//                    QuestionStatus.Correct -> countCorrect++
-//                    QuestionStatus.Error -> countErrors++
-//                    else -> {}
-//                }
-//            }
         }
     }
 
@@ -98,6 +91,63 @@ data class Exam (
         val position = questions.indexOfFirst { it.id == questionId }
         if (position >= 0 && position < questions.size && questions[position].impugned)
             countImpugned++
+    }
+
+    fun calculateAnsweredQuestions(): Int = selectedAnswers.filter { it > 0 }.size
+    fun calculateImpugnedQuestions(): Int = questions.filter { it.impugned }.size
+
+    fun calculateScore(): Double {
+
+        var validQuestions = 0
+        var successfulQuestions = 0
+        var failedQuestions = 0
+
+        loop@ for (i in 0 until questions.size) {
+            if (validQuestions < Constants.numberOfCountableQuestions) {
+                if (!questions[i].impugned && selectedAnswers[i] > 0) {
+                    validQuestions++
+
+                    if (questions[i].correctAnswer == selectedAnswers[i]) successfulQuestions++
+                    else failedQuestions++
+                }
+            } else {
+                break@loop
+            }
+        }
+
+        return successfulQuestions.toDouble() - (failedQuestions.toDouble() / 3)
+    }
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as Exam
+
+        if (filters != other.filters) return false
+        if (questions != other.questions) return false
+        if (!selectedAnswers.contentEquals(other.selectedAnswers)) return false
+        if (id != other.id) return false
+        if (created != other.created) return false
+        if (finished != other.finished) return false
+        if (countCorrect != other.countCorrect) return false
+        if (countErrors != other.countErrors) return false
+        if (countImpugned != other.countImpugned) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        var result = filters.hashCode()
+        result = 31 * result + questions.hashCode()
+        result = 31 * result + selectedAnswers.contentHashCode()
+        result = 31 * result + (id ?: 0)
+        result = 31 * result + (created?.hashCode() ?: 0)
+        result = 31 * result + (finished?.hashCode() ?: 0)
+        result = 31 * result + countCorrect
+        result = 31 * result + countErrors
+        result = 31 * result + countImpugned
+        return result
     }
 
 }

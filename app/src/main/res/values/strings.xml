@@ -11,25 +11,33 @@
 
     <string name="button_let_pass">Let pass</string>
     <string name="button_continue">Continue</string>
+    <string name="button_accept">Accept</string>
+    <string name="button_cancel">Cancel</string>
 
     <string name="toolbar_name_filter">Filters</string>
 
     <string name="action_question_list">Question list</string>
     <string name="action_report_error">Report error</string>
+    <string name="action_finish_exam">Finish exam</string>
+    <string name="action_settings">Settings</string>
+
     <string name="toolbar_count_question">Question:</string>
     <string name="toolbar_answer_success">Success:</string>
     <string name="toolbar_count_points">Points:</string>
     <string name="toolbar_answer_error">Error:</string>
     <string name="toolbar_answer_passed">Passed:</string>
+
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+
     <string name="label_random">Random</string>
     <string name="label_filters">Filters</string>
+
     <string name="input_years_label">Filter by years:</string>
     <string name="input_years_hint">Select years</string>
     <string name="input_years_button">Select</string>
@@ -41,9 +49,11 @@
     <string name="input_words_checkbox">Include answers in the search</string>
     <string name="input_random_label">Random:</string>
     <string name="input_random_checkbox">Generate random exam with 235 questions</string>
+
     <string name="alert_too_many_questions">This exam has too many questions ($1).\n\nDo you want generate an exam with $2 questions?\nThese will be randomly selected</string>
-    <string name="button_accept">Accept</string>
-    <string name="button_cancel">Cancel</string>
     <string name="alert_leave_exam">Do you want to leave the current exam? You will be able to continue with it later.</string>
+    <string name="alert_finish_exam">"Congratulations! You have finished the exam. This is your score:\n\n\t\tAnswered questions: $1\n\t\tSuccessful questions: $2\n\t\tFailed questions: $3\n\t\tLeaved questions: $4\n\t\tImpugned questions: $5\n\t\tTotal score: $6\n\nDo you want to close the exam?"</string>
+    <string name="label_continue">Continue exam</string>
+    <string name="alert_unfinished_exam">There are a unfinished exam. Do you want to finish it and start a new exam?</string>
 
 </resources>

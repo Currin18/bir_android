@@ -50,8 +50,8 @@ class QuestionRecyclerViewAdapter(
         val item = mValues[position]
         val color = when {
             item.impugned -> context.getColor(R.color.grey)
-            mAnswers[position] == 0 -> context.getColor(R.color.white)
-            mAnswers[position] == item.correctAnswer -> context.getColor(R.color.colorPrimary)
+            mAnswers[position] <= 0 -> context.getColor(R.color.white)
+            mAnswers[position] == item.correctAnswer -> context.getColor(R.color.colorPrimaryLight)
             else -> context.getColor(R.color.red)
         }
         holder.mStatusView.setBackgroundColor(color)

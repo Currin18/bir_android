@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import android.view.View.VISIBLE
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -116,7 +117,7 @@ class QuestionExamFragment : Fragment() {
             v.toolbar_answer_error.text = "${getString(R.string.toolbar_answer_error)} ${exam.countErrors}"
             v.toolbar_answer_passed.text = "${getString(R.string.toolbar_answer_passed)} ${exam.selectedAnswers.count { it == -1 }}"
 
-            v.toolbar_count_points.text = "${getString(R.string.toolbar_count_points)} ${BigDecimal((exam.countCorrect.toDouble()) - (exam.countErrors.toDouble() / 3)).setScale(2, RoundingMode.HALF_EVEN)}"
+            v.toolbar_count_points.text = "${getString(R.string.toolbar_count_points)} ${BigDecimal(exam.calculateScore()).setScale(2, RoundingMode.HALF_EVEN)}"
         }
 
         v.btn_let_pass.setOnClickListener { listener?.onLetPassInteraction(question.id ?: 0) }
@@ -150,6 +151,12 @@ class QuestionExamFragment : Fragment() {
                 listener?.onClickListAction()
                 return true
             }
+            R.id.action_report_error -> {
+                Toast.makeText(context, "This functionality is not available yet", Toast.LENGTH_LONG).show()
+            }
+            R.id.action_finish_exam -> {
+                listener?.onClickFinishExam()
+            }
         }
         return false
     }
@@ -172,6 +179,7 @@ class QuestionExamFragment : Fragment() {
      */
     interface OnQuestionExamInteractionListener {
         fun onClickListAction()
+        fun onClickFinishExam()
         fun onClickAnswer(questionId: Int, answerSelected: Int)
         fun onLetPassInteraction(questionId: Int)
         fun onContinueInteraction(questionId: Int)
